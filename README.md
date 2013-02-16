@@ -44,7 +44,7 @@ can do and share it with everyone. Enjoy!
 	---- New Build (MINOR) #1 - February 15, 2013
 	> Small language changes (capitilization, tabs and spaces) and GUI adjustments.
 	---- New Build #2 - February 15, 2013
-	> Language files management. If there are any other language files
+	* Language files management. If there are any other language files
 	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
 	  the Language Option Menu even though the language files does not belong
 	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
