@@ -13,7 +13,7 @@ License   Open Source
 Author    Silvernine0S
 Website   https://github.com/Silvernine0S/FolderMenu3EX/
 NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
-		  A Great Powerful File Manager. http://www.xyplorer.com/
+          A Great Powerful File Manager. http://www.xyplorer.com/
 ======================================================================
 
 [Changelog Key]
