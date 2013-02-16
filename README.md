@@ -5,4 +5,4 @@ to your favorite folders in explorer, open/save dialog or
 command prompt...and more. You can also launch your favorite
 folders, files or urls." -rexx http://foldermenu.sourceforge.net/
 
-FolderMenuEX is a Fork of the Original Folder Menu 3 by rexx
+FolderMenu3 EX is a Fork of the Original Folder Menu 3 by rexx
