@@ -1,5 +1,8 @@
 https://github.com/Silvernine0S/FolderMenu3EX
 HTTP: https://github.com/Silvernine0S/FolderMenu3EX.git
+Direct Download:
+https://github.com/Silvernine0S/FolderMenu3EX/blob/master/FolderMenu.exe?raw=true
+https://github.com/Silvernine0S/FolderMenu3EX/blob/master/FolderMenu_x64.exe?raw=true
 
 http://www.autoitscript.com/autoit3/docs/appendix/fonts.htm
 http://www.autoitscript.com/autoit3/docs/functions/GUISetFont.htm

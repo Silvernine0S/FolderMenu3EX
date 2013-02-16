@@ -1,0 +1,25 @@
+1. Download and Install "AutoIt Full Installation":
+   http://www.autoitscript.com/site/autoit/downloads/
+
+2. Download and Install SciTE4AutoIt3.exe:
+   http://www.autoitscript.com/site/autoit-script-editor/downloads/
+
+3. Open _Include_Replace.au3 With a Text Editor and:
+   Edit $AU3Dir & $FM3Dir (3rd and 4th Line) to Point to the Correct
+   Directory. $AU3Dir Should Point to Where You Installed AutoIt3.
+   $FM3Dir Should Point to Where the Include_Replace Folder Should Be
+   Which Should Be Inside The Source Code Folder of FolderMenu3 EX.
+
+4. Open Compile.bat And Change:
+   C:\AutoIt3_FM\SciTe\AutoIt3Wrapper\AutoIt3Wrapper.exe
+   to Whereever AutoIt3Wrapper.exe Should Be. If You Installed AutoIt3
+   and SciTE4AutoIt3.exe Using Default Settings, It Should Reside In:
+   C:\Program Files\AutoIt3\SciTe\AutoIt3Wrapper\AutoIt3Wrapper.exe
+   Leave Everything Else Alone.
+
+5. You Should Now Be Able to Run Compile.bat which Should Compile the
+   Code. NOTE: Disable Anti-Virus Software is Recommended. They Tend
+   to Get in the Way Of Compiling Which Can Sometimes Abruptyly End
+   The Compilation Process.
+
+6. Enjoy!

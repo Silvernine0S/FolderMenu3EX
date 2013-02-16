@@ -66,7 +66,7 @@ Global Const $iCurrentVer = "3.1.2.2 EX 1.0.0"
 #include "Language.au3"
 
 #region Initialization
-If _Singleton("FolderMenu3", 1) = 0 Then
+If _Singleton("FolderMenu3 EX", 1) = 0 Then ; What Is This?
 	Send("#!+^x")
 	Exit
 EndIf

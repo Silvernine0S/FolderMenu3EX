@@ -1,7 +1,7 @@
 ; remove unnecessary functions in lib to reduce bin size.
 ; restore original
-$AU3Dir = "C:\Program Files\AutoIt3\Include"
-$FM3Dir = "C:\Users\User\Documents\FolderMenu\Include_Replace"
+$AU3Dir = "C:\AutoIt3_FM\Include"
+$FM3Dir = "C:\Users\User\Documents\GitHub\FolderMenu3EX\Include_Replace"
 if FileExists($FM3Dir & "\Array.au3") then
 	MsgBox(0,"", "Already Restored.")
 else
