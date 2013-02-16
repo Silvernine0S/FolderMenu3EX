@@ -2521,7 +2521,7 @@ Func GetLanguageList($sPath, ByRef $aList) ; $sPath includes trailing "\"
 		$sFile = FileFindNextFile($hSearch)
 		If @error Then ExitLoop
 		If StringInStr(FileGetAttrib(@ScriptDir & "\" & $sPath & $sFile), "D") Then GetLanguageList($sPath & $sFile & "\", $aList)
-		If StringRight($sFile, 4) = ".lng" Then
+		If StringRight($sFile, 6) = ".fmlng" Then
 			If UBound($aList) <= $aList[0] + 1 Then ReDim $aList[UBound($aList) * 2]
 			$aList[$aList[0] + 1] = $sPath & $sFile
 			$aList[0] += 1
@@ -2555,7 +2555,7 @@ Func MenuOtherLoadingClick()
 EndFunc
 
 Func ButtonOtherLangClick()
-	Local $sPath = FileOpenDialog($sLang_SelectFile, @ScriptDir, "(*.lng)", 1)
+	Local $sPath = FileOpenDialog($sLang_SelectFile, @ScriptDir, "(*.fmlng)", 1)
 	If $sPath = "" Then Return
 	Local $i = UBound($asLangList)
 	ReDim $asLangList[$i + 1][2]

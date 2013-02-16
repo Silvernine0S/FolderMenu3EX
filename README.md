@@ -12,7 +12,7 @@ can do and share it with everyone. Enjoy!
 
 ####Most Recent Changes. See Changelog.txt For More. 
 ----------------------------------------------------
-	!! Version 3.1.2.2 EX 1.0.0
+	!! Version 3.1.2.2 EX 1.0.0 - February 15, 2013
 	+ Working Internally Referenced Icons at First Start Even if File Name is
 	  Different From the Default FolderMenu.exe
 		> For FIRST TIME RUN ONLY. Basically allows you to rename the file name
@@ -41,8 +41,13 @@ can do and share it with everyone. Enjoy!
 	  FolderMenu.exe as before. x64 however is named as FolderMenu_x64.exe.
 	> Compiled using the latest AutoIt version 3.3.8.1. Used together with
 	  SciTE4AutoIt 6/10/2012.
-	---- New Build (MINOR)
+	---- New Build (MINOR) #1 - February 15, 2013
 	> Small language changes (capitilization, tabs and spaces) and GUI adjustments.
+	---- New Build #2 - February 15, 2013
+	> Language files management. If there are any other language files
+	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
+	  the Language Option Menu even though the language files does not belong
+	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
 
 ####To Do
 ---------
@@ -52,10 +57,6 @@ can do and share it with everyone. Enjoy!
 	  of work and time which I don't have. So far it seems that English,
 	  Korean and both Simplfied Chinese and Traditional Chinese does not have
 	  this problem.
-	! Language files management. If there are any other language files
-	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
-	  the Language Option Menu even though the language files does not belong
-	  to it.
 	! Update "Check Update". Program is currently still set to checkupdates from
 	  rexx's version.
 	! Add GitHub link to the GUI somewhere for reference.

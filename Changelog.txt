@@ -24,7 +24,7 @@ NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
 	! Fixed Minor Bug
 
 ~~~~~~~~~~~~~~~~~~~ February 15, 2013 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Version 3.1.2.2 EX 1.0.0
+	!! Version 3.1.2.2 EX 1.0.0 - February 15, 2013
 	+ Working Internally Referenced Icons at First Start Even if File Name is
 	  Different From the Default FolderMenu.exe
 		> For FIRST TIME RUN ONLY. Basically allows you to rename the file name
@@ -53,5 +53,10 @@ Version 3.1.2.2 EX 1.0.0
 	  FolderMenu.exe as before. x64 however is named as FolderMenu_x64.exe.
 	> Compiled using the latest AutoIt version 3.3.8.1. Used together with
 	  SciTE4AutoIt 6/10/2012.
-	---- New Build (MINOR)
+	---- New Build (MINOR) #1 - February 15, 2013
 	> Small language changes (capitilization, tabs and spaces) and GUI adjustments.
+	---- New Build #2 - February 15, 2013
+	> Language files management. If there are any other language files
+	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
+	  the Language Option Menu even though the language files does not belong
+	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
