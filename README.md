@@ -1,20 +1,18 @@
-FolderMenu3 EX
-==============
-"Folder Menu is a folder switching tool. You can quickly jump
+##FolderMenu3 EX
+FolderMenu3 EX is a fork of the original Folder Menu v3 by rexx. So what is Folder Menu?
+> "Folder Menu is a folder switching tool. You can quickly jump
 to your favorite folders in explorer, open/save dialog or
 command prompt...and more. You can also launch your favorite
 folders, files or urls." -rexx http://foldermenu.sourceforge.net/
 
-FolderMenu3 EX is a Fork of the Original Folder Menu 3 by rexx
-
-DO NOT EXPECT UPDATES. I am doing this on my spare time which I
+**DO NOT EXPECT UPDATES**. I am doing this on my spare time which I
 don't have much of. Furthermore I'm new to programming in general
 so please don't expect too much from me. I'm only doing what I
-can do and share it with everyone. Enjoy!
+can do and share it with everyone. Enjoy!  
 
-Most Recent Changes. See Changelog.txt For The Rest. 
-====================================================
-Version 3.1.2.2 EX 1.0.0
+####Most Recent Changes. See Changelog.txt For More. 
+----------------------------------------------------
+	!! Version 3.1.2.2 EX 1.0.0
 	+ Working Internally Referenced Icons at First Start Even if File Name is
 	  Different From the Default FolderMenu.exe
 		> For FIRST TIME RUN ONLY. Basically allows you to rename the file name
@@ -46,8 +44,8 @@ Version 3.1.2.2 EX 1.0.0
 	---- New Build (MINOR)
 	> Small language changes (capitilization, tabs and spaces) and GUI adjustments.
 
-To Do
-=====
+####To Do
+---------
 	! GUI Design. Currrently when switching to to other languages, the texts
 	  sometimes get hidden or overlap under other GUI controls due to their
 	  length. This has low priority at this point since it will require a lot
