@@ -1,4 +1,4 @@
-Folder Menu 3 EX
+FolderMenu3 EX
 =============
 
 Fork of http://foldermenu.sourceforge.net/
