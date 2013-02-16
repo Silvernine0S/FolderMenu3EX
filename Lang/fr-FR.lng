@@ -1,0 +1,262 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = Français
+Version      = v3.1.2.2
+
+[Lang]
+; ToolMenu
+ToolWebsite     = Site &Web
+ToolAdd         = &Ajouter un Favori
+ToolReload      = &Redémarrer
+ToolOption      = &Options
+ToolEdit        = &Edition
+ToolExit        = &Quitter
+
+; MsgBox
+Error   = Erreur
+Warning = Avertissement
+
+TooManyItems    = Il y a plus de 500 éléments (%ItemCount% éléments)\n\nVoulez-vous continuer ?
+
+NewVer              = Nouvelle version !
+CannotConnect       = Ne peut pas se connecter à Internet.
+NewVerAvailable     = Il y a une nouvelle version v%LatestVer% disponible.\n\nLa télécharger maintenant ?
+NewVerUnavailable   = Vous utilisez la dernière version v%CurrentVer%.
+NewVerFailed        = Erreur de téléchargement.
+NewVerWebsite       = Aller au site Web ?
+NewVerUpdated       = Mis à jour à la version v%CurrentVer%.
+UpdateFolderMenu    = Mise à jour de Folder Menu 3
+UpdateExit          = Quittez Folder Menu 3 avant de continuer
+UpdateDone          = Terminé
+
+AddApp          = Ajouter une application
+AddAppTitle     = Titre :\t[%Title%]\nClasse :\t[%Class%]\n\n
+AddAppAddr      = La région rouge est-elle la barre d'adresse de cette application ?
+AddAppNoAddr    = Barre d'adresse nn trouvée.
+AddAppFocus     = Cliquez sur la barre d'adresse et pressez OK.
+AddAppPrompt    = Voulez-vous ajouter cette application ?
+
+SaveChange  = Voulez-vous enregistrer les changements ?
+EditReload  = Vous devez redémarrer Folder Menu pour que les modifications soient effectives après avoir modifié le fichier XML.
+
+PathExist   = Ce chemin existe déjà.\n[%ItemName%]\n(%ItemPath%)\nL'ajouter encore ?
+
+; ToolTip
+LoadFav     = Chargement des Favoris...
+LoadRecent  = Chargement des éléments Récents...
+LoadTemp    = Chargement des éléments de type sous-dossier...
+LoadDrive   = Chargement des éléments de type disque...
+LoadTC      = Chargement des éléments TC...
+DownloadUpdate  = Téléchargement de la mise à jour...
+
+; TrayTip
+CannotOpenBlank = Ne peut pas ouvrir\n[%ItemName%]\nSon chemin est vide
+CannotOpenDown  = Ne peut pas ouvrir\n%ThisPathIP%\nServeur stoppé
+CannotOpenClip  = Ne peut pas ouvrir\n%Clipboard%
+FavoriteAdded   = [%ItemName%] ajouté\n(%ItemPath%)
+ShowHidden      = Montrer les fichiers cachés
+HideHidden      = Cacher les fichiers cachés
+ShowFileExt     = Montrer l'extension de fichier
+HideFileExt     = Cacher l'extension de fichier
+SVSDeactivate   = Désactiver la couche SVS...
+SVSActivate     = Activer la couche SVS...
+ErrSpecial      = "%ItemPath%" n'est pas un élément spécial valide
+ErrHotkey       = Erreur de raccourci-clavier [%HotkeyName%] (%HotkeyKey%)
+Search          = Chercher
+
+; OptionsGUI
+BtnEdit     = &Edition
+TipEdit     = Modifier Config.xml
+BtnOK       = OK
+BtnCancel   = Annuler
+BtnApply    = &Appliquer
+
+Fav     = Favoris
+App     = Applications
+Hotkey  = Raccourci-clavier
+Icon    = Icônes
+Menu    = Menu
+Other   = Autres
+About   = À propos
+
+; Favorite
+Name    = Nom
+Path    = Chemin
+Size    = Taille
+Depth   = Profondeur
+Submenu = Sous-menu
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = Nouvel élément
+NewMenu = Nouveau menu
+SelectFile      = Sélectionner un fichier
+SelectFolder    = Sélectionner un dossier
+BrowseFolder    = Chercher un dossier
+BrowseFile      = Chercher un fichier
+SpecialItems    = Éléments &spéciaux
+Separator       = Séparateur
+ColSeparator    = Séparateur de colonne
+Computer        = Ordinateur
+AddFavorite     = Ajouter un Favori
+AddHere         = Ajouter un Favori ici
+Reload          = Redémarrer
+Options         = Options
+EditConfig      = Modifier le fichier de configuration
+Exit            = Quitter
+ToggleHidden    = Montrer/cacher les fichiers cachés
+ToggleFileExt   = Montrer/cacher l'extension de fichier
+SystemRecent    = Menu système Récents
+RecentMenu      = Menu Récents
+ExplorerMenu    = Menu Explorateur
+DriveMenu       = Menu Disque
+ToolMenu        = Menu Outils
+SVSMenu         = Menu SVS
+TCMenu          = Menu TC
+
+TipFavTree  = Déposer les fichiers ici pour les ajouter comme Favoris\n\nRaccourcis-clavier:\n  Inser\t\tInsérer un élément\n  Suppr\t\tSupprimer un élément\n  Majusc+Inser\tInsérer un menu\n  Majusc+Suppr\tSupprimer un menu\n  Majusc+Haut\tDéplacer vers le haut\n  Majusc+Bas\tDéplacer vers le bas
+TipFavPath  = Chercher un fichier ou un dossier
+TipFavIcon  = Sélectionner une icône
+TipFavMenu  = Cocher pour créer automatiquement un sous-menu pour un élément Dossier
+TipFavRel   = Permuter entre chemin absolu/relatif\nMaintenir Majusc pour utiliser les variables d'environnement
+TipFavSort  = Trier le menu sélectionné\nMaintenir Majusc pour trier récursivement
+TipFavAdd   = Insérer un nouvel élément\nMaintenir Majusc pour insérer un sous-menu
+TipFavDel   = Supprimer l'élément sélectionné\nMaintenir Majusc pour supprimer un sous-menu
+TipFavDepth = Profondeur maximale des menus créés automatiquement
+TipFavExt   = Liste des extensions de fichier que vous voulez montrer dans le sous-menu\n(Séparation par des virgules)
+
+Setting         = Paramètres
+DriveReload     = Mettre à jour en montrant le menu principal
+DriveFree       = Montrer l'espace libre
+TCPathExe       = Chemin de l'EXE TC
+TCPathIni       = Chemin de l'INI TC
+TCAsMain        = Utiliser TC comme menu principal
+TCSubmenu       = Placer les éléments de TC comme un sous-menu
+TCDirMenu       = Menu Répertoire de Total Commander
+TipTCDirMenu    = Utiliser Total Commander pour modifier le dossier des Favoris
+TipTCSubmenu    = Cocher pour mettre les éléments de TC dans un sous-menu\nSinon, les éléments de TC seront ajoutés dans le menu où vous avez ajouté l'élement "Menu TC"
+RecentSize      = Taille récente
+RecentDate      = Montrer la date
+RecentIndex     = Montrer l'index
+RecentFolder    = Conserver uniquement les dossiers
+RecentFull      = Montrer le chemin complet
+ClearRecent     = Effacer les récents
+
+; Application
+SupportApplications = Sélectionner les applications que vous voulez utiliser avec Folder Menu
+Type        = Type
+Class       = Classe
+Match       = Concorde avec
+Contain     = Contient
+Explorer    = Explorateur
+Dialog      = Dialogue Ouvrir/Enregistrer
+DialogO     = Dialogue Office
+Command     = Commande
+Desktop     = Bureau
+Taskbar     = Barre des tâches
+
+TipAppClass = Peuvent être séparés par des virgules
+TipAppType  = "Concorde avec" signifie que le nom de classe doit concorder exactement avec la chaine de caractères.\n"Contient" signifie que le nom de classe doit contenir la chaîne de caractère à n'importe position
+TipAppAdd   = Maintenez Majusc pour insérer les éléments par défaut
+
+; Hotkey
+Action          = Action
+ShowMenu        = Montrer le menu
+OpenSelText     = Ouvrir le texte sélectionné
+LButton         = BoutonG
+RButton         = BoutonD
+MButton         = BoutonM
+XButton1        = BoutonX1
+XButton2        = BoutonX2
+DoubleClick     = Double-clic
+KeepNative      = Conserver la fonction native
+Shift           = Majusc
+Ctrl            = Ctrl
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = Sélectionne un bouton de souris
+
+; Icon
+NoIcon      = Ne pas utiliser d'icône de menu
+GetFavicon  = Prendre la "favicon"
+ShellIcon   = Prendre l'icône système
+IconSize    = Taille de l'icône
+Extension   = Extension
+IconPath    = Chemin de l'icône
+
+Unknown     = Type de fichier inconnu
+Folder      = Dossier
+FolderS     = Dossier avec des sous-dossiers
+Drive       = Lecteur
+UNCPath     = Chemin UNC
+
+TipNoIcon       = Cocher pour charger le menu plus rapidement
+TipGetFavicon   = Prendre la "favicon" pour l'élément Url\nLe téléchargement de l'icône peut ralentir le chargement du menu
+TipShellIcon    = Prendre l'icône système pour les éléments Dossier\nDécocher pour accélérer un peu le chargement du menu
+TipIconSize     = Sélectionner la taille de l'icône (en pixel)
+
+; Menu
+MenuPosition        = Position du menu
+RelativeToCursor    = Relatif au curseur
+RelativeToScreen    = Relatif à l'écran
+RelativeToWindow    = Relatif à la fenêtre
+TempMenu            = Menu du sous-dossier Temp
+ShowFile            = Montrer les fichiers
+AltFolderIcon       = Montrer une icône différente pour les dossiers qui ont un sous-dossier
+BrowseMode          = Utiliser le mode &Parcourir lorsque le verrouillage Majuscule n'est pas enclenché
+DriveType           = Type de disque que vous voulez montrer
+All                 = Tous
+Fixed               = Fixe
+CDROM               = CD-ROM
+Removable           = Amovible
+Network             = Réseau
+RAMDisk             = Disque RAM
+HideExt             = Cacher l'e&xtension
+HideLnk             = Cacher .lnk .url
+ItemWarn            = M'avertir s'il y a trop d'éléments
+
+TipMenuTempIcon     = Si un élément Dossier contient un sous-dossier\nmontrer une icône différente pour l'indiquer
+TipMenuTempBrowse   = Cocher pour être en mode Parcourir par défaut\net décocher pour ne pas y être quand le verrouillage Majuscule est mis
+
+; Other
+Language        = Langage
+StartWithWin    = &Démarrer avec Windows
+NoTray          = Pas d'icône dans la &zone de notification
+AddFavAtTop     = Ajouter un nouvel élément au dessus
+AddFavCheck     = Tester l'existence du chemin d'un élément
+AddFavSkipGUI   = Sauter la fenêtre des options
+AddFavApp       = Ajouter l'application aux Favoris
+AddFavAppCmd    = Prendre la ligne de commande
+AddFavLnk       = Utiliser le fichier cible du lien
+FileManager     = Chemin du gestionnaire de fichier
+Browser         = Chemin du navigateur
+SearchSel       = Rechercher le texte sélectionné
+LoadingTip      = Lors du chargement des éléments
+LoadingTipNo    = Ne rien montrer
+LoadingTipTool  = Montrer les bulles d'information
+LoadingTipTray  = Montrer les bulles de notification
+MainMenu        = Menu principal
+
+TipOtherAddFavPath      = Teste si le chemin existe déjà comme Favori
+TipOtherAddFavSkipGui   = Ne pas montrer les options lors de l'ajout d'un Favori
+TipOtherAddFavApp       = Si la fenêtre active n'est pas une application supportée\najouter l'application comme Favorite
+TipOtherAddFavCmd       = Ajouter la ligne de commande au lieu du chemin de l'application elle-même
+TipOtherAddFavLnk       = Ajouter la cible du raccourci de fichier au lieu du raccourci lui-même
+TipOtherExplorer        = Choisir le gestionnaire de fichiers pour ouvrir un élément fichier
+TipOtherBrowser         = Choisir le navigateur pour ouvrir l'élément Url
+TipOtherSearch          = Rechercher le texte sélectionné s'il ne peut pas être ouvert
+
+; About
+Website             = Site Web
+CheckVer            = Vérifier les mises à jour
+CheckVerOnStart     = Vérifier les mises à jour au démarrage
+Translate           = Traduit par Michel Dessaintes\n    michel.dessaintes@free.fr
+
+;menu item
+RunSVSAdmin = Exécuter SVS Admin
+Empty   = Vide

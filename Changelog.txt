@@ -1,0 +1,44 @@
+Program   FolderMenu3 EX
+		  "Folder Menu is a folder switching tool. You can quickly jump
+		  to your favorite folders in explorer, open/save dialog or
+		  command prompt...and more. You can also launch your favorite
+		  folders, files or urls." -rexx
+		  http://foldermenu.sourceforge.net/
+		  
+		  FolderMenuEX is a Fork of the Original Folder Menu 3 by rexx
+
+Version   3.1.2.2 EX 1.0.0
+Release   February 15, 2013
+License   Open Source
+Author    Silvernine0S
+Website   https://github.com/Silvernine0S/FolderMenu3EX/
+NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
+		  A Great Powerful File Manager. http://www.xyplorer.com/
+======================================================================
+
+[Changelog Key]
+	+ New Feature
+	* Changed Feature
+	% Improved Performance or Quality
+	> More Information
+	! Fixed Minor Bug
+
+~~~~~~~~~~~~~~~~~~~ February 15, 2013 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.1.2.2 EX 1.0.0
+	+ Working Internally Referenced Icons at First Start If File Name is Different
+	  From the Default FolderMenu.exe
+		> 
+	* Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself
+		> Allows Elevated Privileges
+	* Changed Options GUI Font to Tahoma Size 10
+	% Changed Options GUI to Accomodate Font Change
+	> Converted to using tab characters only for indentations. Spaces character
+	  Used only for spacing and alignment. Trim trailing spaces. Remove all empty
+	  Limes more than two. Applied to all files.
+	> Updated Default Configuration File. Added Drive List and "Toggle Hide File
+	  Extensions" by Default. Added More File Types to Filters.
+	> Original application name is Folder Menu 3. Renamed to FolderMenu3 EX.
+	  Internally changed to new name. Compiled executable still named as
+	  FolderMenu.exe as before. x64 however is named as FolderMenu_x64.exe.
+	> Compiled using the latest AutoIt version 3.3.8.1. Used together with with
+	  SciTe4AutoIt 6/10/2012.

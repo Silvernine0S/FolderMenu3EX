@@ -1,0 +1,262 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = German
+Version      = v3.1.2.2
+
+[Lang]
+; ToolMenu
+ToolWebsite     = &Website besuchen
+ToolAdd         = &Favorit hinzufügen
+ToolReload      = &Neustarten
+ToolOption      = &Einstellungen
+ToolEdit        = &Bearbeiten
+ToolExit        = &Beenden
+
+; MsgBox
+Error   = Fehler
+Warning = Warnung
+
+TooManyItems    = Es existieren bereits mehr als 500 Einträge (%ItemCount% items)\n\nWollen Sie fortfahren?
+
+NewVer              = Es ist eine neue Version verfügbar!
+CannotConnect       = Es kann keine Verbindung zum Internet hergestellt werden.
+NewVerAvailable     = Die neue Version v%LatestVer% steht zum Download bereit.\n\nSoll sie jetzt heruntergeladen werden?
+NewVerUnavailable   = Sie benutzen zur Zeit die aktuellste Version: v%CurrentVer%.
+NewVerFailed        = Download fehlgeschlagen.
+NewVerWebsite       = Soll die Website von Foldermenu aufgerufen werden?
+NewVerUpdated       = Foldermenu auf Version %CurrentVer% aktualisiert.
+UpdateFolderMenu    = Folder Menu 3 Aktualisieren
+UpdateExit          = Folder Menu 3 vor dem fortfahren beenden
+UpdateDone          = Beendet
+
+AddApp          = Anwendung hinzufügen
+AddAppTitle     = Title:\t[%Title%]\nKlasse:\t[%Class%]\n\n
+AddAppAddr      = Ist der rot hervorgehobene Bereich die Adresszeile der Anwendung?
+AddAppNoAddr    = Keine Adresszeile gefunden!
+AddAppFocus     = Klicken Sie auf die Adresszeile und drücken Sie OK
+AddAppPrompt    = Wollen sie diese Anwendung hinzufügen?
+
+SaveChange  = Wollen Sie die Änderungen speichern?
+EditReload  = Um die manuellen Änderungen an der XML-Datei zu übernehmen, müssen Sie FolderMenu Neustarten.
+
+PathExist   = Dieser Pfad existiert bereits.\n[%ItemName%]\n(%ItemPath%)\nSoll er erneut hinzugefügt werden?
+
+; ToolTip
+LoadFav     = Lade Favoriten...
+LoadRecent  = Lade häufig verwendete Einträge...
+LoadTemp    = Lade Einträge...
+LoadDrive   = Lade Laufwerks-Menü Einträge...
+LoadTC      = Lade TC Einträge...
+DownloadUpdate  = Lade Update herunter...
+
+; TrayTip
+CannotOpenBlank = Öffnen nicht möglich\n[%ItemName%]\nPfad ist leer
+CannotOpenDown  = Keine Verbindung zu \n%ThisPathIP%\nServer nicht erreichbar
+CannotOpenClip  = Öffnen nicht möglich\n%Clipboard%
+FavoriteAdded   = [%ItemName%] hinzugefügt\n(%ItemPath%)
+ShowHidden      = versteckte Dateien werden eingeblendet
+HideHidden      = versteckte Dateien werden ausgeblendet
+ShowFileExt     = Dateiendungen einblenden
+HideFileExt     = Dateiendungen ausblenden
+SVSDeactivate   = aktiviere SVS Layer...
+SVSActivate     = deaktiviere SVS Layer...
+ErrSpecial      = "%ItemPath%" ist kein gültiges Special-Eintrag
+ErrHotkey       = Hotkey [%HotkeyName%] (%HotkeyKey%) Fehler
+Search          = Suche
+
+; OptionsGUI
+BtnEdit     = &Bearbeiten
+TipEdit     = Config.xml Bearbeiten
+BtnOK       = OK
+BtnCancel   = Abbrechen
+BtnApply    = &Übernehmen
+
+Fav     = Favoriten
+App     = Anwendungen
+Hotkey  = Hotkey
+Icon    = Icon
+Menu    = Menü
+Other   = Anderes
+About   = Über
+
+; Favorite
+Name    = Name
+Path    = Pfad
+Size    = Größe
+Depth   = Tiefe
+Submenu = Untermenü
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = Neuer Eintrag
+NewMenu = Neues Menü
+SelectFile      = Datei wählen
+SelectFolder    = Ordner wählen
+BrowseFolder    = nach &Ordner durchsuchen
+BrowseFile      = nach &Datei durchsuchen
+SpecialItems    = &Spezial Einträge
+Separator       = Trenner
+ColSeparator    = Spalten-Trenner
+Computer        = Computer
+AddFavorite     = Favorit hinzufügen
+AddHere         = Favorit hier hinzufügen
+Reload          = Neuladen
+Options         = Einstellungen
+EditConfig      = Konfiguration bearbeiten
+Exit            = Beenden
+ToggleHidden    = Versteckte Dateien Ein-/Ausblenden
+ToggleFileExt   = Dateiendungen Ein-/Ausblenden
+SystemRecent    = Häufig verwendete Einträge von Windows
+RecentMenu      = Häufig verwendete Einträge
+ExplorerMenu    = Explorer Menü
+DriveMenu       = Laufwerke Menü
+ToolMenu        = Tool Menü
+SVSMenu         = SVS Menü
+TCMenu          = TC Menü
+
+TipFavTree  = Ziehen Sie die Objekte hier hinein\num sie den Favoriten hinzuzufügen\n\nHotkeys:\n  Einfg           Eintrag einfügen\n  Entf           Eintrag löschen\n  Shift+Einfg     Menü einfügen\n  Shift+Entf   Menü löschen\n  Shift+Hoch    Nach oben verschieben\n  Shift+Runter   Nach unten verschieben
+TipFavPath  = Nach Datei, Ordner oder Specialeintrag suchen
+TipFavIcon  = Icon wählen
+TipFavMenu  = Aktivieren um automatisch ein Untermenü für einen Ordnereintrag zu erzeugen
+TipFavRel   = Zwischen relativen und absoluten Pfad wechseln\nHalten Sie die Shift-Taste gedrückt um Umgebungsvariablen zu nutzen
+TipFavSort  = Gewähltes Menü sortieren\nShift halten um rekursiv zu sortieren
+TipFavAdd   = Neuen Eintrag anlegen\nShift halten um ein neues Untermenü zu erzeugen
+TipFavDel   = Gewählten Eintrag löschen\nShift halten um Untermenü zu löschen
+TipFavDepth = Maximale Tiefe für automatisch erzeugte Untermenüs
+TipFavExt   = Liste der Dateiendungen die im Menü angezeigt werden sollen\n(Komma getrennt)
+
+Setting         = Setup
+DriveReload     = Beim laden des Hauptmenüs aktualisieren
+DriveFree       = Freien Speicherplatz anzeigen
+TCPathExe       = Pfad zur TC exe
+TCPathIni       = Pfad zur TC ini
+TCAsMain        = TC als Hauptmenü benutzen
+TCSubmenu       = TC-Einträge in ein Untermenü zusammenfassen
+TCDirMenu       = Total Commander Ordner-Menü
+TipTCDirMenu    = Total Commander zum editieren der häufig verwendeten Ordner benutzen
+TipTCSubmenu    = Diese Funktion aktivieren um alle TC-Einträge in ein Untermenü zusammen zu fassen\nAnsonsten werden die TC-Einträge zum "TC Menu" hinzugefügt
+RecentSize      = Anzahl der häufig verwendeten Einträge
+RecentDate      = Datum anzeigen
+RecentIndex     = Anzahl der Einträge
+RecentFolder    = Nur Ordner speichern
+RecentFull      = Vollständigen Pfad anzeigen
+ClearRecent     = Liste der häufig verwendeten Einträge zurück setzen
+
+; Application
+SupportApplications = Markieren Sie die Anwendung in der Sie FolderMenu nutzen wollen
+Type        = Typ
+Class       = Klasse
+Match       = exakt gleich
+Contain     = enthält
+Explorer    = Explorer
+Dialog      = Öffnen/Speichern Dialog
+DialogO     = MS Office Dialog
+Command     = Kommandozeile
+Desktop     = Desktop
+Taskbar     = Taskbar
+
+TipAppClass = Enthält Komma getrennte Werte
+TipAppType  = "exakt gleich" heisst dass der Klassenname exakt mit der Zeichenfolge überein stimmen muss.\n"enthält" heisst dass der Klassenname an beliebiger Stelle im String enthalten sein kann.
+TipAppAdd   = Halten Sie die Shift-Taste gedrückt um Standardeinträge hinzuzufügen
+
+; Hotkey
+Action          = Aktion
+ShowMenu        = Menü anzeigen
+OpenSelText     = Markierten Text öffnen
+LButton         = LButton
+RButton         = RButton
+MButton         = MButton
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = Doppelklick
+KeepNative      = Grundfunktion beibehalten
+Shift           = Shift
+Ctrl            = Strg
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = Legen Sie einen Maus-Button fest
+
+; Icon
+NoIcon      = Menü&icons nicht benutzen
+GetFavicon  = Favicon herunterladen
+ShellIcon   = Shellicon laden
+IconSize    = Icon Größe
+Extension   = Endung
+IconPath    = Pfad zum Icon
+
+Unknown     = Unbekannter Dateityp
+Folder      = Ordner
+FolderS     = Ordner mit Unterordnern
+Drive       = Laufwerk
+UNCPath     = UNC-Pfad
+
+TipNoIcon       = Aktivieren Sie diese Option um das Menü schneller zu laden
+TipGetFavicon   = Läd das Favicon von URL-Verknüpfungen herunter\nDas aktivieren dieser Funktion kann das laden des Menüs verlangsamen
+TipShellIcon    = Lädt das Windows-Shell-Icon für Ordner\nDeaktivieren Sie diese Option um das Menü (minimal) schneller zu laden
+TipIconSize     = Der Wert "0" ohne "" definiert die maximal verfügbare Größe
+
+; Menu
+MenuPosition        = Menüposition
+RelativeToCursor    = relativ zum Cursor
+RelativeToScreen    = relativ zum Bildschirm
+RelativeToWindow    = relativ zum Fenster
+TempMenu            = Tenporäres Unterordnermenü
+ShowFile            = Dateien anzeigen
+AltFolderIcon       = benutze für Ordner mit enthaltenen Unterordnern ein anderes Icon
+BrowseMode          = benutze &Durchsuchen-Modus wenn die Feststelltaste deaktiviert ist
+DriveType           = Laufwerkstypen die angezeigt werden sollen
+All                 = Alle Laufwerke
+Fixed               = Interne Laufwerke
+CDROM               = CD-ROM / DVD-ROM
+Removable           = Wechseldatenträger
+Network             = Netzlaufwerk
+RAMDisk             = RAM-Laufwerk
+HideExt             = Endungen &verbergen
+HideLnk             = .lnk und .url ausblenden
+ItemWarn            = Warnung bei zu vielen Einträgen
+
+TipMenuTempIcon     = Sobald ein Ordner einen Unterordner hat\nwird dies durch ein anderes Icon optisch hervorgehoben
+TipMenuTempBrowse   = Ist diese Option aktiviert, ist der Browse-Modus standardmäßig eingeschaltet\nund deaktiviert den Browse-Mode wenn die Feststelltaste aktiviert ist.
+
+; Other
+Language        = Sprache
+StartWithWin    = &Mit Windows starten
+NoTray          = &Trayicon verbergen
+AddFavAtTop     = Neuen Eintrag an oberster Stelle hinzufügen
+AddFavCheck     = prüfen ob der Pfad bereits hinzugefügt wurde
+AddFavSkipGUI   = Einstellungsfenster beim hinzufügen von Favoriten nicht anzeigen
+AddFavApp       = Anwendung zu Favoriten hinzufügen
+AddFavAppCmd    = Kommandozeile auslesen
+AddFavLnk       = Benutze Zieldatei der Verknüpfung
+FileManager     = Pfad zum Dateimanager
+Browser         = Pfad zum Webbrowser
+SearchSel       = nach markierten Text suchen
+LoadingTip      = Wenn die Einträge geladen werden
+LoadingTipNo    = Nichts anzeigen
+LoadingTipTool  = Tooltip anzeigen
+LoadingTipTray  = TrayTip anzeigen
+MainMenu        = Hauptmenü
+
+TipOtherAddFavPath      = prüft ob der Pfad bereits zu den Favoriten hinzugefügt wurde
+TipOtherAddFavSkipGui   = zeigt die Einstellungen beim hinzufügen eines Favoriten nicht an
+TipOtherAddFavApp       = Wenn das aktive Fenster keine von FolderMenu unterstützte Anwendung ist\nwird die Anwendung zu den Favoriten hinzugefügt
+TipOtherAddFavCmd       = fügt anstatt des Pfades die Kommandozeile zur Anwendung hinzu
+TipOtherAddFavLnk       = fügt anstelle der Verknüpfung deren Zieldatei hinzu
+TipOtherExplorer        = Wählen Sie den Dateimanager mit dem Ordner geöffnet werden sollen\nUmgebungsvariablen werden unterstützt
+TipOtherBrowser         = Wählen Sie den Browser mit dem Internetverknüpfungen geöffnet werden sollen\nUmgebungsvariablen werden unterstützt
+TipOtherSearch          = Suche nach dem markierten Text wenn der Eintrag nicht geöffnet werden kann
+
+; About
+Website             = Website
+CheckVer            = Auf neue Version prüfen
+CheckVerOnStart     = Beim Start auf neue Version prüfen
+Translate           = Übersetzt von Deep-Silence
+
+;menu item
+RunSVSAdmin = SVS Admin starten
+Empty   = Leer

@@ -1,0 +1,240 @@
+; Folder Menu Language File
+;
+; \n = Nueva linea
+; \t = Tab
+; Comentario si se inicia linea con ;
+
+[Info]
+LanguageName = Spanish Argentina
+Version      = v3.0.4
+
+[Lang]
+; Menu herramientas
+ToolWebsite     = Sitio Web
+ToolAdd         = Agregar a Favoritos
+ToolReload      = Recargar
+ToolOption      = Opciones
+ToolEdit        = Editar
+ToolExit        = Salir
+
+; MsgBox
+Error   = Error
+Warning = Advertencia
+
+TooManyItems    = Hay mas de 500 items (%ItemCount% items)\n\nQuiere continuar?
+
+NewVer              = Nueva Versión!
+CannotConnect       = No puede conectar a Internet
+NewVerAvailable     = Hay una nueva versión v%LatestVer% disponible\n\nIr al sitio Web?
+NewVerUnavailable   = Esta usando la ultima versión v%CurrentVer%.
+
+AddApp          = Añadir Aplicación
+AddAppEdit1     = Titulo:\t[%Title%]\nClass:\t[%Class%]\n\nEdit1 exist!\n\nEs la barra de direcciones de esa aplicación?
+AddAppPrompt    = Desea agregar esta aplicación?
+AddAppNoEdit1   = Titulo:\t[%Title%]\nClass:\t[%Class%]\n\nEdit1 do NOT exist!\n\nAún desea agregar esa aplicación?
+
+SaveChange  = Salvar los cambios?
+EditReload  = Debe reiniciar Folder Menu para que tome efecto la edición del archivo xmll
+
+PathExist   = Este camino ya existe\n[%ItemName%]\n(%ItemPath%)
+
+; ToolTip
+LoadFav     = Cargando Favoritos...
+LoadRecent  = Cargando items recientes...
+LoadTemp    = Cargando items en subcarpetas...
+LoadDrive   = Cargando menu items de discos...
+LoadTC      = Cargando TC Items...
+
+; TrayTip
+CannotOpenBlank = No puede abrir\n[%ItemName%]\nCamino sin especificar
+CannotOpenPath  = No puede abrir\n[%ItemName%]\n(%ItemPath%)
+CannotOpenDown  = No puede abrir\n[%ItemName%]\n(%ItemPath%)\n(%ThisPathIP%)\nServer caido
+CannotOpenClip  = No puede abrir\n%Clipboard%
+FavoriteAdded   = [%ItemName%] added\n(%ItemPath%)
+ShowHidden      = Mostrar archivos ocultos
+HideHidden      = Ocultar archivos ocultos
+ShowFileExt     = Mostrar extensiones de archivo
+HideFileExt     = Esconder extensiones de archivo
+SVSDeactivate   = Desactivando capa SVS...
+SVSActivate     = Activando capa SVS...
+ErrSpecial      = "%ItemPath%" no es un menu especial válido
+ErrHotkey       = Hotkey [%HotkeyName%] (%HotkeyKey%) error
+Search          = Buscar
+
+; Opciones GUI
+OptionsTitle    = Optciones
+
+BtnEdit     = &Editar
+TipEdit     = Editar Config.xml
+BtnOK       = OK
+BtnCancel   = Cancelar
+BtnApply    = &Aplicar
+
+Fav     = Favoritos
+App     = Aplicaciones
+Hotkey  = Hotkey
+Icon    = Iconos
+Menu    = Menu
+Other   = Otros
+About   = Acerca del programa
+
+; Favorito
+Name    = Nombre
+Path    = Camino
+Size    = Tam.
+Depth   = Profundidad
+Submenu = Submenu
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = Nuevo Item
+NewMenu = Nuevo Menu
+SelectFile      = Seleccionar archivo
+SelectFolder    = Seleccionar carpeta
+BrowseFolder    = Explorar carpeta
+BrowseFile      = Explorar archivo
+SpecialItems    = Items Especiales
+Separator       = Separador
+ColSeparator    = Separador de columna
+Computer        = Computadora
+AddFavorite     = Agregar a Favoritos
+AddHere         = Agregar Favotrito aqui
+Reload          = Relcargar
+Options         = Opciones
+EditConfig      = Editar archivo de configuración
+Exit            = Salir
+ToggleHidden    = Mostrar/ocultar archivos ocultos
+ToggleFileExt   = Mostrar/ocultar extensión archivos ocultos
+SystemRecent    = Menu recientes del sistema
+RecentMenu      = Menu recientes
+ExplorerMenu    = Menu del Explorador
+DriveMenu       = Menu de Discos
+ToolMenu        = Menu de herramientas
+SVSMenu         = Menu SVS
+TCMenu          = Menu de TC
+TCDirMenu       = Menu dir TC
+TipTCDirMenu    = Usar TC (editar carpetas favoritas)
+
+TipFavTree  = Arrastrar archivos aqui para agregar a favoritos\n\nHotkeys:\n  Ins       Insert item\n  Del          Delete item\n  Shift+Ins  Insert menu\n  Shift+Del   Delete menu\n  Shift+Up    Move up\n  Shift+Down   Move down
+TipFavPath  = Explorar archivos o carpeta
+TipFavIcon  = Seleccionar icono
+TipFavMenu  = Checkear para auto crear un submenu para una carpeta
+TipFavSort  = Ordenar menu seleccionado\nPresionando Shift para ordenar recursivamente
+TipFavAdd   = Insertar item nuevo\nPresionando Shift para insertar un submenu
+TipFavDel   = Borrar item seleccionado\nPresionando Shift para borrar el submenu
+TipFavDepth = Max profundidad del submenu auto creado
+TipFavExt   = Listar extensiones a ver en el menu\n(Separadas por coma)
+
+; Aplicaciones
+SupportApplications = Seleccionar aplicaciones a usar en Folder Menu
+Type        = Tipo
+Class       = Clase
+Match       = Match
+Contain     = Contiene
+Explorer    = Explorador
+Dialog      = Diálogo Abrir/Salvar
+DialogO     = Diálogo Office
+Command     = Comando
+Desktop     = Escritorio
+
+TipAppClass = Puede ser separado por comas
+TipAppType  = "Match" significa que el nobre debe ser exactamente como el string\n"Contain" means the classname can contain the string anywhere
+TipAppDef   = Insertar items por defecto
+
+; Hotkey
+Action          = Acción
+ShowMenu        = Mostrar Menu
+OpenSelText     = Abrir texto seleccionado
+LButton         = Botón izquierdo
+RButton         = Botón derecho
+MButton         = Botón medio
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = Doble click
+KeepNative      = Mantener función nativa
+
+TipHotkeyKey    = Set hotkey
+TipHotkeyMouse  = Seleccionar un botón del mouse
+
+; Icon
+NoIcon      = No usar icono en el menu
+GetFavicon  = Obtener favicon
+ShellIcon   = Obtener icono del shell
+IconSize    = Tamaño del icono
+Extension   = Extens.
+IconPath    = Camino al icono
+
+TipNoIcon       = Chequear para cargar el menu mas rápido
+TipGetFavicon   = Obtener favicon de url \n(Puede resultar en una carga lenta del menú)
+TipShellIcon    = Obtener icono del shell ipara carpetas\nNo chequear para una rápida carga del menú
+TipIconExt      = Extensiones pueden ser los siguientes:\nUnknown   \tUnknown file type\nMenu       \tSubmenu items\nFolder      \tFolder items\nFolderS      \tFolder items which has subfolder\nDrive        \tHDD items\nComputer  \tComputer item\nShare      \tUNC path item\n_????       \tSpecial item\n:????       \tSpecial menu item
+TipIconSize     = Seleccionar tamaño del icono (en pixel)
+
+; Menu
+MenuPosition        = Posición del menu
+RelativeToCursor    = Relativa al cursor
+RelativeToScreen    = Relativa a la pantalla
+RelativeToWindow    = Relativa a la ventana
+RecentSize          = Tamaño reciente
+RecentSizeS         = Reciente del sistema
+RecentOnlyFolder    = Solo carpetas
+RecentShowIndex     = Mostrar el indice
+RecentShowDate      = Mostrar la fecha
+ClearRecent         = Borrar reciente
+TempMenu            = Menu Subcarpeta Temporal
+ShowFile            = Mostrar archivos
+AltFolderIcon       = Mostrar diferentes iconos para subcarpetas
+BrowseMode          = Usar modo exploración cuando la tecla capslock esta desactivada
+DriveType           = Tipo de disco a mostrar
+All                 = Todo
+Fixed               = Fijo
+CDROM               = CD-ROM
+Removable           = Removible
+Network             = Red
+RAMDisk             = Disco RAM
+HideExt             = Esconder extensión
+HideLnk             = Esconder .lnk .url
+UseTCMenu           =Usa menu Total Commander
+TCPath              =Camino TC
+
+TipMenuTempIcon     = Si existe subcarpeta\nMostrar diferente icono para indicarlo
+TipMenuTempBrowse   = Chequear para activar modo explorador\ny desactivar cuando la tecla capslock esta activada
+
+; Other
+Language        = Lenguaje
+StartWithWin    = Iniciar con Windows
+NoTray          = Sin icono en la bandeja
+AddFavAtTop     = Agregar item nuevo arriba
+AddFavCheck     = Chequear camino al item existente
+AddFavSkipGUI   = Eludir ventana de opciones
+AddFavApp       = Añadir aplicación a favoritos
+AddFavAppCmd    = Obtener linea de comando
+FileManager     = Camino al explorador
+Browser         = Camino al navegador web
+SearchSel       = Buscar texto seleccionado
+LoadingTip      = Al cargar items
+LoadingTipNo    = No mostrar nada
+LoadingTipTool  = Mostrar ToolTip
+LoadingTipTray  = Mostrar TrayTip
+MainMenu        = Menu principal
+
+TipOtherAddFavPath      = Chequear si el camino esta agregado en favoritos
+TipOtherAddFavSkipGui   = No mostrar ventana de opciones al añadir a favoritos
+TipOtherAddFavApp       = Si la ventana activa no es una aplicación soportada\nAgregar como favorita
+TipOtherAddFavCmd       = Agregar linea de comando en lugar de el camino
+TipOtherExplorer        = Seleccionar programa administrador de archivos para abris carpetas
+TipOtherBrowser         = Seleccionar programa navegador de internet para abrir url's
+TipOtherSearch          = Buscar el texto seleccionado si no puede ser abierto
+
+; Acerca del programa:
+Website             = Sitio Web
+CheckVer            = N.Versión?
+CheckVerOnStart     = Chequear actualizacionmes al inicio
+Translate           = Traducción: Mario Guillermo Macri
+
+;hotkey para fija foco en la barra de direcciones del explorador de windows, !d Por defecto (Alt+D)
+AddrHotkey  = !d
+
+;Item menu
+RunSVSAdmin = Ejecutar SVS Admin
+Empty   = Vacio

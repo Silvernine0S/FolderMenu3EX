@@ -1,0 +1,262 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = 正體中文
+Version      = v3.1.2.2
+
+[Lang]
+; ToolMenu
+ToolWebsite     = 網站(&W)
+ToolAdd         = 新增(&A)
+ToolReload      = 重新啟動(&R)
+ToolOption      = 選項(&O)
+ToolEdit        = 編輯(&E)
+ToolExit        = 離開(&X)
+
+; MsgBox
+Error   = 錯誤
+Warning = 警告
+
+TooManyItems    = 選單項目超過 500 項(%ItemCount% 項)\n\n你還要繼續嗎?
+
+NewVer              = 新版本!
+CannotConnect       = 無法連接網路。
+NewVerAvailable     = 有新版本 v%LatestVer% 可下載。\n\n馬上下載?
+NewVerUnavailable   = 你正在使用最新版 v%CurrentVer%。
+NewVerFailed        = 下載失敗。
+NewVerWebsite       = 去網站看看?
+NewVerUpdated       = 更新至 v%CurrentVer%.
+UpdateFolderMenu    = 更新 Folder Menu 3
+UpdateExit          = 繼續之前請先離開 Folder Menu 3
+UpdateDone          = 完成
+
+AddApp          = 新增程式
+AddAppTitle     = 標題:\t[%Title%]\nClass:\t[%Class%]\n\n
+AddAppAddr      = 紅色區域這是這個程式的位址列嗎?
+AddAppNoAddr    = 找不到位址列。
+AddAppFocus     = 點一下位址列再按確定。
+AddAppPrompt    = 你要加入這個程式嗎?
+
+SaveChange  = 你要儲存變更嗎?
+EditReload  = 手動編輯 XML 檔後，需要重新啟動 Folder Menu 變更才會生效。
+
+PathExist   = 這個路徑已經存在。\n[%ItemName%]\n(%ItemPath%)\n再新增一次?
+
+; ToolTip
+LoadFav     = 載入我的最愛中...
+LoadRecent  = 載入最近的項目中...
+LoadTemp    = 載入子資料夾項目中...
+LoadDrive   = 載入磁碟機選單項目中...
+LoadTC      = 載入 TC 項目中...
+DownloadUpdate  = 下載更新中...
+
+; TrayTip
+CannotOpenBlank = 無法開啟\n[%ItemName%]\n路徑空白
+CannotOpenDown  = 無法開啟\n%ThisPathIP%\n伺服器無法連線
+CannotOpenClip  = 無法開啟\n%Clipboard%
+FavoriteAdded   = 新增 [%ItemName%]\n(%ItemPath%)
+ShowHidden      = 顯示隱藏檔案
+HideHidden      = 不顯示隱藏檔案
+ShowFileExt     = 顯示副檔名
+HideFileExt     = 不顯示副檔名
+SVSDeactivate   = 停用 SVS Layer...
+SVSActivate     = 啟用 SVS Layer...
+ErrSpecial      = "%ItemPath%" 不是正確的特殊項目
+ErrHotkey       = 快速鍵 [%HotkeyName%] (%HotkeyKey%) 錯誤
+Search          = 搜尋
+
+; OptionsGUI
+BtnEdit     = 編輯(&E)
+TipEdit     = 編輯 Config.xml
+BtnOK       = 確定
+BtnCancel   = 取消
+BtnApply    = 套用(&A)
+
+Fav     = 我的最愛
+App     = 應用程式
+Hotkey  = 快速鍵
+Icon    = 圖示
+Menu    = 選單
+Other   = 其他
+About   = 關於
+
+; Favorite
+Name    = 名稱
+Path    = 路徑
+Size    = 大小
+Depth   = 深度
+Submenu = 子選單
+Sort    = △
+Add     = 加
+Del     = 減
+NewItem = 新增項目
+NewMenu = 新增選單
+SelectFile      = 選擇檔案
+SelectFolder    = 選擇資料夾
+BrowseFolder    = 瀏覽資料夾(&B)
+BrowseFile      = 瀏覽檔案(&R)
+SpecialItems    = 特殊項目(&S)
+Separator       = 分隔線
+ColSeparator    = 垂直分隔線
+Computer        = 電腦
+AddFavorite     = 新增我的最愛
+AddHere         = 新增我的最愛至此
+Reload          = 重新啟動
+Options         = 選項
+EditConfig      = 編輯設定檔
+Exit            = 離開
+ToggleHidden    = 切換隱藏檔案
+ToggleFileExt   = 切換隱藏副檔名
+SystemRecent    = 系統最近的項目選單
+RecentMenu      = 最近的項目選單
+ExplorerMenu    = 檔案總管選單
+DriveMenu       = 磁碟機選單
+ToolMenu        = 工具選單
+SVSMenu         = SVS 選單
+TCMenu          = TC 選單
+
+TipFavTree  = 拖放檔案至此加入我的最愛\n\n快速鍵:\n  Ins             新增項目\n  Del             刪除項目\n  Shift+Ins   新增選單\n  Shift+Del   刪除選單\n  Shift+Up    往上移\n  Shift+Down 往下移
+TipFavPath  = 瀏覽檔案/資料夾/特殊項目
+TipFavIcon  = 選取圖示
+TipFavMenu  = 選取此項則會自動建立資料夾項目的子選單
+TipFavRel   = 切換絕對/相對路徑\n按住 Shift 以使用環境變數
+TipFavSort  = 排序選取的選單\n按住 Shift 以排序所有子選單
+TipFavAdd   = 新增一個新項目\n按住 Shift 以新增選單
+TipFavDel   = 刪除選取的項目\n按住 Shift 以刪除選單
+TipFavDepth = 自動建立子選單最大深度
+TipFavExt   = 列出你想要在選單中顯示的檔案的副檔名\n(逗號分隔)
+
+Setting         = 設定
+DriveReload     = 在顯示主選單時更新
+DriveFree       = 顯示可用空間
+TCPathExe       = TC exe 路徑
+TCPathIni       = TC ini 路徑
+TCAsMain        = 將 TC 作為主選單
+TCSubmenu       = 將 TC 項目放在子選單中
+TCDirMenu       = Total Commander 資料夾選單
+TipTCDirMenu    = 請用 Total Commander 編輯我的最愛
+TipTCSubmenu    = 選取此項會將 TC 項目放在子選單中\n不選的話 TC 項目將會直接加到 "TC 選單" 所在的那個選單
+RecentSize      = 最近的項目個數
+RecentDate      = 顯示日期
+RecentIndex     = 顯示索引
+RecentFolder    = 只保留資料夾
+RecentFull      = 顯示完整路徑
+ClearRecent     = 清除最近的項目
+
+; Application
+SupportApplications = 選擇要使用 Folder Menu 的應用程式
+Type        = 類型
+Class       = Class
+Match       = 符合
+Contain     = 包含
+Explorer    = 檔案總管
+Dialog      = 開啟/儲存對話框
+DialogO     = MS Office 對話框
+Command     = 命令提示字元
+Desktop     = 桌面
+Taskbar     = 工作列
+
+TipAppClass = 可以是逗號分隔的多個字串
+TipAppType  = 「符合」表示 Classname 要完全符合字串\n「包含」表示 Classname 中包含字串
+TipAppAdd   = 按住 Shift 以加入預設項目
+
+; Hotkey
+Action          = 動作
+ShowMenu        = 顯示選單
+OpenSelText     = 開啟選取的文字
+LButton         = 滑鼠左鍵
+RButton         = 滑鼠右鍵
+MButton         = 滑鼠中鍵
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = 點兩下
+KeepNative      = 保留原始功能
+Shift           = Shift
+Ctrl            = Ctrl
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = 選擇滑鼠按鍵
+
+; Icon
+NoIcon      = 不顯示選單圖示(&I)
+GetFavicon  = 使用 Favicon
+ShellIcon   = 使用系統圖示
+IconSize    = 圖示大小
+Extension   = 副檔名
+IconPath    = 圖示路徑
+
+Unknown     = 不明檔案類型
+Folder      = 資料夾
+FolderS     = 有子資料夾的資料夾
+Drive       = 磁碟機
+UNCPath     = UNC 路徑
+
+TipNoIcon       = 選取此項可以使載入選單更快速
+TipGetFavicon   = 網址項目使用 Favicon\n下載圖示可能會使載入選單速度變慢
+TipShellIcon    = 資料夾項目使用系統圖示\n不選此項可以使載入選單快一點
+TipIconSize     = 選擇圖示大小 (像素)
+
+; Menu
+MenuPosition        = 選單位置
+RelativeToCursor    = 相對於滑鼠
+RelativeToScreen    = 相對於螢幕
+RelativeToWindow    = 相對於視窗
+TempMenu            = 子資料夾暫時選單
+ShowFile            = 顯示檔案
+AltFolderIcon       = 以不同的圖示標明有子資料夾的資料夾
+BrowseMode          = Capslock 關閉時使用瀏覽模式(&B)
+DriveType           = 要顯示的磁碟機類型
+All                 = 全部
+Fixed               = 固定式
+CDROM               = 光碟
+Removable           = 可移除式
+Network             = 網路
+RAMDisk             = RAM Disk
+HideExt             = 隱藏副檔名(&X)
+HideLnk             = 隱藏 .lnk .url
+ItemWarn            = 項目太多時提醒我
+
+TipMenuTempIcon     = 假如資料夾項目有子資料夾\n則用不同的圖示標示出來
+TipMenuTempBrowse   = 選取此項則預設會開啟瀏覽模式\n在 Capslock 開啟時則會關閉瀏覽模式
+
+; Other
+Language        = 語言
+StartWithWin    = 隨 Window&s 啟動
+NoTray          = 不顯示系統列圖示(&T)
+AddFavAtTop     = 新增於選單最上面
+AddFavCheck     = 檢查重複的路徑(&P)
+AddFavSkipGUI   = 跳過選項視窗直接加入
+AddFavApp       = 新增應用程式到我的最愛
+AddFavAppCmd    = 使用 Command line
+AddFavLnk       = 使用捷徑指向的目標
+FileManager     = 檔案管理員路徑
+Browser         = 瀏覽器路徑
+SearchSel       = 搜尋選取的文字
+LoadingTip      = 載入項目時
+LoadingTipNo    = 不顯示提示
+LoadingTipTool  = 顯示 ToolTip
+LoadingTipTray  = 顯示 TrayTip
+MainMenu        = 主選單
+
+TipOtherAddFavPath      = 檢查要加入的路徑是否已經在我的最愛中
+TipOtherAddFavSkipGui   = 加入我的最愛時不顯示選項視窗
+TipOtherAddFavApp       = 如果現用視窗不是支援的應用程式\n則把應用程式當做我的最愛加入
+TipOtherAddFavCmd       = 加入 Command line 而不只是加入程式路徑
+TipOtherAddFavLnk       = 加入捷徑指向的目標而不是捷徑本身
+TipOtherExplorer        = 選取開啟資料夾項目的檔案管理員\n你可以使用 %s 來表示路徑
+TipOtherBrowser         = 選取開啟網址項目的瀏覽器\n你可以使用 %s 來表示網址
+TipOtherSearch          = 如果選取的文字無法開啟則搜尋
+
+; About
+Website             = 網站
+CheckVer            = 檢查更新
+CheckVerOnStart     = 啟動時檢查更新
+Translate           = 翻譯: rexx
+
+;menu item
+RunSVSAdmin = 執行 SVS Admin
+Empty   = 空

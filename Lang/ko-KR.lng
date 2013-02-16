@@ -1,0 +1,253 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = Korean
+Version      = v3.1.0-b3
+
+[Lang]
+; ToolMenu
+ToolWebsite     = 웹사이트&W)
+ToolAdd         = 즐겨찾기 추가(&A)
+ToolReload      = 재시작(&R)
+ToolOption      = 옵션설정(&O)
+ToolEdit        = 편집(&E)
+ToolExit        = 종료(&X)
+
+; MsgBox
+Error   = 오류
+Warning = 경고
+
+TooManyItems    = 아이템이 500개 이상입니다 (%ItemCount% 아이템)\n\n계속 하시겠습니까?
+
+NewVer              = 새 버전!
+CannotConnect       = 인터넷에 연결할 수 없습니다.
+NewVerAvailable     = 새 버전 v%LatestVer% 이/가 대기중입니다.\n\n웹 사이트를 방문 하시겠습니까?
+NewVerUnavailable   = 현재 최신 버전 v%CurrentVer% 을/를 사용 중입니다.
+NewVerFailed        = 다운로드 실패.
+NewVerWebsite       = 웹사이트를 방문하시겠습니까?
+NewVerUpdated       = v%CurrentVer%으/로 업데이트.
+
+AddApp          = 프로그램 추가
+AddAppEdit1     = 제목:\t[%Title%]\n클래스:\t[%Class%]\n\nEdit1 이/가 존재합니다!\n\n프로그램의 주소 표시줄입니까?
+AddAppPrompt    = 이 프로그램을 추가 하시겠습니까?
+AddAppNoEdit1   = 제목:\t[%Title%]\n클래스:\t[%Class%]\n\nEdit1 이/가 존재하지 않습니다!\n\n이 프로그램을 추가 하시겠습니까?
+
+SaveChange  = 변경된 내용을 저장 하시겠습니까?
+EditReload  = 메모장으로 Xml파일을 편집한후 효과를 적용하려면 Folder Menu를 다시 불러야합니다.
+
+PathExist   = 이 경로는 이미 존재합니다.\n[%ItemName%]\n(%ItemPath%)
+
+; ToolTip
+LoadFav     = 즐겨찾기 불러오는중...
+LoadRecent  = 최근 아이템 불러오는중...
+LoadTemp    = 아이템 불러오는중...
+LoadDrive   = 드라이브 메뉴 아이템 불러오는중...
+LoadTC      = TC 아이템 불러오는중...
+DownloadUpdate  = 업데이트 다운로드중...
+
+; TrayTip
+CannotOpenBlank = [%ItemName%]\n을/를 열 수 없습니다\n경로가 비었습니다.
+CannotOpenDown  = [%ItemName%]\n을/를 열 수 없습니다\n(%ItemPath%)\n(%ThisPathIP%)\n서버 다운
+CannotOpenClip  = %Clipboard%\n를 열 수 없습니다
+FavoriteAdded   = [%ItemName%] 추가됨\n(%ItemPath%)
+ShowHidden      = 숨김 파일 표시
+HideHidden      = 숨김 파일 숨김
+ShowFileExt     = 파일 확장 표시
+HideFileExt     = 파일 확장 숨김
+SVSDeactivate   = SVS 레이어 다시 활성...
+SVSActivate     = SVS 레이어 활성...
+ErrSpecial      = "%ItemPath%" 이/가 지정한 아이템의 경로가 아닙니다
+ErrHotkey       = 단축키[%HotkeyName%] (%HotkeyKey%) 오류
+Search          = 검색
+
+; OptionsGUI
+BtnEdit     = 편집(&E)
+TipEdit     = Config.xml 편집
+BtnOK       = 확인
+BtnCancel   = 취소
+BtnApply    = 적용(&A)
+
+Fav     = 즐겨찾기
+App     = 프로그램
+Hotkey  = 단축키
+Icon    = 아이콘
+Menu    = 메뉴옵션
+Other   = 기타옵션
+About   = 제품정보
+
+; Favorite
+Name    = 이름
+Path    = 경로
+Size    = 크기
+Depth   = 깊이
+Submenu = 하위메뉴
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = 새 아이템
+NewMenu = 새 메뉴
+SelectFile      = 파일 선택
+SelectFolder    = 폴더 선택
+BrowseFolder    = 폴더 탐색(&B)
+BrowseFile      = 파일 탐색(&R)
+SpecialItems    = 특수 아이템(&S)
+Separator       = 분리선
+ColSeparator    = 컬럼 분리자
+Computer        = 컴퓨터
+AddFavorite     = 즐겨찾기 추가
+AddHere         = 여기에 즐겨찾기 추가
+Reload          = 다시 부르기
+Options         = 옵션설정
+EditConfig      = Config 파일 편집
+Exit            = 종료
+ToggleHidden    = 히든 파일 토글
+ToggleFileExt   = 파일 확장자 숨김 토글
+SystemRecent    = 시스템 최근 메뉴
+RecentMenu      = 최근 메뉴
+ExplorerMenu    = 탐색기 메뉴
+DriveMenu       = 드라이브 메뉴
+ToolMenu        = 도구
+SVSMenu         = SVS 메뉴
+TCMenu          = TC 메뉴
+
+TipFavTree  = 즐겨찾기에 추가하려면 여기에 파일을 드랍하세요\n\n단축키:\n  Ins              아이템 삽입\n  Del             아이템 삭제\n  Shift+Ins   메뉴 삽입\n  Shift+Del  메뉴 삭제\n  Shift+Up   위로 이동\n  Shift+Down 아래로 이동
+TipFavPath  = 파일이나 폴더 탐색
+TipFavIcon  = 아이콘 고르기
+TipFavMenu  = 폴더 아이템의 하위 메뉴를 자동 생성하려면 여기를 체크하세요
+TipFavSort  = 선택된 메뉴 정렬\n반복적으로 정렬하려면 Sift키를 누른 상태로
+TipFavAdd   = 새 아이템 삽입\n하위 메뉴를 삽입하려면 Sift키를 누른 상태로
+TipFavDel   = 선택된 아이템 삭제\n하위 메뉴를 삭제하려면 Sift키를 누른 상태로
+TipFavDepth = 자동 생성된 하위 메뉴 최대 깊이
+TipFavExt   = 메뉴에 표시될 파일 확장자 목록\n(콤마로 분리)
+
+Setting         = 설정
+DriveReload     = 메인 메뉴가 나타났을때 업데이트
+DriveFree       = 여유공간 표시
+TCPathExe       = TC exe 경로
+TCPathIni       = TC ini 경로
+TCAsMain        = TC 를 메인메뉴로 사용
+TCSubmenu       = 하위 메뉴에 TC항목 넣기
+TCDirMenu       = Total Commander 디렉터리 메뉴
+TipTCDirMenu    = 즐겨찾기 폴더 편집에 Total Commander 사용
+TipTCSubmenu    = 하위 메뉴에 이 TC항목이 있나 점검하거나\n그렇지 않으면 "TC 메뉴"항목을 추가할 자리에 TC 항목이 추가됩니다
+RecentSize      = 최근 크기
+RecentDate      = 날짜 표시
+RecentIndex     = 인덱스 표시
+RecentFolder    = 폴더만 유지
+RecentFull      = 전체경로 표시
+ClearRecent     = 최근문서 정리
+
+; Application
+SupportApplications = Folder Menu에서 사용을 원하는 프로그램을 선택하세요
+Type        = 형식
+Class       = 부류
+Match       = 일치
+Contain     = 포함
+Explorer    = 탐색기
+Dialog      = 열기/저장 대화상자
+DialogO     = Office 대화상자
+Command     = 명령
+Desktop     = 바탕화면
+Taskbar     = 작업표시줄
+
+TipAppClass = 콤마가 값을 분리합니다
+TipAppType  = "일치" 는 문자열과 클래스이름이 완전히 일치함을 의미합니다.\n"포함" 은 클래스이름 문자열이 어디있건 상관없음을 의미합니다
+TipAppDef   = 기본 아이템 삽입
+
+; Hotkey
+Action          = 동작
+ShowMenu        = 메뉴 표시
+OpenSelText     = 선택된 텍스트 열기
+LButton         = 왼쪽 버튼
+RButton         = 오른쪽 버튼
+MButton         = 가운데 버튼
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = 더블 클릭
+KeepNative      = 원래 기능 유지
+Shift           = Shift
+Ctrl            = Ctrl
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = 마우스 버튼 선택
+
+; Icon
+NoIcon      = 메뉴 아이콘 사용안함(&I)
+GetFavicon  = 파비콘 사용
+ShellIcon   = 셸 아이콘 사용
+IconSize    = 아이콘 크기
+Extension   = 확장자
+IconPath    = 아이콘 위치
+
+TipNoIcon       = 메뉴를 더 빠르게 부르려면 체크
+TipGetFavicon   = URL 아이템으로 파비콘 받기\n아이콘을 다운받는중 메뉴 부르기가 느려질 수 있습니다
+TipShellIcon    = 폴더 아이콘을 셸 아이콘으로 대체\n이 기능을 해제하면 메뉴 부르기가 조금 빨라 집니다
+TipIconExt      = 확장자는 다음의 특수 아이템이 될 수 있습니다:\n알수없음   \t알수없는 파일 형식\n컴퓨터  \t컴퓨터 아이템\n드라이브        \tHDD 아이템\n공유      \tUNC 경로 아이템\n폴더      \t폴더 아이템\n폴더들      \t하위폴더를 포함한 폴더\n메뉴       \t하위메뉴 아이템\n최근      \t시스템 최근 아이템\n탐색기      \t탐색기 목록 아이템
+TipIconSize     = 최대 사용 가능한 크기로 지정하려면 크기를 0으로
+
+; Menu
+MenuPosition        = 메뉴 위치
+RelativeToCursor    = 커서와 연관
+RelativeToScreen    = 화면과 연관
+RelativeToWindow    = 창과 연관
+TempMenu            = 하위폴더 임시 메뉴
+ShowFile            = 파일 표시
+AltFolderIcon       = 하위 폴더가 있는 폴더는 다른 이이콘으로 표시
+BrowseMode          = CapsLock이 꺼졌을때 탐색방식 사용(&B)
+DriveType           = 표시할 드라이브 입력
+All                 = 모두
+Fixed               = 고정됨
+CDROM               = CD-ROM
+Removable           = 분리형
+Network             = 네트웍
+RAMDisk             = RAM 디스크
+HideExt             = 확장자 숨김
+HideLnk             = .lnk .url 숨김
+
+TipMenuTempIcon     = 폴더 항목에 하위 폴더가 있으면\n다른 아이콘으로 표시해줌
+TipMenuTempBrowse   =기본 값으로 탐색기 방식이 켜져있나 점검\n하고 Capslock이 켜지면 탐색기 방식 끄기
+
+; Other
+Language        = 언어선택
+StartWithWin    = Windows 시작시 실행(&S).
+NoTray          = 트레이 아이콘 사용안함(&T)
+AddFavAtTop     = 새 항목 상단에 추가
+AddFavCheck     = 존재하는 항목 경로 점검
+AddFavSkipGUI   = 옵션창 무시
+AddFavApp       = 즐겨찾기에 프로그램 추가
+AddFavAppCmd    = 명령줄 구하기
+AddFavLnk       = 링크파일의 타겟 사용
+FileManager     = 파일 관리자 경로
+Browser         = 탐색기 경로
+SearchSel       = 선택된 내용 검색
+LoadingTip      = 항목 불러올때
+LoadingTipNo    = 아무것도 표시안함
+LoadingTipTool  = 툴팁 표시
+LoadingTipTray  = 트레이팁 표시
+MainMenu        = 메인메뉴
+
+TipOtherAddFavPath      = 경로가 이미 즐겨찾기에 존재하는지 점검
+TipOtherAddFavSkipGui   = 즐겨찾기를 추가할때 옵션창 열지 않음
+TipOtherAddFavApp       = 활성창이 프로그램을 지원하지 않으면\n프로그램을 즐겨찾기로 추가
+TipOtherAddFavCmd       = 프로그램 경로만 명령줄에 추가
+TipOtherAddFavLnk       = 파일 자체의 바로가기 대신에 파일의 바로가기 타겟 추가
+TipOtherExplorer        = 폴더 아이템을 열기위해 파일 관리자 선택
+TipOtherBrowser         = URL아이템을 열기위한 탐색기 선택
+TipOtherSearch          = 텍스트를 열 수 없으면 선택된 텍스트 검색
+
+; About
+Website             = 홈페이지(&W)
+CheckVer            = 업데이트(&U)
+CheckVerOnStart     = 프로그램 시작시 점검
+Translate           = 한글번역 : 강민철
+
+;hotkey to set focus on addressbar in windows explorer, !d by default (Alt+D)
+AddrHotkey  = !d
+
+;menu item
+RunSVSAdmin = SVS 관리자 실행
+Empty   = 비었음

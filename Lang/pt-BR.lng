@@ -1,0 +1,262 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = Brazilian Portuguese
+Version      = v3.1.2.2
+
+[Lang]
+; Menu Ferramentas
+ToolWebsite     = &Site da Internet
+ToolAdd         = &Adicionar Favorito
+ToolReload      = &Reiniciar
+ToolOption      = &Opções
+ToolEdit        = &Editar
+ToolExit        = Sai&r
+
+; MsgBox
+Error   = Erro
+Warning = Aviso
+
+TooManyItems    = Existem mais de 500 itens (%ItemCount% items)\n\nVocê deseja continuar?
+
+NewVer              = Nova Versão!
+CannotConnect       = Não foi possível conectar à Internet!
+NewVerAvailable     = Há uma nova versão v%LatestVer% disponível.\n\nBaixar agora?
+NewVerUnavailable   = Você está usando a última versão v%CurrentVer%.
+NewVerFailed        = Falha no download.
+NewVerWebsite       = Ir para o website?
+NewVerUpdated       = Atualizado para v%CurrentVer%.
+UpdateFolderMenu    = Atualizar Folder Menu 3
+UpdateExit          = Feche o Folder Menu 3 antes de continuar
+UpdateDone          = Feito
+
+AddApp          = Adicionar Aplicativo
+AddAppTitle     = Título:\t[%Title%]\nClass:\t[%Class%]\n\n
+AddAppAddr      = A região em vermelho é a barra de endereço deste aplicativo?
+AddAppNoAddr    = Barra de endereço não encontrada.
+AddAppFocus     = Clique na barra de endereço e pressione OK.
+AddAppPrompt    = Você deseja adicionar esse aplicativo?
+
+SaveChange  = Você gostaria de salvar as alterações?
+EditReload  = Você tem que reiniciar o Folder Menu para que as alterações no arquivo XML tenham efeito.
+
+PathExist   = Este caminho já existe.\n[%ItemName%]\n(%ItemPath%)\nAdicioná-lo novamente?
+
+; ToolTip
+LoadFav     = Carregando Favoritos...
+LoadRecent  = Carregando Itens Recentes...
+LoadTemp    = Carregando Itens nas subpastas...
+LoadDrive   = Carregando Itens do Menu de Discos...
+LoadTC      = Carregando TC Itens...
+DownloadUpdate  = Baixando Atualização...
+
+; TrayTip
+CannotOpenBlank = Não foi possível abrir\n[%ItemName%]\nCaminho em branco
+CannotOpenDown  = Não foi possível abrir\n%ThisPathIP%\nServidor não responde
+CannotOpenClip  = Não foi possível abrir\n%Clipboard%
+FavoriteAdded   = [%ItemName%] adicionado\n(%ItemPath%)
+ShowHidden      = Mostrar arquivos ocultos
+HideHidden      = Esconder arquivos ocultos
+ShowFileExt     = Mostrar extensões de arquivos
+HideFileExt     = Esconder extensões de arquivos
+SVSDeactivate   = Desativando Camada SVS...
+SVSActivate     = Ativando Camada SVS...
+ErrSpecial      = "%ItemPath%" não é um item especial válido
+ErrHotkey       = Erro [%HotkeyName%] (%HotkeyKey%) atalho(HotKey)
+Search          = Busca
+
+; OptionsGUI
+BtnEdit     = &Editar
+TipEdit     = Editar Config.xml
+BtnOK       = OK
+BtnCancel   = Cancelar
+BtnApply    = &Aplicar
+
+Fav     = Favoritos
+App     = Aplicativos
+Hotkey  = Hotkey
+Icon    = Ícone
+Menu    = Menu
+Other   = Outros
+About   = Sobre
+
+; Favorite
+Name    = Nome
+Path    = Caminho
+Size    = Tamanho
+Depth   = Profundidade
+Submenu = Submenu
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = Novo Item
+NewMenu = Novo Menu
+SelectFile      = Selecionar Arquivo
+SelectFolder    = Selecionar Pasta
+BrowseFolder    = Explorar &Pasta
+BrowseFile      = Explorar &Arquivo
+SpecialItems    = &Itens Especiais
+Separator       = Separador
+ColSeparator    = Separador de Coluna
+Computer        = Computador
+AddFavorite     = Adicionar Favorito
+AddHere         = Adicionar Favorito Aqui
+Reload          = Reiniciar
+Options         = Opções
+EditConfig      = Editar Arquivo de Configurações
+Exit            = Sair
+ToggleHidden    = Mostrar/ocultar Arquivos Ocultos
+ToggleFileExt   = Mostrar/ocultar Extensões de arquivos
+SystemRecent    = Menu Recente do Sistema
+RecentMenu      = Menu Recente
+ExplorerMenu    = Menu Explorer
+DriveMenu       = Menu Discos
+ToolMenu        = Menu Ferramentas
+SVSMenu         = Menu SVS
+TCMenu          = Menu TC
+
+TipFavTree  = Arraste e Solte arquivos aqui para adicioná-los aos favoritos\n\nHotkeys:\n  Ins             Insert item\n  Del              Delete item\n  Shift+Ins    Insert menu\n  Shift+Del    Delete menu\n  Shift+Up     Move up\n  Shift+Down   Move down
+TipFavPath  = Explorar arquivo/pasta/item especial
+TipFavIcon  = Selecionar ícone
+TipFavMenu  = Marque aqui para criar automaticamente submenus para um item de pasta
+TipFavRel   = Alternar entre caminho absoluto/relativo\nSegure Shift para usar variáveis de ambiente
+TipFavSort  = Ordena menu selecionado\nSegure Shift para ordenar recursivamente
+TipFavAdd   = Insere um novo item\nSegure Shift para inserir um submenu
+TipFavDel   = Exclui item selecionado\nSegure Shift para excluir um submenu
+TipFavDepth = Profundidade máxima do submenu criado automaticamente
+TipFavExt   = Lista as extensões que você deseja mostrar no submenu\n(Separados por vírgula)
+
+Setting         = Configuração
+DriveReload     = Atualizar quando o menu principal for mostrado
+DriveFree       = Mostrar espaço livre
+TCPathExe       = Caminho do exe para TC
+TCPathIni       = Caminho do ini para TC
+TCAsMain        = Usar TC como menu principal
+TCSubmenu       = Colocar items do TC em um submenu
+TCDirMenu       = Menu Diretório do Total Commander
+TipTCDirMenu    = Usar Total Commander para editar pastas favoritas
+TipTCSubmenu    = Marque aqui para colocar items do TC em um submenu\nCaso contrário, os items do TC serão adicionados no menu onde você colocou o item "Menu TC"
+RecentSize      = Tamanho recente
+RecentDate      = Mostrar Data
+RecentIndex     = Mostrar Índice
+RecentFolder    = Mantém somente pastas
+RecentFull      = Mostrar caminho completo
+ClearRecent     = Limpar recentes
+
+; Application
+SupportApplications = Selecione os aplicativos que você deseja usar no Folder Menu
+Type        = Tipo
+Class       = Classe
+Match       = Combinar
+Contain     = Contém
+Explorer    = Explorer
+Dialog      = Janela Abrir/Salvar
+DialogO     = Janela MS Office
+Command     = Comando
+Desktop     = Desktop
+Taskbar     = Barra de Tarefas
+
+TipAppClass = Porde ser valor separado por vírugla
+TipAppType  = "Combinar" significa que o nome da classe deve combinar exatamente com o texto.\n"Contém" significa que o nome da classe pode conter o texto em qualquer lugar
+TipAppAdd   = Segure Shift para inserir itens padrão
+
+; Hotkey
+Action          = Ação
+ShowMenu        = Mostrar Menu
+OpenSelText     = Abrir Texto Selecionado
+LButton         = BotãoEsq
+RButton         = BotãoDir
+MButton         = BotãoMei
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = Clique Duplo
+KeepNative      = Manter função nativa
+Shift           = Shift
+Ctrl            = Ctrl
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = Selecione um botão do mouse
+
+; Icon
+NoIcon      = Não usar &icone no menu
+GetFavicon  = Pegar favicon
+ShellIcon   = Pegar ícone do shell
+IconSize    = Tamanho do ícone
+Extension   = Extensão
+IconPath    = Caminho do Ícone
+
+Unknown     = Tipo de arquivo desconhecido
+Folder      = Pasta
+FolderS     = Pasta e subpastas
+Drive       = Disco
+UNCPath     = Caminho UNC
+
+TipNoIcon       = Marque aqui para carregar o menu mais rápido
+TipGetFavicon   = Pegar favicon para items de url\nBaixar ícones pode fazer o carregamento de menus lento
+TipShellIcon    = Pegar ícone de shell para itens de pasta\nDesmarque aqui para carregar menus um pouco mais rápido
+TipIconSize     = Selecione tamanho do ícone(em pixels)
+
+; Menu
+MenuPosition        = Posição do Menu
+RelativeToCursor    = Relativo ao cursor
+RelativeToScreen    = Relativo à tela
+RelativeToWindow    = Relative à janela
+TempMenu            = Menu Subpasta Temporário
+ShowFile            = Mostrar aquivos
+AltFolderIcon       = Mostrar ícones diferentes para pastas que possuem subpastas
+BrowseMode          = Usar modo e&xplorador quando capslock (maiúscula) está desligada
+DriveType           = Tipo de Disco que você deseja mostrar
+All                 = Todos
+Fixed               = Fixos
+CDROM               = CD-ROM
+Removable           = Removível
+Network             = Rede
+RAMDisk             = Disco RAM
+HideExt             = Esconder e&xtensão
+HideLnk             = Esconder .lnk .url
+ItemWarn            = Avisar se existem muitos itens
+
+TipMenuTempIcon     = Se um item de pasta possui subpastas\nmostrar um ícone diferente que indique isso
+TipMenuTempBrowse   = Marque aqui para ligar o modo explorador por padrão\ne desligar modo explorador quando capslock estiver ativada
+
+; Other
+Language        = Idioma
+StartWithWin    = &Iniciar com o windows
+NoTray          = S&em ícone na bandeja
+AddFavAtTop     = Adicionar novo item no topo
+AddFavCheck     = Checar caminho do item existente
+AddFavSkipGUI   = Pular janela de opções
+AddFavApp       = Adcionar aplicativo aos favoritos
+AddFavAppCmd    = Pegar linha de comando
+AddFavLnk       = Usar destino do atalho
+FileManager     = Caminho do gerenciador de arquivo
+Browser         = Caminho do explorador
+SearchSel       = Buscar texto selecionado
+LoadingTip      = Quando carregando itens
+LoadingTipNo    = Não mostrar nada
+LoadingTipTool  = Mostrar Dicas
+LoadingTipTray  = Mostrar dicas na bandeja
+MainMenu        = Menu Principal
+
+TipOtherAddFavPath      = Verifica se o caminho já foi adicionado nos favoritos
+TipOtherAddFavSkipGui   = Não mostrar janela de opções ao adicionar favoritos
+TipOtherAddFavApp       = Se a janela ativa não é um aplicativo compatível\nadicioná-lo como um favorito
+TipOtherAddFavCmd       = Adicionar linha de comando ao invés de apenas o caminho do aplicativo
+TipOtherAddFavLnk       = Adicionar caminho do destino do atalho ao invés do caminho do atalho
+TipOtherExplorer        = Escolha o gerenciador de arquivos para abrir item de pasta\nVocê pode usar %s como o caminho
+TipOtherBrowser         = Escolha explorar para abrir o item de url\nVocê pode usar %s como a url
+TipOtherSearch          = Buscar pelo texto selecionado se ele não puder ser aberto
+
+; About
+Website             = Website
+CheckVer            = Verificar atualizações
+CheckVerOnStart     = Verificar atualizações ao iniciar
+Translate           = Traduzido por rickybr
+
+;menu item
+RunSVSAdmin = Executar SVS Admin
+Empty   = Vazio

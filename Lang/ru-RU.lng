@@ -1,0 +1,254 @@
+; Folder Menu Language File
+;
+; \n = New Line
+; \t = Tab
+; line comments start with ;
+
+[Info]
+LanguageName = Русский
+Version      = v3.1.0-b1
+
+[Lang]
+; ToolMenu
+ToolWebsite     = &Web-сайт
+ToolAdd         = &Добавить в Избранное
+ToolReload      = &Перезагрузка
+ToolOption      = &Настройки
+ToolEdit        = П&равка
+ToolExit        = &Закрыть
+
+; MsgBox
+Error   = Сбой!!
+Warning = Внимание!
+
+TooManyItems    = Имеется более 500 пунктов (%ItemCount% items)\n\nХотите продолжить?
+
+NewVer              = Новая версия!
+CannotConnect       = Доступ в Интернет невозможен.
+NewVerAvailable     = Новая версия v%LatestVer% доступна \n\n Перейти на веб-сайт?
+NewVerUnavailable   = Вы используете устаревшую версию v%CurrentVer%.
+NewVerDone          = Загрузка завершена. \n\n Извлечь %FileName% и заменить FolderMenu.exe
+NewVerFailed        = Загрузка перервана. \n\n Перейти на web-сайт?
+
+AddApp          = Добавить приложение
+AddAppEdit1     = Title:\t[%Title%]\nClass:\t[%Class%]\n\nEdit1 существует!\n\n Это точно ссылка на программу?
+AddAppPrompt    = Вы точно хотите добавить это приложение?
+AddAppNoEdit1   = Title:\t[%Title%]\nClass:\t[%Class%]\n\nEdit1 не существует! \n\n Вы точно хотите добавить это приложение?
+
+SaveChange  = Вы точно хотите сохранить изменения?
+EditReload  = Вам необходимо перезагрузить Folder Menu, чтобы отредактированный xml-файл вступил в действие.
+
+PathExist   = Этот путь уже указан. \n[%ItemName%]\n(%ItemPath%)\n Попробовать снова?
+
+; ToolTip
+LoadFav     = Загрузка Избранного...
+LoadRecent  = Загрузка Последних ссылок...
+LoadTemp    = Загрузка Подразделов...
+LoadDrive   = Загрузка Меню диска...
+LoadTC      = Загрузка TC...
+DownloadUpdate  = Загрузка обновления...
+
+; TrayTip
+CannotOpenBlank = Невозможно открыть\n[%ItemName%]\nЭта ссылка пустая!
+CannotOpenDown  = Невозможно открыть \n[%ItemName%]\n(%ItemPath%)\n(%ThisPathIP%\nСервер упал =)
+CannotOpenClip  = Невозможно открыть\n%Clipboard%
+FavoriteAdded   = [%ItemName%] добавить\n(%ItemPath%)
+ShowHidden      = Показать"скрытые" файлы
+HideHidden      = Скрыть "скрытые" файлы
+ShowFileExt     = Показать расширение файла
+HideFileExt     = Скрыть расширение файла
+SVSDeactivate   = Деактивация SVS уровня...
+SVSActivate     = Активация SVS уровня...
+ErrSpecial      = "%ItemPath%" Это некорректное меню
+ErrHotkey       = Ошибка [%HotkeyName%] (%HotkeyKey%) горячей клавиши
+Search          = Поиск
+
+; OptionsGUI
+OptionsTitle    = Настройки
+
+BtnEdit     = &Правка
+TipEdit     = Править Config.xml
+BtnOK       = ДА
+BtnCancel   = Закрыть
+BtnApply    = &Применить
+
+Fav     = Избранное
+App     = Приложения
+Hotkey  = Hot-key (горячие клавиши)
+Icon    = Иконки
+Menu    = Меню
+Other   = Прочее
+About   = О Программе
+
+; Favorite
+Name    = Имя
+Path    = Путь
+Size    = Размер
+Depth   = Depth
+Submenu = Подменю
+Sort    = ^
+Add     = +
+Del     = -
+NewItem = Новый элемент
+NewMenu = Новое меню
+SelectFile      = Выбрать файл
+SelectFolder    = Выбрать папку
+BrowseFolder    = & Показать папку
+BrowseFile      = П&оказать файл
+SpecialItems    = &Специальные элементы
+Separator       = Разделитель
+ColSeparator    = Разделитель столбцов
+Computer        = Компьютер
+AddFavorite     = Добавить Favorite
+AddHere         = Добавить Favorite сюда
+Reload          = Перезагрузка
+Options         = Настройки
+EditConfig      = Правка конфигурационного файла
+Exit            = Выход
+ToggleHidden    = Переключить Hidden Files
+ToggleFileExt   = Переключить Hide File Extension
+SystemRecent    = System Recent меню
+RecentMenu      = Recent меню
+ExplorerMenu    = Explorer меню
+DriveMenu       = Drive меню
+ToolMenu        = Tool меню
+SVSMenu         = SVS меню
+TCMenu          = TC меню
+
+TipFavTree  = Drop files here to add into favorite\n\nHotkeys:\n  Ins           Insert item\n  Del              Delete item\n  Shift+Ins    Insert menu\n  Shift+Del    Delete menu\n  Shift+Up     Move up\n  Shift+Down   Move down
+TipFavPath  = Browse file or folder
+TipFavIcon  = Pick icon
+TipFavMenu  = Check this to auto create submenu for a folder item
+TipFavSort  = Sort selected menu\nHolding Shift to sort recursively
+TipFavAdd   = Insert a new item\nHolding Shift to insert a submenu
+TipFavDel   = Delete selected item\nHolding Shift to delete a submenu
+TipFavDepth = Max depth of auto created submenu
+TipFavExt   = List the file extensions you want to show in the menu\n(Comma separated)
+
+Setting         = Настройки
+DriveReload     = Update when showing main menu
+DriveFree       = Показать свободное место
+TCPathExe       = TC exe path
+TCPathIni       = TC ini path
+TCAsMain        = Использовать TC-меню в качестве базовых
+TCSubmenu       = Put TC items in a submenu
+TCDirMenu       = Меню директории Total Commander
+TipTCDirMenu    = Использовать Total Commander для правки избранных папок
+TipTCSubmenu    = Check this to put TC items in a submenu\nOtherwise TC items will be added in the menu where you add the "TC Menu" item
+RecentSize      = Recent size
+RecentDate      = Показать дату
+RecentIndex     = Показать индекс
+RecentFolder    = Сохранять только папки
+RecentFull      = Show full path
+ClearRecent     = Clear recent
+
+; Application
+SupportApplications = Select applications that you want to use Folder Menu
+Type        = Тип
+Class       = Класс
+Match       = Match
+Contain     = Contain
+Explorer    = Обозреватель
+Dialog      = Жиалог Открыть/Закрыть
+DialogO     = Office Dialog
+Command     = Command
+Desktop     = Десктоп
+Taskbar     = Таскбар
+
+TipAppClass = Can be comma separated value
+TipAppType  = "Match" means the classname must exactly match the string.\n"Contain" means the classname can contain the string anywhere
+TipAppDef   = Insert default items
+
+; Hotkey
+Action          = Действие
+ShowMenu        = Показать меню
+OpenSelText     = Открыть выбранный текст
+LButton         = LButton
+RButton         = RButton
+MButton         = MButton
+XButton1        = XButton1
+XButton2        = XButton2
+DoubleClick     = Double click
+KeepNative      = Keep native function
+Shift           = Shift
+Ctrl            = Ctrl
+Alt             = Alt
+Win             = Win
+TipHotkeyMouse  = Select a mouse button
+
+; Icon
+NoIcon      = Don't use menu &icon
+GetFavicon  = Get favicon
+ShellIcon   = Get shell icon
+IconSize    = Icon size
+Extension   = Расширения
+IconPath    = Icon Path
+
+TipNoIcon       = Check this to load menu faster
+TipGetFavicon   = Get favicon for url items\nDownloadingnDownЗагрузка icon may slow down loadingЗагрузка menu
+TipShellIcon    = Get shell icon for folder items\nUncheck this to load menu a little faster
+TipIconExt      = Extension can be the following special items:\nUnknown   \tUnknown file type\nMenu       \tSubmenu items\nFolder      \tFolder items\nFolderS      \tFolder items which has subfolder\nDrive        \tHDD items\nComputer  \tComputer item\nShare      \tUNC path item\n_????       \tSpecial item\n:????       \tSpecial menu item
+TipIconSize     = Select icon size (in pixel)
+
+; Menu
+MenuPosition        = Меню позиции
+RelativeToCursor    = По отношению к курсору
+RelativeToScreen    = По отношению к экрану
+RelativeToWindow    = По отношению к окну
+TempMenu            = Subfolder Temp Menu
+ShowFile            = Показать файлы
+AltFolderIcon       = Show different icon for folders which has subfolder
+BrowseMode          = Use &browse mode when capslock is off
+DriveType           = Drive type you want to show
+All                 = ВСЕ
+Fixed               = Фиксированный
+CDROM               = DVD/CD
+Removable           = Съёмный
+Network             = Сеть
+RAMDisk             = RAM-диск
+HideExt             = Скрыть р&асширения
+HideLnk             = Скрыть ссылки
+
+TipMenuTempIcon     = If a folder item has subfolder\nshow a different icon to indicate that
+TipMenuTempBrowse   = Check this to turn on browse mode by default\nand turn off browse mode when capslock is on
+
+; Other
+Language        = Язык
+StartWithWin    = &Стартовать с Windows
+NoTray          = Без иконки в трее
+AddFavAtTop     = Добавить новый пункт (сверху)
+AddFavCheck     = Проверка адреса
+AddFavSkipGUI   = Пропустить опции экрана
+AddFavApp       = Добавить в Избранное
+AddFavAppCmd    = Вызвать командную строку
+AddFavLnk       = Использовать ссылку на файл
+FileManager     = Диспетчер файлов
+Browser         = Браузер
+SearchSel       = Поиск выделенного
+LoadingTip      = Загружаемые элементы
+LoadingTipNo    = Показывать БЕЗ подсказок
+LoadingTipTool  = Показывать подсказки
+LoadingTipTray  = Показывать ознакомительный тур
+MainMenu        = Основное меню
+
+TipOtherAddFavPath      = Проверять, если путь уже добавили в Favorite
+TipOtherAddFavSkipGui   = Не показывать окно настроек при добавлении Favorite
+TipOtherAddFavApp       = If the active window is not a supported application\nadd the application as a favorite
+TipOtherAddFavCmd       = Add command line instead of only the application path
+TipOtherAddFavLnk       = Add target of shortcut file instead of the shortcut file itself
+TipOtherExplorer        = Выберите файловый менеджер для открытия папки
+TipOtherBrowser         = Выберите для открытия ссылки
+TipOtherSearch          = Поиск выделенного текста, если он не может быть открыт
+
+; About
+Website             = Web-сайт
+CheckVer            = Проверить обновления
+CheckVerOnStart     = Проверить обновления при старте
+Translate           = Переведено by Echinosor
+
+;hotkey to set focus on addressbar in windows explorer, !d by default (Alt+D)
+AddrHotkey  = !d
+
+;menu item
+RunSVSAdmin = Запуск SVS Admin
+Empty   = Пустой
