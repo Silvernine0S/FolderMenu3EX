@@ -63,12 +63,15 @@ NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
 	  the Language Option Menu even though the language files does not belong
 	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
 	---- New Build #3 - February 16, 2013
+	* Updated "Check Update". Program now check for updates from GitHub.
+	! When introducing thew new ability for FolderMenu to launch elevated programs
+	  without the need for FolderMenu to be elevated itself, "Command Prompt" and
+	  "Command Prompt Here" broke. Fixed.
 	> Forgot to mention that the original Folder Menu 3 named its configuration
 	  file as Config.xml which can get confusing since some programs also used
 	  the same file name and extension for its configuration file. To prevent
 	  that from happening, the configuration file will now be named as
 	  FolderMenu.xml. For previous users, please rename Config.xml to FolderMenu.xml.
-	* Updated "Check Update". Program now check for updates from GitHub.
-	! When introducing thew new ability for FolderMenu to launch elevated programs
-	  without the need for FolderMenu to be elevated itself, "Command Prompt" and
-	  "Command Prompt Here" broke. Fixed.
+	---- New Build #4 - February 16, 2013
+	! Check for Update did not work as expected. Fixed.
+	> Executables are now zipped before uploading.

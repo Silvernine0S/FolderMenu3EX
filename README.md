@@ -58,6 +58,9 @@ can do and share it with everyone. Enjoy!
 	! When introducing thew new ability for FolderMenu to launch elevated programs
 	  without the need for FolderMenu to be elevated itself, "Command Prompt" and
 	  "Command Prompt Here" broke. Fixed.
+	---- New Build #4 - February 16, 2013
+	! Check for Update did not work as expected. Fixed.
+	> Executables are now zipped before uploading.
 
 ####To Do
 ---------

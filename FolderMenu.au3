@@ -2137,10 +2137,10 @@ EndFunc
 Func DownloadUpdate($iVer)
 	If @AutoItX64 Then
 		;Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
-		Local $sFileName = "FolderMenu_x64" & ".exe"
+		Local $sFileName = "FolderMenu_x64" & ".zip"
 	Else
 		;Local $sFileName = "FolderMenu_" & $iVer & ".zip"
-		Local $sFileName = "FolderMenu" & ".exe"
+		Local $sFileName = "FolderMenu" & ".zip"
 	EndIf
 	Local $sFilePath = @TempDir & "\" & $sFileName
 	;Local $iFileSize = InetGetSize("http://downloads.sourceforge.net/foldermenu/" & $sFileName)
