@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=FolderMenu3 EX
-#AutoIt3Wrapper_Res_Fileversion=3.1.2.2 EX 1.0.0
+#AutoIt3Wrapper_Res_Fileversion=1.0.0
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_requestedExecutionLevel=asInvoker
 #AutoIt3Wrapper_Res_Icon_Add=Res\201.ico
@@ -23,8 +23,9 @@
 #AutoIt3Wrapper_Run_AU3Check=n
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 
-; FolderMenu3 EX by rexx
-Global Const $iCurrentVer = "3.1.2.2 EX 1.0.0"
+; Oringally Folder Menu3 EX by rexx
+; FolderMenu3EX is Forked from v3.1.2.2
+Global Const $iCurrentVer = "1.0.0"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -2116,7 +2117,7 @@ Func _CheckUpdate()
 	CheckVersion()
 EndFunc
 Func CheckVersion($fQuiet = 0)
-	Local $iLatestVer = BinaryToString(InetRead("http://foldermenu.sourceforge.net/ver3.txt"))
+	Local $iLatestVer = BinaryToString(InetRead("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/Version.txt?raw=true"))
 	If $iLatestVer <> "" Then
 		If $iCurrentVer < $iLatestVer Then
 			Local $sLang_NewVerAvailable_ = StringReplace($sLang_NewVerAvailable, "%LatestVer%", $iLatestVer)
@@ -2135,16 +2136,20 @@ Func CheckVersion($fQuiet = 0)
 EndFunc
 Func DownloadUpdate($iVer)
 	If @AutoItX64 Then
-		Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
+		;Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
+		Local $sFileName = "FolderMenu_x64" & ".exe"
 	Else
-		Local $sFileName = "FolderMenu_" & $iVer & ".zip"
+		;Local $sFileName = "FolderMenu_" & $iVer & ".zip"
+		Local $sFileName = "FolderMenu" & ".exe"
 	EndIf
 	Local $sFilePath = @TempDir & "\" & $sFileName
-	Local $iFileSize = InetGetSize("http://downloads.sourceforge.net/foldermenu/" & $sFileName)
+	;Local $iFileSize = InetGetSize("http://downloads.sourceforge.net/foldermenu/" & $sFileName)
+	Local $iFileSize = InetGetSize("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true")
 	If $iFileSize = 0 Then
 		If MsgBox($MB_ICONEXCLAMATION + $MB_YESNO, $sLang_CheckVer & " - FolderMenu3 EX", $sLang_NewVerFailed & @LF & @LF & $sLang_NewVerWebsite) = $IDYES Then _GoWebsite()
 	Else
-		Local $hDownload = InetGet("http://downloads.sourceforge.net/foldermenu/" & $sFileName, $sFilePath, 0, 1)
+		;Local $hDownload = InetGet("http://downloads.sourceforge.net/foldermenu/" & $sFileName, $sFilePath, 0, 1)
+		Local $hDownload = InetGet("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true", $sFilePath, 0, 1)
 		Local $sLang_DownloadUpdate_ = $sLang_DownloadUpdate
 		ToolTip2($sLang_DownloadUpdate_, "FolderMenu3 EX", 1)
 		Do
@@ -2157,7 +2162,7 @@ Func DownloadUpdate($iVer)
 		InetClose($hDownload)
 		If $aData[3] Then
 			FileDelete(@TempDir & "\FolderMenu.exe")
-			_Zip_Unzip($sFilePath, "FolderMenu.exe", @TempDir)
+			;_Zip_Unzip($sFilePath, "FolderMenu.exe", @TempDir)
 			FileDelete($sFilePath)
 			FileDelete(@TempDir & "\FM_update.bat")
 			FileWrite(@TempDir & "\FM_update.bat", _
@@ -2184,7 +2189,7 @@ Func DownloadUpdate($iVer)
 EndFunc
 
 Func _GoWebsite()
-	OpenUrl("http://foldermenu.sourceforge.net")
+	OpenUrl("https://github.com/Silvernine0S/FolderMenu3EX/")
 EndFunc
 #endregion Special Function
 
@@ -2545,7 +2550,9 @@ Func OpenFilter($sPath)
 EndFunc
 
 Func OpenFile($sPath)
-	If StringInStr($sPath, ".exe") Then
+	If StringLeft($sPath, 7) = "cmd.exe" Then
+		Run($sPath)
+	ElseIf StringInStr($sPath, ".exe") Then
 		ShellExecute($sPath) ; Oringally Run($sPath)
 	Else
 		Local $sDrive, $sDir, $sFName, $sExt

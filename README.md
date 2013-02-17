@@ -48,6 +48,16 @@ can do and share it with everyone. Enjoy!
 	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
 	  the Language Option Menu even though the language files does not belong
 	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
+	---- New Build #3 - February 16, 2013
+	> Forgot to mention that the original Folder Menu 3 named its configuration
+	  file as Config.xml which can get confusing since some programs also used
+	  the same file name and extension for its configuration file. To prevent
+	  that from happening, the configuration file will now be named as
+	  FolderMenu.xml. For previous users, please rename Config.xml to FolderMenu.xml.
+	* Updated "Check Update". Program now check for updates from GitHub.
+	! When introducing thew new ability for FolderMenu to launch elevated programs
+	  without the need for FolderMenu to be elevated itself, "Command Prompt" and
+	  "Command Prompt Here" broke. Fixed.
 
 ####To Do
 ---------
@@ -57,7 +67,4 @@ can do and share it with everyone. Enjoy!
 	  of work and time which I don't have. So far it seems that English,
 	  Korean and both Simplfied Chinese and Traditional Chinese does not have
 	  this problem.
-	! Update "Check Update". Program is currently still set to checkupdates from
-	  rexx's version.
-	! Add GitHub link to the GUI somewhere for reference.
 	! Decide on how to do version number or build number.

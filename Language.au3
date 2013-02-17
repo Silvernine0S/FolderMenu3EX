@@ -1,4 +1,5 @@
-; FolderMenu3 EX Language v3.1.2.2 EX 1.0.0
+; Oringally Folder Menu 3 by rexx
+; FolderMenu3EX is Forked from v3.1.2.2
 Func ReadLanguage()
 	ReadLanguageDefault()
 	Global $sLanguage = ReadConfigSetting("/FolderMenu/Settings/Others", "Language", "")

@@ -1,4 +1,5 @@
-; FolderMenu3 EX GUI v3.1.2.2 EX 1.0.0
+; Oringally Folder Menu 3 by rexx
+; FolderMenu3EX is Forked from v3.1.2.2
 #include <GUIConstantsEx.au3>
 #include <WindowsConstants.au3>
 #include <ComboConstants.au3>
@@ -2608,9 +2609,9 @@ Func TabAboutCreate()
 	GUICtrlSetResizing($LabelAboutMe, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutMe, "LabelAboutMeClick")
 	If @AutoItX64 Then
-		Local $LabelAboutVer = GUICtrlCreateLabel("v" & $iCurrentVer & " (64-Bit)", 286, 184, -1, 17)
+		Local $LabelAboutVer = GUICtrlCreateLabel("v3.1.2.2 EX " & $iCurrentVer & " (64-Bit)", 286, 184, -1, 17)
 	Else
-		Local $LabelAboutVer = GUICtrlCreateLabel("v" & $iCurrentVer, 286, 184, -1, 17)
+		Local $LabelAboutVer = GUICtrlCreateLabel("v3.1.2.2 EX " & $iCurrentVer, 286, 184, -1, 17)
 	EndIf
 	GUICtrlSetResizing($LabelAboutVer, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutVer, "LabelAboutVerClick")
@@ -2625,6 +2626,9 @@ Func TabAboutCreate()
 	; GUICtrlSetOnEvent($CheckboxAboutCheck, "CheckboxAboutCheckClick")
 	Local $LabelAboutTranslate = GUICtrlCreateLabel($sLang_Translate, 200, 312, -1, -1)
 	GUICtrlSetResizing($LabelAboutTranslate, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
+	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
+	Local $LabelAboutEX = GUICtrlCreateLabel("FolderMenu3 EX By Silvernine0S", 200, 325, -1, -1)
+	GUICtrlSetResizing($LabelAboutEX, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
 EndFunc
 Func TabAboutSet()

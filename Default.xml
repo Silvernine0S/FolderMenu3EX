@@ -24,7 +24,7 @@
 			<Item Type="Item" Name="FolderMenu.xml" Path=".\FolderMenu.xml" Icon="" Size=""></Item>
 		</Item>
 		<Item ID="23" Type="Menu" Name="WebSites" Icon="%ProgramFiles%\Internet Explorer\iexplore.exe,1" Size="">
-			<Item Type="Item" Name="Folder Menu" Path="http://foldermenu.sourceforge.net/" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Folder Menu" Path="https://github.com/Silvernine0S/FolderMenu3EX/" Icon="" Size=""></Item>
 			<Item Type="Item" Name="SourceForge.net" Path="http://sourceforge.net/" Icon="" Size=""></Item>
 			<Item Type="Item" Name="AutoIt 3" Path="http://www.autoitscript.com/autoit3/" Icon="" Size=""></Item>
 		</Item>
