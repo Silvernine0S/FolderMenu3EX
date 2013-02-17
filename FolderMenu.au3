@@ -2150,6 +2150,7 @@ Func DownloadUpdate($iVer)
 	Else
 		;Local $hDownload = InetGet("http://downloads.sourceforge.net/foldermenu/" & $sFileName, $sFilePath, 0, 1)
 		Local $hDownload = InetGet("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true", $sFilePath, 0, 1)
+		MsgBox(1,"Test","https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true")
 		Local $sLang_DownloadUpdate_ = $sLang_DownloadUpdate
 		ToolTip2($sLang_DownloadUpdate_, "FolderMenu3 EX", 1)
 		Do
@@ -2162,7 +2163,7 @@ Func DownloadUpdate($iVer)
 		InetClose($hDownload)
 		If $aData[3] Then
 			FileDelete(@TempDir & "\FolderMenu.exe")
-			;_Zip_Unzip($sFilePath, "FolderMenu.exe", @TempDir)
+			_Zip_Unzip($sFilePath, "FolderMenu.exe", @TempDir)
 			FileDelete($sFilePath)
 			FileDelete(@TempDir & "\FM_update.bat")
 			FileWrite(@TempDir & "\FM_update.bat", _

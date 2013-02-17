@@ -12,3 +12,6 @@ http://www.autoitscript.com/forum/topic/38669-new-tool-a-preprocessor/page__st__
 http://msdn.microsoft.com/en-us/library/windows/desktop/bb756929.aspx
 http://www.autoitscript.com/forum/topic/124368-uac-elevate-and-deelevate-scripts/
 http://www.autoitscript.com/forum/topic/52201-to-run-or-to-shellexecute/
+
+REMEMBER:
+Update file version in FolderMenu.au3, Changelog.txt, Readme.md, and Default.xml

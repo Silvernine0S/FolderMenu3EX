@@ -61,6 +61,8 @@ can do and share it with everyone. Enjoy!
 	---- New Build #4 - February 16, 2013
 	! Check for Update did not work as expected. Fixed.
 	> Executables are now zipped before uploading.
+	---- New Build #4 - February 16, 2013
+	! Check for Update really fixed this time.
 
 ####To Do
 ---------
