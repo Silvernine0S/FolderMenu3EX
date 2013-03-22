@@ -13,5 +13,8 @@ http://msdn.microsoft.com/en-us/library/windows/desktop/bb756929.aspx
 http://www.autoitscript.com/forum/topic/124368-uac-elevate-and-deelevate-scripts/
 http://www.autoitscript.com/forum/topic/52201-to-run-or-to-shellexecute/
 
+http://www.autoitscript.com/forum/topic/122212-running-a-command-prompt-command-as-administrator/
+DllCall("kernel32.dll", "int", "Wow64DisableWow64FsRedirection", "int", 1) ; This disables 32bit applications from being redirected to syswow64 instead of system32 by default
+
 REMEMBER:
 Update file version in FolderMenu.au3, Changelog.txt, Readme.md, and Default.xml

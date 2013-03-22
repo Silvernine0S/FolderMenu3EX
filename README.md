@@ -12,6 +12,16 @@ can do and share it with everyone. Enjoy!
 
 ####Most Recent Changes. See Changelog.txt For More. 
 ----------------------------------------------------
+
+	!! Version 3.1.2.2 EX 1.0.1 - March 22, 2013
+	* Removed "Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself"
+		> Was not working well and did not allow program parameters. Will find a
+		  workaround later. For now, if you want to be able to run an app with admin
+		  capability, append "cmd.exe /c" to the path before the path to the application.
+		  Make sure the program already have "Run this program as an administrator"
+		  checked under the Compatibility tab of its file property for cmd.exe to
+		  actually elevate the application.
+
 	!! Version 3.1.2.2 EX 1.0.0 - February 15, 2013
 	+ Working Internally Referenced Icons at First Start Even if File Name is
 	  Different From the Default FolderMenu.exe

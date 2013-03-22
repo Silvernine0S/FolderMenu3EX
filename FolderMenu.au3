@@ -25,7 +25,7 @@
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
-Global Const $iCurrentVer = "1.0.0"
+Global Const $iCurrentVer = "1.0.1"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -65,6 +65,9 @@ Global Const $iCurrentVer = "1.0.0"
 #include "Include\_Zip.au3"
 #include "GUI.au3"
 #include "Language.au3"
+
+; http://www.autoitscript.com/forum/topic/122212-running-a-command-prompt-command-as-administrator/
+DllCall("kernel32.dll", "int", "Wow64DisableWow64FsRedirection", "int", 1) ; Disables 32Bit Redirected To SYSWOW64 Instead Of System32
 
 #region Initialization
 If _Singleton("FolderMenu3 EX", 1) = 0 Then ; What Is This?
@@ -2554,7 +2557,7 @@ Func OpenFile($sPath)
 	If StringLeft($sPath, 7) = "cmd.exe" Then
 		Run($sPath)
 	ElseIf StringInStr($sPath, ".exe") Then
-		ShellExecute($sPath) ; Oringally Run($sPath)
+		Run($sPath)
 	Else
 		Local $sDrive, $sDir, $sFName, $sExt
 		_PathSplit($sPath, $sDrive, $sDir, $sFName, $sExt)
