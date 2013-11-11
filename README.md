@@ -10,8 +10,35 @@ don't have much of. Furthermore I'm new to programming in general
 so please don't expect too much from me. I'm only doing what I
 can do and share it with everyone. Enjoy!  
 
-####Most Recent Changes. See Changelog.txt For More. 
+####Most Recent Changes. See Changelog.txt For More.
 ----------------------------------------------------
+	!! Version 3.1.2.2 EX 1.0.2 - November 11, 2013
+	+ Added Support for XYplorer Script Commands. Thanks to Marco.
+		> FolderMenu3 EX can now run XYplorer (a powerful and portable file manager)
+		  script commands. All you need is XYplorer running and for any command you
+		  want to use, in the file path, prefix the command with "xys::". Examples:
+		  xys::msg "FolderMenu3EX & XYplorer!"
+		  xys::goto "C:\Users\User\Desktop"
+	+ Application With Admin Elevations Requirement Can Be Used Again!
+		> "Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself"
+		  once again can be used. No need to use "cmd.exe /c" since you can now just
+		  use the prefix "admin::". Examples:
+		  admin::C:\Path\To\Program.exe
+		  Once again, make sure the program already have "Run this program as an
+		  administrator" checked under the Compatibility tab for programs that does
+		  not automatically pop up a UAC (since they do not have the Admin flag in
+		  their manifest so that Windows will automatically prompt a UAC).
+		  NOTE: Program parameters are still not supported since they way this code
+		  works is by running the program using the shell. If parameters are needed,
+		  you will still need to use "cmd.exe /c". Maybe a better way will be used
+		  once I figured it out.
+	+ Assigning of Icons for XYplorer Commands and Admin Required Applications
+		> XYplorer Commands will automatically assign a XYplorer icon to it if an
+		  icon is not manually assigned. Admin "admin::" will use the right icon
+		  from the program that you want to elevate as admin.
+	* Fixed Spacings in Drive Menu
+	% Small tweaks and changed in clarity of comments in code. Also slight GUI change
+	  for the About menu.
 
 	!! Version 3.1.2.2 EX 1.0.1 - March 22, 2013
 	* Removed "Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself"
@@ -21,58 +48,8 @@ can do and share it with everyone. Enjoy!
 		  Make sure the program already have "Run this program as an administrator"
 		  checked under the Compatibility tab of its file property for cmd.exe to
 		  actually elevate the application.
-
-	!! Version 3.1.2.2 EX 1.0.0 - February 15, 2013
-	+ Working Internally Referenced Icons at First Start Even if File Name is
-	  Different From the Default FolderMenu.exe
-		> For FIRST TIME RUN ONLY. Basically allows you to rename the file name
-		  to whatever you want and the new FolderMenu.xml will correctly points
-		  to the filename which mean internal icons should show up correctly on
-		  first run. Previously on first run, if the file is renamed,
-		  FolderMenu.xml settings will still reference FolderMenu.exe even thought
-		  the name is now different. The result is certain icons in the menu and
-		  Options won't show up.
-	* Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself
-		> FolderMenu runs as a Standard User. However, when launching a program that
-		  requires admin privileges, there is no UAC prompt and the program will
-		  silently fail to run. The only way to fix this is to run FolderMenu with
-		  admin privileges. Now FolderMenu still run as a Standard User but when
-		  a program that requires admin privileges is launched, a UAC prompt appears
-		  and the program can then run without the need to elevate FolderMenu.
-	* Changed Options GUI Font to Tahoma Size 10
-	% Changed Options GUI to Accommodate Font Change
-	> Converted to using tab characters only for indentations. Spaces character
-	  Used only for spacing and alignment. Trim trailing spaces. Remove all empty
-	  Limes more than two. Applied to all files.
-	> Updated Default Configuration File. Added Drive List and "Toggle Hide File
-	  Extensions" by Default. Added More File Types to Filters.
-	> Original application name is Folder Menu 3. Renamed to FolderMenu3 EX.
-	  Internally changed to new name. Compiled executable still named as
-	  FolderMenu.exe as before. x64 however is named as FolderMenu_x64.exe.
-	> Compiled using the latest AutoIt version 3.3.8.1. Used together with
-	  SciTE4AutoIt 6/10/2012.
-	---- New Build (MINOR) #1 - February 15, 2013
-	> Small language changes (capitilization, tabs and spaces) and GUI adjustments.
-	---- New Build #2 - February 15, 2013
-	* Language files management. If there are any other language files
-	  (with ext lng), FolderMenu3EX (and the original as well) adds them to
-	  the Language Option Menu even though the language files does not belong
-	  to it. Fixed by changing language file format from ".lng" to ".fmlng".
-	---- New Build #3 - February 16, 2013
-	> Forgot to mention that the original Folder Menu 3 named its configuration
-	  file as Config.xml which can get confusing since some programs also used
-	  the same file name and extension for its configuration file. To prevent
-	  that from happening, the configuration file will now be named as
-	  FolderMenu.xml. For previous users, please rename Config.xml to FolderMenu.xml.
-	* Updated "Check Update". Program now check for updates from GitHub.
-	! When introducing thew new ability for FolderMenu to launch elevated programs
-	  without the need for FolderMenu to be elevated itself, "Command Prompt" and
-	  "Command Prompt Here" broke. Fixed.
-	---- New Build #4 - February 16, 2013
-	! Check for Update did not work as expected. Fixed.
-	> Executables are now zipped before uploading.
-	---- New Build #4 - February 16, 2013
-	! Check for Update really fixed this time.
+	
+	See Changelog.txt For More Past Changes.
 
 ####To Do
 ---------

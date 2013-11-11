@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=FolderMenu3 EX
-#AutoIt3Wrapper_Res_Fileversion=1.0.1
+#AutoIt3Wrapper_Res_Fileversion=1.0.2
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_requestedExecutionLevel=asInvoker
 #AutoIt3Wrapper_Res_Icon_Add=Res\201.ico
@@ -26,7 +26,8 @@
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
-Global Const $iCurrentVer = "1.0.1"
+Global Const $iCurrentVer = "1.0.2"
+Global Const $EXBuildDate = "November 11, 2013"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -67,12 +68,13 @@ Global Const $iCurrentVer = "1.0.1"
 #include "GUI.au3"
 #include "Language.au3"
 
+; FolderMenu3 EX
 ; http://www.autoitscript.com/forum/topic/122212-running-a-command-prompt-command-as-administrator/
 ; http://www.autoitscript.com/forum/topic/44048-x64-wow64disablewow64fsredirection/
 ; DllCall("kernel32.dll", "int", "Wow64DisableWow64FsRedirection", "int", 1) ; Disables 32Bit Redirected To SYSWOW64 Instead Of System32
 
 #region Initialization
-If _Singleton("FolderMenu3 EX", 1) = 0 Then ; What Is This?
+If _Singleton("FolderMenu3 EX", 1) = 0 Then ; What Is This? - FolderMenu3 EX
 	Send("#!+^x")
 	Exit
 EndIf
@@ -81,7 +83,7 @@ Opt('MustDeclareVars', 1)
 
 FileChangeDir(@ScriptDir)
 
-Global Const $sFolderMenuExe = @ScriptFullPath ;Originally StringReplace(@ScriptFullPath, ".au3", ".exe") Why?
+Global Const $sFolderMenuExe = @ScriptFullPath ;Originally StringReplace(@ScriptFullPath, ".au3", ".exe") Why? - FolderMenu3 EX
 
 ; main menu gui controls
 Global $hGuiMain = GUICreate("", 0, 0, 0, 0, $WS_POPUP, BitOR($WS_EX_TOOLWINDOW, $WS_EX_TOPMOST, $WS_EX_MDICHILD), _WinAPI_GetDesktopWindow())
@@ -113,7 +115,7 @@ TraySetIcon($sFolderMenuExe)
 TraySetToolTip("FolderMenu3 EX")
 TraySetClick(8) ; only right click show the tray menu
 
-Global Const $sConfigFile = @ScriptDir & "\FolderMenu.xml"
+Global Const $sConfigFile = @ScriptDir & "\FolderMenu.xml" ;FolderMenu3 EX
 If Not FileExists($sConfigFile) Then
 	$sErrorMsg = "Configuration File FolderMenu.xml Does Not Exist." & @LF & "Default Configuration File Is Used." & @LF
 	FileInstall("Default.xml", $sConfigFile)
@@ -1322,7 +1324,7 @@ Func CreateDriveMenu($iMenuID)
 			Local $nTotal = DriveSpaceTotal($aDriveList[$i])
 			If Not @error Then
 				$fEmpty = False
-				Local $sName = DriveGetLabel($aDriveList[$i]) & " (" & StringUpper($aDriveList[$i]) & ")    "
+				Local $sName = DriveGetLabel($aDriveList[$i]) & " (" & StringUpper($aDriveList[$i]) & ")	" ;There Is A Tab Character For Spacing On Drive Menu - FolderMenu3 EX
 				If $fDriveFree = 1 Then
 					Local $nFree = DriveSpaceFree($aDriveList[$i])
 					$sName &= Round($nFree / 1024, 1) & "GB/" & Round($nTotal / 1024, 1) & "GB    "
@@ -1462,6 +1464,9 @@ Func SetMenuItemIcon($hMenu, $iItemID, $sItemPath, $sItemIcon = "", $iItemSize =
 	SplitIconPath($sItemIcon, $sIconPath, $iIconIndex, $iIconSize)
 	If $sIconPath = "%1" Or $sIconPath = """%1""" Then ; the icon is itself
 		Local $sDrive, $sDir, $sFName, $sExt
+		If StringLeft($sItemPath, 7) = "admin::" Then ;Run as Admin Strip Code
+			$sItemPath = StringReplace($sItemPath,"admin::","")
+		EndIf
 		_PathSplit($sItemPath, $sDrive, $sDir, $sFName, $sExt)
 		If $sExt = ".lnk" Then ; get target of .lnk file
 			Local $aLink = FileGetShortcut($sItemPath)
@@ -1488,14 +1493,17 @@ Func SetMenuItemIcon($hMenu, $iItemID, $sItemPath, $sItemIcon = "", $iItemSize =
 	Return
 EndFunc
 Func GetIcon($sPath)
+	If StringLeft($sPath, 7) = "admin::" Then ;Run as Admin Strip Code - FolderMenu3 EX
+		$sPath = StringReplace($sPath,"admin::","")
+	EndIf
 	$sPath = StringReplace($sPath, """", "")
 	$sPath = StringStripWS($sPath, 3)
 	$sPath = DerefPath($sPath)
 	Local $sIcon
-	If StringLeft($sPath, 4) = "http" Then ; Url
-		$sIcon = GetIconForUrl($sPath)
-	ElseIf StringLeft($sPath, 2) = "::" Then ;XYplorer Command
+	If StringLeft($sPath, 5) = "xys::" Then ;XYplorer Command Icon - FolderMenu3 EX
 		$sIcon = $sFolderMenuExe & ",-212"
+	ElseIf StringLeft($sPath, 4) = "http" Then ; Url
+		$sIcon = GetIconForUrl($sPath)
 	ElseIf StringLeft($sPath, 2) = "HK" Then ; Registry
 		$sIcon = GetIconForExt("reg")
 	ElseIf StringLeft($sPath, 2) = "\\" Then ; UNC path
@@ -1570,7 +1578,7 @@ Func GetIconForFile($sFile)
 		Local $iIconIndex = DllStructGetData($tSHFILEINFO, 2)
 		If $sIconFile = "" Then Return GetIconForExt("Folder")
 		Return $sIconFile & "," & $iIconIndex
-		; File
+	; File
 	Else
 		Local $sDrive, $sDir, $sFName, $sExt
 		_PathSplit($sFile, $sDrive, $sDir, $sFName, $sExt)
@@ -2123,7 +2131,7 @@ EndFunc
 Func _CheckUpdate()
 	CheckVersion()
 EndFunc
-Func CheckVersion($fQuiet = 0)
+Func CheckVersion($fQuiet = 0) ;Updated CheckVersion - FolderMenu3 EX
 	Local $iLatestVer = BinaryToString(InetRead("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/Version.txt?raw=true"))
 	If $iLatestVer <> "" Then
 		If $iCurrentVer < $iLatestVer Then
@@ -2141,7 +2149,7 @@ Func CheckVersion($fQuiet = 0)
 		If $fQuiet = 0 Then MsgBox($MB_ICONHAND, $sLang_Error & " - FolderMenu3 EX", $sLang_CannotConnect)
 	EndIf
 EndFunc
-Func DownloadUpdate($iVer)
+Func DownloadUpdate($iVer) ;Updated DownloadUpdate - FolderMenu3 EX
 	If @AutoItX64 Then
 		;Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
 		Local $sFileName = "FolderMenu_x64" & ".zip"
@@ -2558,22 +2566,28 @@ Func OpenFilter($sPath)
 EndFunc
 
 Func OpenFile($sPath)
-	; XYplorer Command Support
-	If StringLeft($sPath, 2) = "::" Then
+	; XYplorer Command Support - FolderMenu3 EX
+	If StringLeft($sPath, 5) = "xys::" Then
 		; Original Source By Marco (XYPlorer Messenger): http://www.xyplorer.com/xyfc/viewtopic.php?f=7&t=9216
-		Global $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
+		Global $sPathXY, $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
+		$sPathXY = StringTrimLeft($sPath, 3)
 		$WM_COPYDATAXY = 0x004A
 		$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
 		$dwDataXY = 0x00400001
-		$iSizeXY = StringLen($sPath)
+		$iSizeXY = StringLen($sPathXY)
 		$pMemXY = DllStructCreate("wchar[" & $iSizeXY & "]")
-		DllStructSetData($pMemXY, 1, $sPath)
+		DllStructSetData($pMemXY, 1, $sPathXY)
 		$pCdsXY = DllStructCreate("dword;dword;ptr")
 		DllStructSetData($pCdsXY, 1, $dwDataXY)
 		DllStructSetData($pCdsXY, 2, ($iSizeXY * 2))
 		DllStructSetData($pCdsXY, 3, DllStructGetPtr($pMemXY))
 		DllCall("user32.dll", "lresult", "SendMessageW", "hwnd", $hWndXY, "uint", $WM_COPYDATAXY, "wparam", 0, "lparam", DllStructGetPtr($pCdsXY))
 		WinActivate("[CLASS:ThunderRT6FormDC]", "")
+	ElseIf StringLeft($sPath, 7) = "admin::" Then ;Run as Admin - FolderMenu3 EX
+		$sPath = StringReplace($sPath,"admin::","")
+		;$sPath = "cmd.exe /c "&$sPath
+		;Run($sPath)
+		ShellExecute($sPath) ;ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
 	ElseIf StringLeft($sPath, 7) = "cmd.exe" Then
 		Run($sPath)
 	ElseIf StringInStr($sPath, ".exe") Then
@@ -2980,7 +2994,7 @@ Func _Test()
 EndFunc
 #endregion Misc.
 
-#New - February 14, 2013
+#New - February 14, 2013 - FolderMenu3 EX
 ; If Exe Name Different, Change Configuration to Point at New Executable Name.
 ; This Is to Fix Problems With Initial Configuration. Icons Point At FolderMenu.exe
 ; by Default (Default.xml) So If Exe Name Is Different, Embedded Icons Won't Show.

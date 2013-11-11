@@ -821,9 +821,16 @@ Func TreeViewFavCopyItem($hItem, $hDest, $iPos) ; $iPos = -1:before, 0:into, 1:a
 	_GUICtrlTreeView_Expand($TreeViewFav, $hNew, $fExpend)
 	Return $hNew
 EndFunc
-Func TreeViewFavSetItemIcon($hItem, $sItemPath, $sItemIcon = "")
+Func TreeViewFavSetItemIcon($hItem, $sItemPath, $sItemIcon = "") ; Get Icon for Admin:: and XYS:: - FolderMenu3 EX
 	If Not IsPtr($hItem) Then $hItem = $FavItemHandle[$hItem - 10000]
-	If $sItemIcon = "" Then $sItemIcon = GetIcon($sItemPath)
+	If StringLeft($sItemPath, 7) = "admin::" Then
+		$sItemPath = StringReplace($sItemPath,"admin::","")
+		$sItemIcon = GetIcon($sItemPath)
+	ElseIf StringLeft($sItemPath, 5) = "xys::" Then
+		$sItemIcon = $sFolderMenuExe & ",-212"
+	ElseIf $sItemIcon = "" Then
+		$sItemIcon = GetIcon($sItemPath)
+	EndIf
 	Local $sIconPath, $iIconIndex, $iIconSize
 	SplitIconPath($sItemIcon, $sIconPath, $iIconIndex, $iIconSize)
 	If $sIconPath = "%1" Or $sIconPath = """%1""" Then
@@ -2627,8 +2634,10 @@ Func TabAboutCreate()
 	Local $LabelAboutTranslate = GUICtrlCreateLabel($sLang_Translate, 200, 312, -1, -1)
 	GUICtrlSetResizing($LabelAboutTranslate, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
-	Local $LabelAboutEX = GUICtrlCreateLabel("FolderMenu3 EX By Silvernine0S", 200, 325, -1, -1)
+	Local $LabelAboutEX = GUICtrlCreateLabel("FolderMenu3 EX by Silvernine0S", 200, 325, -1, -1)
 	GUICtrlSetResizing($LabelAboutEX, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
+	Local $LabelAboutEXDate = GUICtrlCreateLabel("Build On "&$EXBuildDate, 200, 338, -1, -1)
+	GUICtrlSetResizing($LabelAboutEXDate, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
 EndFunc
 Func TabAboutSet()
