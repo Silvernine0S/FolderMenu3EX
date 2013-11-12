@@ -1,4 +1,4 @@
-#Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#Region ; **** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Icon=Res\folder_go.ico
 #AutoIt3Wrapper_Outfile=FolderMenu.exe
 #AutoIt3Wrapper_Outfile_x64=FolderMenu_x64.exe
@@ -22,7 +22,7 @@
 #AutoIt3Wrapper_Res_Icon_Add=Res\211.ico
 #AutoIt3Wrapper_Res_Icon_Add=Res\212.ico
 #AutoIt3Wrapper_Run_AU3Check=n
-#EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
+#EndRegion ; **** Directives created by AutoIt3Wrapper_GUI ****
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
@@ -32,22 +32,22 @@ Global Const $EXBuildDate = "November 11, 2013"
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
 ; http://www.famfamfam.com/lab/icons/silk/
-;
+; 
 ; AsyncHotKeySet by Berean
 ; http://www.autoitscript.com/forum/index.php?showtopic=8220
-;
+; 
 ; XML DOM wrapper by eltorro
 ; http://www.autoitscript.com/forum/index.php?showtopic=19848
-;
+; 
 ; HotKey by Yashied
 ; http://www.autoitscript.com/forum/index.php?showtopic=90492
-;
+; 
 ; Zip by torels_
 ; http://www.autoitscript.com/forum/index.php?showtopic=73425
-;
+; 
 
 #region AutoIt3Wrapper Directives
-;#AutoIt3Wrapper_UseUpx=N
+; #AutoIt3Wrapper_UseUpx=N
 #endregion AutoIt3Wrapper Directives
 
 #include <Constants.au3>
@@ -83,7 +83,7 @@ Opt('MustDeclareVars', 1)
 
 FileChangeDir(@ScriptDir)
 
-Global Const $sFolderMenuExe = @ScriptFullPath ;Originally StringReplace(@ScriptFullPath, ".au3", ".exe") Why? - FolderMenu3 EX
+Global Const $sFolderMenuExe = @ScriptFullPath ; Originally StringReplace(@ScriptFullPath, ".au3", ".exe") Why? - FolderMenu3 EX
 
 ; main menu gui controls
 Global $hGuiMain = GUICreate("", 0, 0, 0, 0, $WS_POPUP, BitOR($WS_EX_TOOLWINDOW, $WS_EX_TOPMOST, $WS_EX_MDICHILD), _WinAPI_GetDesktopWindow())
@@ -102,10 +102,10 @@ Global $sErrorMsg, $sLoadingTipText
 Global $iPriorKey, $iPriorKeySel, $iPriorMouseTime, $iPriorKeyTime
 
 Switch @OSVersion
-	Case "WIN_8", "WIN_2008R2", "WIN_7", "WIN_2008", "WIN_VISTA"
+	Case "WIN_2008R2", "WIN_7", "WIN_8", "WIN_2008", "WIN_VISTA"
 		Global $sOSVersion = "WIN_VISTA"
-	Case Else ;"WIN_2003","WIN_XP","WIN_XPe","WIN_2000"
-		Global $sOSVersion = "WIN_XP"
+	Case Else ; "WIN_2003","WIN_XP","WIN_XPe","WIN_2000"
+		Global Const $sOSVersion = "WIN_XP"
 EndSwitch
 
 Opt('TrayMenuMode', 1 + 2) ; no default tray menu items + no check
@@ -115,7 +115,7 @@ TraySetIcon($sFolderMenuExe)
 TraySetToolTip("FolderMenu3 EX")
 TraySetClick(8) ; only right click show the tray menu
 
-Global Const $sConfigFile = @ScriptDir & "\FolderMenu.xml" ;FolderMenu3 EX
+Global Const $sConfigFile = @ScriptDir & "\FolderMenu.xml" ; FolderMenu3 EX
 If Not FileExists($sConfigFile) Then
 	$sErrorMsg = "Configuration File FolderMenu.xml Does Not Exist." & @LF & "Default Configuration File Is Used." & @LF
 	FileInstall("Default.xml", $sConfigFile)
@@ -459,7 +459,7 @@ Func HotKeySetVKey($iKey, $sFunc = "")
 EndFunc
 Func HotkeyDoubleClick($iKey)
 	Local $iTimeDiff = TimerDiff($iPriorMouseTime)
-	If $iPriorKey = $iKey And $iTimeDiff < 250 Then ;and $iTimeDiff > 20 then ; > 20 to prevent poll calls this twice within 10ms
+	If $iPriorKey = $iKey And $iTimeDiff < 250 Then ; and $iTimeDiff > 20 then ; > 20 to prevent poll calls this twice within 10ms
 		If $iKey = 1 And $iPriorKeySel <> "" Then Return ; double click on a file
 		Call(Eval("HotkeyFunc" & $iKey))
 	EndIf
@@ -773,7 +773,7 @@ Func CreateItemMenu($iMenuID, $sPath, $fShowFile, $sShowFExt, $sDriveType, $iMax
 					Local $sName = DriveGetLabel($aDriveList[$i]) & " (" & StringUpper($aDriveList[$i]) & ")    "
 					$sName &= Round($nFree / 1024, 1) & "GB/" & Round($nTotal / 1024, 1) & "GB    "
 					$sName &= Round(100 * $nFree / $nTotal, 1) & "% Free"
-					If $iDepth < $iMaxDepth Then ;or $iMaxDepth = 0 then
+					If $iDepth < $iMaxDepth Then ; or $iMaxDepth = 0 then
 						Local $iSubMenuID = GUICtrlCreateMenu($sName, $iMenuID)
 						SetMenuItemIcon($iMenuID, $iSubMenuID, $aDriveList[$i])
 						CreateItemMenu($iSubMenuID, $aDriveList[$i], $fShowFile, $sShowFExt, $sDriveType, $iMaxDepth, $iDepth + 1)
@@ -1324,7 +1324,7 @@ Func CreateDriveMenu($iMenuID)
 			Local $nTotal = DriveSpaceTotal($aDriveList[$i])
 			If Not @error Then
 				$fEmpty = False
-				Local $sName = DriveGetLabel($aDriveList[$i]) & " (" & StringUpper($aDriveList[$i]) & ")	" ;There Is A Tab Character For Spacing On Drive Menu - FolderMenu3 EX
+				Local $sName = DriveGetLabel($aDriveList[$i]) & " (" & StringUpper($aDriveList[$i]) & ")	" ; There Is A Tab Character For Spacing On Drive Menu - FolderMenu3 EX
 				If $fDriveFree = 1 Then
 					Local $nFree = DriveSpaceFree($aDriveList[$i])
 					$sName &= Round($nFree / 1024, 1) & "GB/" & Round($nTotal / 1024, 1) & "GB    "
@@ -1464,7 +1464,7 @@ Func SetMenuItemIcon($hMenu, $iItemID, $sItemPath, $sItemIcon = "", $iItemSize =
 	SplitIconPath($sItemIcon, $sIconPath, $iIconIndex, $iIconSize)
 	If $sIconPath = "%1" Or $sIconPath = """%1""" Then ; the icon is itself
 		Local $sDrive, $sDir, $sFName, $sExt
-		If StringLeft($sItemPath, 7) = "admin::" Then ;Run as Admin Strip Code
+		If StringLeft($sItemPath, 7) = "admin::" Then ; Run as Admin Strip Code
 			$sItemPath = StringReplace($sItemPath,"admin::","")
 		EndIf
 		_PathSplit($sItemPath, $sDrive, $sDir, $sFName, $sExt)
@@ -1493,14 +1493,14 @@ Func SetMenuItemIcon($hMenu, $iItemID, $sItemPath, $sItemIcon = "", $iItemSize =
 	Return
 EndFunc
 Func GetIcon($sPath)
-	If StringLeft($sPath, 7) = "admin::" Then ;Run as Admin Strip Code - FolderMenu3 EX
+	If StringLeft($sPath, 7) = "admin::" Then ; Run as Admin Strip Code - FolderMenu3 EX
 		$sPath = StringReplace($sPath,"admin::","")
 	EndIf
 	$sPath = StringReplace($sPath, """", "")
 	$sPath = StringStripWS($sPath, 3)
 	$sPath = DerefPath($sPath)
 	Local $sIcon
-	If StringLeft($sPath, 5) = "xys::" Then ;XYplorer Command Icon - FolderMenu3 EX
+	If StringLeft($sPath, 5) = "xys::" Then ; XYplorer Command Icon - FolderMenu3 EX
 		$sIcon = $sFolderMenuExe & ",-212"
 	ElseIf StringLeft($sPath, 4) = "http" Then ; Url
 		$sIcon = GetIconForUrl($sPath)
@@ -1658,7 +1658,7 @@ Func _CreateBitmapFromIcon($iBackground, $sPath, $iIndex, $iWidth, $iHeight)
 	Local $hBitmap = _WinAPI_CreateSolidBitmap2(0, $iBackground, $iWidth, $iHeight)
 	Local $hBackSv = _WinAPI_SelectObject($hBackDC, $hBitmap)
 
-	;slow here ~2ms
+	; slow here ~2ms
 	Local $hIcon = _WinAPI_ShellExtractIcons($sPath, $iIndex, $iWidth, $iHeight)
 	; Local $hIcon = _WinAPI_PrivateExtractIcon($sPath, $iIndex, $iWidth, $iHeight)
 
@@ -2068,7 +2068,7 @@ Func AddAppMask($hWnd, $sClassNN) ; return 1 if $sClassNN is found
 	Local $w = $pos[2]
 	Local $h = $pos[3]
 
-	Local $tPoint = DllStructCreate("int;int")
+	Local $tPoint = DllStructCreate("int; int")
 	DllStructSetData($tPoint, 1, $x)
 	DllStructSetData($tPoint, 2, $y)
 	_WinAPI_ClientToScreen($hWnd, $tPoint)
@@ -2131,7 +2131,7 @@ EndFunc
 Func _CheckUpdate()
 	CheckVersion()
 EndFunc
-Func CheckVersion($fQuiet = 0) ;Updated CheckVersion - FolderMenu3 EX
+Func CheckVersion($fQuiet = 0) ; Updated CheckVersion - FolderMenu3 EX
 	Local $iLatestVer = BinaryToString(InetRead("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/Version.txt?raw=true"))
 	If $iLatestVer <> "" Then
 		If $iCurrentVer < $iLatestVer Then
@@ -2149,21 +2149,21 @@ Func CheckVersion($fQuiet = 0) ;Updated CheckVersion - FolderMenu3 EX
 		If $fQuiet = 0 Then MsgBox($MB_ICONHAND, $sLang_Error & " - FolderMenu3 EX", $sLang_CannotConnect)
 	EndIf
 EndFunc
-Func DownloadUpdate($iVer) ;Updated DownloadUpdate - FolderMenu3 EX
+Func DownloadUpdate($iVer) ; Updated DownloadUpdate - FolderMenu3 EX
 	If @AutoItX64 Then
-		;Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
+		; Local $sFileName = "FolderMenu_x64_" & $iVer & ".zip"
 		Local $sFileName = "FolderMenu_x64" & ".zip"
 	Else
-		;Local $sFileName = "FolderMenu_" & $iVer & ".zip"
+		; Local $sFileName = "FolderMenu_" & $iVer & ".zip"
 		Local $sFileName = "FolderMenu" & ".zip"
 	EndIf
 	Local $sFilePath = @TempDir & "\" & $sFileName
-	;Local $iFileSize = InetGetSize("http://downloads.sourceforge.net/foldermenu/" & $sFileName)
+	; Local $iFileSize = InetGetSize("http://downloads.sourceforge.net/foldermenu/" & $sFileName)
 	Local $iFileSize = InetGetSize("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true")
 	If $iFileSize = 0 Then
 		If MsgBox($MB_ICONEXCLAMATION + $MB_YESNO, $sLang_CheckVer & " - FolderMenu3 EX", $sLang_NewVerFailed & @LF & @LF & $sLang_NewVerWebsite) = $IDYES Then _GoWebsite()
 	Else
-		;Local $hDownload = InetGet("http://downloads.sourceforge.net/foldermenu/" & $sFileName, $sFilePath, 0, 1)
+		; Local $hDownload = InetGet("http://downloads.sourceforge.net/foldermenu/" & $sFileName, $sFilePath, 0, 1)
 		Local $hDownload = InetGet("https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true", $sFilePath, 0, 1)
 		MsgBox(1,"Test","https://github.com/Silvernine0S/FolderMenu3EX/blob/master/" & $sFileName & "?raw=true")
 		Local $sLang_DownloadUpdate_ = $sLang_DownloadUpdate
@@ -2488,7 +2488,7 @@ Func OpenFolder($sPath)
 				Send("cd /d " & $sPath & "\") ; (thanks to tireless for the /d switch)
 				Send("{Enter}")
 			Case "TTOTAL_CMD", "TxUNCOM", "TxUNCOM.UnicodeClass" ; Total Commander (thanks to FatZgrED)
-				;Total Commander has Edit1 control but you need to cd to location
+				; Total Commander has Edit1 control but you need to cd to location
 				ControlSetText($hWnd, "", $sAdrClassNN, "cd " & $sPath)
 				ControlSend($hWnd, "", $sAdrClassNN, "{Enter}")
 				; Case "TfcForm" ; FreeCommander (thanks to catweazle (John))
@@ -2502,7 +2502,7 @@ Func OpenFolder($sPath)
 			Case Else
 				If StringInStr($sWinClass, "bosa_sdm_") Then ; Microsoft Office application
 					Local $sEdit1Text = ControlGetText($hWnd, "", $sAdrClassNN)
-					ControlClick($hWnd, "", $sAdrClassNN) ;<----------important!!!
+					ControlClick($hWnd, "", $sAdrClassNN) ; <----------important!!!
 					ControlSetText($hWnd, "", $sAdrClassNN, $sPath)
 					ControlSend($hWnd, "", $sAdrClassNN, "{Enter}")
 					Sleep(100)
@@ -2532,7 +2532,7 @@ Func OpenFilter($sPath)
 			Sleep(100) ; It needs extra time on some dialogs or in some cases.
 			ControlSetText($hWnd, "", $sAdrClassNN, $sEdit1Text)
 		Case "ConsoleWindowClass" ; Command Prompt (thanks to Mr. Milk)
-			$sPath = StringReplace($sPath, ";", " ")
+			$sPath = StringReplace($sPath, "; ", " ")
 			$sPath = "for /R %a in (" & $sPath & ") do @echo %~aa %~ta %~za %~Fa"
 			Send("cmd.exe /F:OFF{Enter}")
 			Send($sPath)
@@ -2540,7 +2540,7 @@ Func OpenFilter($sPath)
 		Case Else
 			If $sOSVersion = "WIN_VISTA" Then ; Vista Explorer (thanks to Mr. Milk)
 				If $sPath <> "*.*" Then
-					$sPath = StringReplace($sPath, ";", " OR ")
+					$sPath = StringReplace($sPath, "; ", " OR ")
 				EndIf
 				If $sWinClass = "CabinetWClass" Then
 					Send("^e") ; Set focus on searchbox to enable Edit2
@@ -2577,17 +2577,17 @@ Func OpenFile($sPath)
 		$iSizeXY = StringLen($sPathXY)
 		$pMemXY = DllStructCreate("wchar[" & $iSizeXY & "]")
 		DllStructSetData($pMemXY, 1, $sPathXY)
-		$pCdsXY = DllStructCreate("dword;dword;ptr")
+		$pCdsXY = DllStructCreate("dword; dword; ptr")
 		DllStructSetData($pCdsXY, 1, $dwDataXY)
 		DllStructSetData($pCdsXY, 2, ($iSizeXY * 2))
 		DllStructSetData($pCdsXY, 3, DllStructGetPtr($pMemXY))
 		DllCall("user32.dll", "lresult", "SendMessageW", "hwnd", $hWndXY, "uint", $WM_COPYDATAXY, "wparam", 0, "lparam", DllStructGetPtr($pCdsXY))
 		WinActivate("[CLASS:ThunderRT6FormDC]", "")
-	ElseIf StringLeft($sPath, 7) = "admin::" Then ;Run as Admin - FolderMenu3 EX
+	ElseIf StringLeft($sPath, 7) = "admin::" Then ; Run as Admin - FolderMenu3 EX
 		$sPath = StringReplace($sPath,"admin::","")
-		;$sPath = "cmd.exe /c "&$sPath
-		;Run($sPath)
-		ShellExecute($sPath) ;ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
+		; $sPath = "cmd.exe /c "&$sPath
+		; Run($sPath)
+		ShellExecute($sPath) ; ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
 	ElseIf StringLeft($sPath, 7) = "cmd.exe" Then
 		Run($sPath)
 	ElseIf StringInStr($sPath, ".exe") Then
@@ -2708,11 +2708,11 @@ Func _WinAPI_GetCommandLineFromPID($iPID)
 
 	Local $hProcess = $aCall[0]
 
-	Local $tPROCESS_BASIC_INFORMATION = DllStructCreate("dword_ptr ExitStatus;" & _
-			"ptr PebBaseAddress;" & _
-			"dword_ptr AffinityMask;" & _
-			"dword_ptr BasePriority;" & _
-			"dword_ptr UniqueProcessId;" & _
+	Local $tPROCESS_BASIC_INFORMATION = DllStructCreate("dword_ptr ExitStatus; " & _
+			"ptr PebBaseAddress; " & _
+			"dword_ptr AffinityMask; " & _
+			"dword_ptr BasePriority; " & _
+			"dword_ptr UniqueProcessId; " & _
 			"dword_ptr InheritedFromUniqueProcessId")
 
 	$aCall = DllCall("ntdll.dll", "int", "NtQueryInformationProcess", _
@@ -2727,59 +2727,59 @@ Func _WinAPI_GetCommandLineFromPID($iPID)
 		Return SetError(2, 0, "")
 	EndIf
 
-	Local $tPEB = DllStructCreate("byte InheritedAddressSpace;" & _
-			"byte ReadImageFileExecOptions;" & _
-			"byte BeingDebugged;" & _
-			"byte Spare;" & _
-			"ptr Mutant;" & _
-			"ptr ImageBaseAddress;" & _
-			"ptr LoaderData;" & _
-			"ptr ProcessParameters;" & _
-			"ptr SubSystemData;" & _
-			"ptr ProcessHeap;" & _
-			"ptr FastPebLock;" & _
-			"ptr FastPebLockRoutine;" & _
-			"ptr FastPebUnlockRoutine;" & _
-			"dword EnvironmentUpdateCount;" & _
-			"ptr KernelCallbackTable;" & _
-			"ptr EventLogSection;" & _
-			"ptr EventLog;" & _
-			"ptr FreeList;" & _
-			"dword TlsExpansionCounter;" & _
-			"ptr TlsBitmap;" & _
-			"dword TlsBitmapBits[2];" & _
-			"ptr ReadOnlySharedMemoryBase;" & _
-			"ptr ReadOnlySharedMemoryHeap;" & _
-			"ptr ReadOnlyStaticServerData;" & _
-			"ptr AnsiCodePageData;" & _
-			"ptr OemCodePageData;" & _
-			"ptr UnicodeCaseTableData;" & _
-			"dword NumberOfProcessors;" & _
-			"dword NtGlobalFlag;" & _
-			"ubyte Spare2[4];" & _
-			"int64 CriticalSectionTimeout;" & _
-			"dword HeapSegmentReserve;" & _
-			"dword HeapSegmentCommit;" & _
-			"dword HeapDeCommitTotalFreeThreshold;" & _
-			"dword HeapDeCommitFreeBlockThreshold;" & _
-			"dword NumberOfHeaps;" & _
-			"dword MaximumNumberOfHeaps;" & _
-			"ptr ProcessHeaps;" & _
-			"ptr GdiSharedHandleTable;" & _
-			"ptr ProcessStarterHelper;" & _
-			"ptr GdiDCAttributeList;" & _
-			"ptr LoaderLock;" & _
-			"dword OSMajorVersion;" & _
-			"dword OSMinorVersion;" & _
-			"dword OSBuildNumber;" & _
-			"dword OSPlatformId;" & _
-			"dword ImageSubSystem;" & _
-			"dword ImageSubSystemMajorVersion;" & _
-			"dword ImageSubSystemMinorVersion;" & _
-			"dword GdiHandleBuffer[34];" & _
-			"dword PostProcessInitRoutine;" & _
-			"dword TlsExpansionBitmap;" & _
-			"byte TlsExpansionBitmapBits[128];" & _
+	Local $tPEB = DllStructCreate("byte InheritedAddressSpace; " & _
+			"byte ReadImageFileExecOptions; " & _
+			"byte BeingDebugged; " & _
+			"byte Spare; " & _
+			"ptr Mutant; " & _
+			"ptr ImageBaseAddress; " & _
+			"ptr LoaderData; " & _
+			"ptr ProcessParameters; " & _
+			"ptr SubSystemData; " & _
+			"ptr ProcessHeap; " & _
+			"ptr FastPebLock; " & _
+			"ptr FastPebLockRoutine; " & _
+			"ptr FastPebUnlockRoutine; " & _
+			"dword EnvironmentUpdateCount; " & _
+			"ptr KernelCallbackTable; " & _
+			"ptr EventLogSection; " & _
+			"ptr EventLog; " & _
+			"ptr FreeList; " & _
+			"dword TlsExpansionCounter; " & _
+			"ptr TlsBitmap; " & _
+			"dword TlsBitmapBits[2]; " & _
+			"ptr ReadOnlySharedMemoryBase; " & _
+			"ptr ReadOnlySharedMemoryHeap; " & _
+			"ptr ReadOnlyStaticServerData; " & _
+			"ptr AnsiCodePageData; " & _
+			"ptr OemCodePageData; " & _
+			"ptr UnicodeCaseTableData; " & _
+			"dword NumberOfProcessors; " & _
+			"dword NtGlobalFlag; " & _
+			"ubyte Spare2[4]; " & _
+			"int64 CriticalSectionTimeout; " & _
+			"dword HeapSegmentReserve; " & _
+			"dword HeapSegmentCommit; " & _
+			"dword HeapDeCommitTotalFreeThreshold; " & _
+			"dword HeapDeCommitFreeBlockThreshold; " & _
+			"dword NumberOfHeaps; " & _
+			"dword MaximumNumberOfHeaps; " & _
+			"ptr ProcessHeaps; " & _
+			"ptr GdiSharedHandleTable; " & _
+			"ptr ProcessStarterHelper; " & _
+			"ptr GdiDCAttributeList; " & _
+			"ptr LoaderLock; " & _
+			"dword OSMajorVersion; " & _
+			"dword OSMinorVersion; " & _
+			"dword OSBuildNumber; " & _
+			"dword OSPlatformId; " & _
+			"dword ImageSubSystem; " & _
+			"dword ImageSubSystemMajorVersion; " & _
+			"dword ImageSubSystemMinorVersion; " & _
+			"dword GdiHandleBuffer[34]; " & _
+			"dword PostProcessInitRoutine; " & _
+			"dword TlsExpansionBitmap; " & _
+			"byte TlsExpansionBitmapBits[128]; " & _
 			"dword SessionId")
 
 	$aCall = DllCall("kernel32.dll", "bool", "ReadProcessMemory", _
@@ -2794,40 +2794,40 @@ Func _WinAPI_GetCommandLineFromPID($iPID)
 		Return SetError(3, 0, "")
 	EndIf
 
-	Local $tPROCESS_PARAMETERS = DllStructCreate("dword AllocationSize;" & _
-			"dword ActualSize;" & _
-			"dword Flags;" & _
-			"dword Unknown1;" & _
-			"word LengthUnknown2;" & _
-			"word MaxLengthUnknown2;" & _
-			"ptr Unknown2;" & _
-			"handle InputHandle;" & _
-			"handle OutputHandle;" & _
-			"handle ErrorHandle;" & _
-			"word LengthCurrentDirectory;" & _
-			"word MaxLengthCurrentDirectory;" & _
-			"ptr CurrentDirectory;" & _
-			"handle CurrentDirectoryHandle;" & _
-			"word LengthSearchPaths;" & _
-			"word MaxLengthSearchPaths;" & _
-			"ptr SearchPaths;" & _
-			"word LengthApplicationName;" & _
-			"word MaxLengthApplicationName;" & _
-			"ptr ApplicationName;" & _
-			"word LengthCommandLine;" & _
-			"word MaxLengthCommandLine;" & _
-			"ptr CommandLine;" & _
-			"ptr EnvironmentBlock;" & _
-			"dword Unknown[9];" & _
-			"word LengthUnknown3;" & _
-			"word MaxLengthUnknown3;" & _
-			"ptr Unknown3;" & _
-			"word LengthUnknown4;" & _
-			"word MaxLengthUnknown4;" & _
-			"ptr Unknown4;" & _
-			"word LengthUnknown5;" & _
-			"word MaxLengthUnknown5;" & _
-			"ptr Unknown5;")
+	Local $tPROCESS_PARAMETERS = DllStructCreate("dword AllocationSize; " & _
+			"dword ActualSize; " & _
+			"dword Flags; " & _
+			"dword Unknown1; " & _
+			"word LengthUnknown2; " & _
+			"word MaxLengthUnknown2; " & _
+			"ptr Unknown2; " & _
+			"handle InputHandle; " & _
+			"handle OutputHandle; " & _
+			"handle ErrorHandle; " & _
+			"word LengthCurrentDirectory; " & _
+			"word MaxLengthCurrentDirectory; " & _
+			"ptr CurrentDirectory; " & _
+			"handle CurrentDirectoryHandle; " & _
+			"word LengthSearchPaths; " & _
+			"word MaxLengthSearchPaths; " & _
+			"ptr SearchPaths; " & _
+			"word LengthApplicationName; " & _
+			"word MaxLengthApplicationName; " & _
+			"ptr ApplicationName; " & _
+			"word LengthCommandLine; " & _
+			"word MaxLengthCommandLine; " & _
+			"ptr CommandLine; " & _
+			"ptr EnvironmentBlock; " & _
+			"dword Unknown[9]; " & _
+			"word LengthUnknown3; " & _
+			"word MaxLengthUnknown3; " & _
+			"ptr Unknown3; " & _
+			"word LengthUnknown4; " & _
+			"word MaxLengthUnknown4; " & _
+			"ptr Unknown4; " & _
+			"word LengthUnknown5; " & _
+			"word MaxLengthUnknown5; " & _
+			"ptr Unknown5; ")
 
 	$aCall = DllCall("kernel32.dll", "bool", "ReadProcessMemory", _
 			"ptr", $hProcess, _

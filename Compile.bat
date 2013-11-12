@@ -1,5 +1,5 @@
 TASKKILL /F /IM FolderMenu.exe
-REM TASKKILL /F /IM FolderMenu_x64.exe
+TASKKILL /F /IM FolderMenu_x64.exe
 REM DEL "%~dp0FolderMenu.xml"
 DEL "%~dp0FolderMenu.zip"
 DEL "%~dp0FolderMenu_x64.zip"

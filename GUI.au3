@@ -16,11 +16,27 @@
 Opt("GUIOnEventMode", 1)
 Global Const $WM_DROPFILES = 0x233
 
+; Font Settings - FolderMenu3 EX
+; Tahoma, Segoe UI, Verdana - FolderMenu3 EX
+Switch @OSVersion
+	Case "WIN_2008R2", "WIN_7", "WIN_8", "WIN_2008", "WIN_VISTA"
+		Global $sOSVersion = "WIN_VISTA"
+	Case Else ; "WIN_2003","WIN_XP","WIN_XPe","WIN_2000"
+		Global Const $sOSVersion = "WIN_XP"
+EndSwitch
+Global $sTabAboutFont, $sGUIFont
+$sTabAboutFont = "Segoe UI"
+$sGUIFont      = "Segoe UI"
+If $sOSVersion <> "WIN_VISTA" Then
+	$sTabAboutFont = "Tahoma"
+	$sGUIFont      = "Tahoma"
+EndIf
+
 Func CreateOptionsGui()
 	Global $iGuiMinWidth = 580, $iGuiMinHeight = 538
 	#region ### START Koda GUI section ###
 	Local $Options = GUICreate($sLang_Options, 564, 500, -1, -1, BitOR($WS_MAXIMIZEBOX, $WS_MINIMIZEBOX, $WS_SIZEBOX, $WS_THICKFRAME, $WS_SYSMENU, $WS_CAPTION, $WS_OVERLAPPEDWINDOW, $WS_TILEDWINDOW, $WS_POPUP, $WS_POPUPWINDOW, $WS_GROUP, $WS_TABSTOP, $WS_BORDER, $WS_CLIPSIBLINGS), BitOR($WS_EX_ACCEPTFILES, $WS_EX_WINDOWEDGE))
-	GUISetFont(9, 400, 0, "Tahoma")
+	GUISetFont(9, 400, 0, $sGUIFont)
 	GUISetOnEvent($GUI_EVENT_CLOSE, "OptionsClose")
 	GUISetOnEvent($GUI_EVENT_MAXIMIZE, "OptionsResized")
 	GUISetOnEvent($GUI_EVENT_RESIZED, "OptionsResized")
@@ -2609,7 +2625,7 @@ Func TabAboutCreate()
 	GUICtrlSetResizing($IconAbout, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	GUICtrlSetOnEvent($IconAbout, "IconAboutClick")
 	Global $LabelAboutFM = GUICtrlCreateLabel("FolderMenu3 EX", 200, 156, 200, 31)
-	GUICtrlSetFont($LabelAboutFM, 18, 500, 0, "Tahoma")
+	GUICtrlSetFont($LabelAboutFM, 18, 500, 0, $sTabAboutFont) ; Tab Fonts - FolderMenu3 EX
 	GUICtrlSetResizing($LabelAboutFM, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutFM, "LabelAboutFMClick")
 	Local $LabelAboutMe = GUICtrlCreateLabel($sLang_CopyRight, 190, 184, 92, 17)
@@ -2634,9 +2650,9 @@ Func TabAboutCreate()
 	Local $LabelAboutTranslate = GUICtrlCreateLabel($sLang_Translate, 200, 312, -1, -1)
 	GUICtrlSetResizing($LabelAboutTranslate, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
-	Local $LabelAboutEX = GUICtrlCreateLabel("FolderMenu3 EX by Silvernine0S", 200, 325, -1, -1)
+	Local $LabelAboutEX = GUICtrlCreateLabel($sLang_FolderMenu3_EX, 200, 325, -1, -1)
 	GUICtrlSetResizing($LabelAboutEX, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
-	Local $LabelAboutEXDate = GUICtrlCreateLabel("Build On "&$EXBuildDate, 200, 338, -1, -1)
+	Local $LabelAboutEXDate = GUICtrlCreateLabel($sLang_BuildDate, 200, 338, -1, -1)
 	GUICtrlSetResizing($LabelAboutEXDate, $GUI_DOCKHCENTER + $GUI_DOCKVCENTER + $GUI_DOCKWIDTH + $GUI_DOCKHEIGHT)
 	; GUICtrlSetOnEvent($LabelAboutTranslate, "LabelAboutTranslateClick")
 EndFunc

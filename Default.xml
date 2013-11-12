@@ -134,8 +134,8 @@
 			<Setting Name="Browser" Value=""></Setting>
 			<Setting Name="SearchSel" Value="0"></Setting>
 			<Setting Name="SearchSelUrl" Value="http://www.google.com/search?q=%s"></Setting>
-			<Setting Name="LoadingTip" Value="1"></Setting>
-			<Setting Name="LoadingTipFor" Value="11"></Setting>
+			<Setting Name="LoadingTip" Value="0"></Setting>
+			<Setting Name="LoadingTipFor" Value="0"></Setting>
 			<Setting Name="CheckVersion" Value="1"></Setting>
 			<Setting Name="CurrentVer" Value="3.1.2.2 EX 1.0.0"></Setting>
 		</Others>
