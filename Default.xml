@@ -137,7 +137,7 @@
 			<Setting Name="LoadingTip" Value="0"></Setting>
 			<Setting Name="LoadingTipFor" Value="0"></Setting>
 			<Setting Name="CheckVersion" Value="1"></Setting>
-			<Setting Name="CurrentVer" Value="3.1.2.2 EX 1.0.0"></Setting>
+			<Setting Name="CurrentVer" Value="3.1.2.2 EX 1.0.3"></Setting>
 		</Others>
 		<GUI>
 			<Setting Name="OptionsPosX" Value=""></Setting>

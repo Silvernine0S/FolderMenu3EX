@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=FolderMenu3 EX
-#AutoIt3Wrapper_Res_Fileversion=1.0.2
+#AutoIt3Wrapper_Res_Fileversion=1.0.3
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_requestedExecutionLevel=asInvoker
 #AutoIt3Wrapper_Res_Icon_Add=Res\201.ico
@@ -21,13 +21,14 @@
 #AutoIt3Wrapper_Res_Icon_Add=Res\210.ico
 #AutoIt3Wrapper_Res_Icon_Add=Res\211.ico
 #AutoIt3Wrapper_Res_Icon_Add=Res\212.ico
+#AutoIt3Wrapper_Res_Icon_Add=Res\213.ico
 #AutoIt3Wrapper_Run_AU3Check=n
 #EndRegion ; **** Directives created by AutoIt3Wrapper_GUI ****
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
-Global Const $iCurrentVer = "1.0.2"
-Global Const $EXBuildDate = "November 11, 2013"
+Global Const $iCurrentVer = "1.0.3"
+Global Const $EXBuildDate = "November 14, 2013"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -45,6 +46,8 @@ Global Const $EXBuildDate = "November 11, 2013"
 ; Zip by torels_
 ; http://www.autoitscript.com/forum/index.php?showtopic=73425
 ; 
+; Admin Icon - Perqui By Ampeross 
+; https://www.iconfinder.com/icons/100500/cmd_icon
 
 #region AutoIt3Wrapper Directives
 ; #AutoIt3Wrapper_UseUpx=N
@@ -1493,15 +1496,19 @@ Func SetMenuItemIcon($hMenu, $iItemID, $sItemPath, $sItemIcon = "", $iItemSize =
 	Return
 EndFunc
 Func GetIcon($sPath)
-	If StringLeft($sPath, 7) = "admin::" Then ; Run as Admin Strip Code - FolderMenu3 EX
-		$sPath = StringReplace($sPath,"admin::","")
+	If StringLeft($sPath, 7) = "ADMIN::" Then ; Run as Admin Strip Code - FolderMenu3 EX
+		$sPath = StringReplace($sPath,"ADMIN::","")
 	EndIf
 	$sPath = StringReplace($sPath, """", "")
 	$sPath = StringStripWS($sPath, 3)
 	$sPath = DerefPath($sPath)
 	Local $sIcon
-	If StringLeft($sPath, 5) = "xys::" Then ; XYplorer Command Icon - FolderMenu3 EX
+	If StringLeft($sPath, 5) = "XYS::" Then ; XYplorer Command Icon - FolderMenu3 EX
 		$sIcon = $sFolderMenuExe & ",-212"
+	ElseIf StringLeft($sPath, 7) = "XYS_F::" Then ; XYplorer Command Icon - FolderMenu3 EX
+		$sIcon = $sFolderMenuExe & ",-212"
+	ElseIf $sPath = "ADMIN" Then ; Admin Elevation Required Icon - FolderMenu3 EX
+		$sIcon = $sFolderMenuExe & ",-213"
 	ElseIf StringLeft($sPath, 4) = "http" Then ; Url
 		$sIcon = GetIconForUrl($sPath)
 	ElseIf StringLeft($sPath, 2) = "HK" Then ; Registry
@@ -2565,26 +2572,35 @@ Func OpenFilter($sPath)
 	Return 0
 EndFunc
 
-Func OpenFile($sPath)
+Func XYSScript($xysScript)
 	; XYplorer Command Support - FolderMenu3 EX
-	If StringLeft($sPath, 5) = "xys::" Then
-		; Original Source By Marco (XYPlorer Messenger): http://www.xyplorer.com/xyfc/viewtopic.php?f=7&t=9216
+	; Original Source By Marco (XYPlorer Messenger): http://www.xyplorer.com/xyfc/viewtopic.php?f=7&t=9216
+	$WM_COPYDATAXY = 0x004A
+	$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
+	$dwDataXY = 0x00400001
+	$iSizeXY = StringLen($sPathXY)
+	$pMemXY = DllStructCreate("wchar[" & $iSizeXY & "]")
+	DllStructSetData($pMemXY, 1, $sPathXY)
+	$pCdsXY = DllStructCreate("dword; dword; ptr")
+	DllStructSetData($pCdsXY, 1, $dwDataXY)
+	DllStructSetData($pCdsXY, 2, ($iSizeXY * 2))
+	DllStructSetData($pCdsXY, 3, DllStructGetPtr($pMemXY))
+	DllCall("user32.dll", "lresult", "SendMessageW", "hwnd", $hWndXY, "uint", $WM_COPYDATAXY, "wparam", 0, "lparam", DllStructGetPtr($pCdsXY))
+EndFunc
+
+Func OpenFile($sPath)
+	; XYplorer Command Support Implemented - FolderMenu3 EX
+	If StringLeft($sPath, 5) = "XYS::" Then
 		Global $sPathXY, $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
 		$sPathXY = StringTrimLeft($sPath, 3)
-		$WM_COPYDATAXY = 0x004A
-		$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
-		$dwDataXY = 0x00400001
-		$iSizeXY = StringLen($sPathXY)
-		$pMemXY = DllStructCreate("wchar[" & $iSizeXY & "]")
-		DllStructSetData($pMemXY, 1, $sPathXY)
-		$pCdsXY = DllStructCreate("dword; dword; ptr")
-		DllStructSetData($pCdsXY, 1, $dwDataXY)
-		DllStructSetData($pCdsXY, 2, ($iSizeXY * 2))
-		DllStructSetData($pCdsXY, 3, DllStructGetPtr($pMemXY))
-		DllCall("user32.dll", "lresult", "SendMessageW", "hwnd", $hWndXY, "uint", $WM_COPYDATAXY, "wparam", 0, "lparam", DllStructGetPtr($pCdsXY))
+		XYSScript($sPathXY)
+	ElseIf StringLeft($sPath, 7) = "XYS_F::" Then
+		Global $sPathXY, $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
+		$sPathXY = StringTrimLeft($sPath, 5)
+		XYSScript($sPathXY)
 		WinActivate("[CLASS:ThunderRT6FormDC]", "")
-	ElseIf StringLeft($sPath, 7) = "admin::" Then ; Run as Admin - FolderMenu3 EX
-		$sPath = StringReplace($sPath,"admin::","")
+	ElseIf StringLeft($sPath, 7) = "ADMIN::" Then ; Run as Admin - FolderMenu3 EX
+		$sPath = StringReplace($sPath,"ADMIN::","")
 		; $sPath = "cmd.exe /c "&$sPath
 		; Run($sPath)
 		ShellExecute($sPath) ; ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else

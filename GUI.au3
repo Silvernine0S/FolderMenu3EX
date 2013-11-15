@@ -887,6 +887,13 @@ Func MenuFavPathCreate()
 	MenuFavPathAddItem($sLang_ToggleHidden, $MenuSpecial, GetIcon("_ToggleHidden"), "MenuFavPathSpecial", "_ToggleHidden")
 	MenuFavPathAddItem($sLang_ToggleFileExt, $MenuSpecial, GetIcon("_ToggleFileExt"), "MenuFavPathSpecial", "_ToggleFileExt")
 	MenuFavPathAddItem($sLang_SystemRecent, $MenuSpecial, GetIcon("_SystemRecent"), "MenuFavPathSpecial", "_SystemRecent")
+	; Custom Special Items - FolderMenu3 EX
+	; Add Admin Elevation Required Special Item - FolderMenu3 EX
+	MenuFavPathAddItem($sLang_Admin, $MenuSpecial, GetIcon("ADMIN"), "MenuFavPathSpecial", "ADMIN::")
+	; Add XYplorer Scripting Special Items - FolderMenu3 EX
+	MenuFavPathAddItem($sLang_XYS, $MenuSpecial, GetIcon("XYS::"), "MenuFavPathSpecial", "XYS::")
+	MenuFavPathAddItem($sLang_XYS_WFocus, $MenuSpecial, GetIcon("XYS_F::"), "MenuFavPathSpecial", "XYS_F::")
+	; ----------
 	GUICtrlCreateMenuItem("", $MenuSpecial)
 	MenuFavPathAddItem($sLang_RecentMenu, $MenuSpecial, GetIcon(":RecentMenu"), "MenuFavPathSpecial", ":RecentMenu")
 	MenuFavPathAddItem($sLang_ExplorerMenu, $MenuSpecial, GetIcon(":ExplorerMenu"), "MenuFavPathSpecial", ":ExplorerMenu")

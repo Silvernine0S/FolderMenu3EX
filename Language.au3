@@ -142,6 +142,12 @@ Func ReadLanguageDefault()
 	Global $sLang_Exit          = Unescape("Exit")
 	Global $sLang_ToggleHidden  = Unescape("Toggle Hidden Files")
 	Global $sLang_ToggleFileExt = Unescape("Toggle Hide File Extension")
+	; Add Admin Elevation Required Special Item - FolderMenu3 EX
+	Global $sLang_Admin         = Unescape("Admin")
+	; Add XYplorer Scripting Special Items - FolderMenu3 EX
+	Global $sLang_XYS           = Unescape("XYplorer Script")
+	Global $sLang_XYS_WFocus    = Unescape("XYplorer Script With Focus")
+	; ----------
 	Global $sLang_SystemRecent  = Unescape("System Recent Menu")
 	Global $sLang_RecentMenu    = Unescape("Recent Menu")
 	Global $sLang_ExplorerMenu  = Unescape("Explorer Menu")

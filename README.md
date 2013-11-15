@@ -12,6 +12,25 @@ can do and share it with everyone. Enjoy!
 
 ####Most Recent Changes. See Changelog.txt For More.
 ----------------------------------------------------
+	!! Version 3.1.2.2 EX 1.0.3 - November 14, 2013
+	+ Added XYplorer Scripting and Admin to Special Items Menu When Adding New Items
+		> There are now two XYplorer Scripting Special Items.
+		  XYPlorer Scripting - "XYS::" As before, simply tell XYplorer to
+		    load a script and run it. XYplorer's window will not be restored
+			so if it's minimized, it will stay minimized while running the
+			script.
+		  XYplorer Scripting With Focus - "XYS_F::" Run the script and restore
+		    XYplorer's main window back into view. For example this is useful
+			for scripting where you tell XYplorer to go to a certain location:
+			XYS_F::Goto "C:\Users\User\Desktop"
+			If XYplorer's window is minimized, it will be restored and then go
+			to "C:\Users\User\Desktop". If the focus mode is not used, it will
+			simply go to the User's Desktop but XYplorer's window will remaind
+			minimized.
+	> All Commands "XYS::" "XYS_F" and "ADMIN::" Are CASE-INSENSITIVE.
+		> xys:: = xYs:: = XYS::
+		  admin:: = aDmIn:: = ADMIN::
+
 	!! Version 3.1.2.2 EX 1.0.2 - November 11, 2013
 	+ Added Support for XYplorer Script Commands. Thanks to Marco.
 		> FolderMenu3 EX can now run XYplorer (a powerful and portable file manager)
@@ -40,15 +59,6 @@ can do and share it with everyone. Enjoy!
 	% Small tweaks and changed in clarity of comments in code. Also slight GUI change
 	  for the About menu.
 
-	!! Version 3.1.2.2 EX 1.0.1 - March 22, 2013
-	* Removed "Run Elevated Apps Without Requiring FolderMenu to Be Elevated Itself"
-		> Was not working well and did not allow program parameters. Will find a
-		  workaround later. For now, if you want to be able to run an app with admin
-		  capability, append "cmd.exe /c" to the path before the path to the application.
-		  Make sure the program already have "Run this program as an administrator"
-		  checked under the Compatibility tab of its file property for cmd.exe to
-		  actually elevate the application.
-	
 	See Changelog.txt For More Past Changes.
 
 ####To Do
