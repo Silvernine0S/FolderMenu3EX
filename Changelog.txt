@@ -7,8 +7,8 @@ Program   FolderMenu3 EX
 		  
 		  FolderMenuEX is a Fork of the Original Folder Menu 3 by rexx
 
-Version   3.1.2.2 EX 1.0.2
-Release   November 11, 2013
+Version   3.1.2.2 EX 1.0.3.1
+Release   November 22, 2013
 License   Open Source
 Author    Silvernine0S
 Website   https://github.com/Silvernine0S/FolderMenu3EX/
@@ -24,6 +24,11 @@ NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
 	! Fixed Minor Bug
 	
 	FolderMenu3EX = FolderMenu3 EX = FolderMenu != Folder Menu 3
+
+~~~~~~~~~~~~~~~~~~~ November 22, 2013 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	!! Version 3.1.2.2 EX 1.0.3.1 - November 14, 2013
+	! Fixed minor bug. For some systems, XYS scripts refuse to run.
+	% Slight code cleanup and change.
 
 ~~~~~~~~~~~~~~~~~~~ November 14, 2013 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	!! Version 3.1.2.2 EX 1.0.3

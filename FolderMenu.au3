@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=FolderMenu3 EX
-#AutoIt3Wrapper_Res_Fileversion=1.0.3
+#AutoIt3Wrapper_Res_Fileversion=1.0.3.1
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_requestedExecutionLevel=asInvoker
 #AutoIt3Wrapper_Res_Icon_Add=Res\201.ico
@@ -27,8 +27,8 @@
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
-Global Const $iCurrentVer = "1.0.3"
-Global Const $EXBuildDate = "November 14, 2013"
+Global Const $iCurrentVer = "1.0.3.1"
+Global Const $EXBuildDate = "November 22, 2013"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -2572,9 +2572,10 @@ Func OpenFilter($sPath)
 	Return 0
 EndFunc
 
-Func XYSScript($xysScript)
+Func XYSScript($sPathXY)
 	; XYplorer Command Support - FolderMenu3 EX
 	; Original Source By Marco (XYPlorer Messenger): http://www.xyplorer.com/xyfc/viewtopic.php?f=7&t=9216
+	Local $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
 	$WM_COPYDATAXY = 0x004A
 	$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
 	$dwDataXY = 0x00400001
@@ -2590,12 +2591,11 @@ EndFunc
 
 Func OpenFile($sPath)
 	; XYplorer Command Support Implemented - FolderMenu3 EX
+	Local $sPathXY
 	If StringLeft($sPath, 5) = "XYS::" Then
-		Global $sPathXY, $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
 		$sPathXY = StringTrimLeft($sPath, 3)
 		XYSScript($sPathXY)
 	ElseIf StringLeft($sPath, 7) = "XYS_F::" Then
-		Global $sPathXY, $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
 		$sPathXY = StringTrimLeft($sPath, 5)
 		XYSScript($sPathXY)
 		WinActivate("[CLASS:ThunderRT6FormDC]", "")

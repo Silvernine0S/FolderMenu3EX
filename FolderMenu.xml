@@ -96,7 +96,22 @@
 			<Setting Name="RecentFolder" Value="0"></Setting>
 			<Setting Name="RecentFull" Value="1"></Setting>
 			<Setting Name="RecentList">
-				<Recent Path=""></Recent>
+				<Recent Date="2013/11/22 14:50:48" Path="XYS_F::goto C:\"></Recent>
+				<Recent Date="2013/11/22 14:50:46" Path="XYS::load &quot;&lt;xyscripts&gt;\Weather2.xys&quot;;"></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
 			</Setting>
 		</Menus>
 		<Others>

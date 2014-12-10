@@ -12,6 +12,10 @@ can do and share it with everyone. Enjoy!
 
 ####Most Recent Changes. See Changelog.txt For More.
 ----------------------------------------------------
+	!! Version 3.1.2.2 EX 1.0.3.1 - November 14, 2013
+	! Fixed minor bug. For some systems, XYS scripts refuse to run.
+	% Slight code cleanup and change.
+
 	!! Version 3.1.2.2 EX 1.0.3 - November 14, 2013
 	+ Added XYplorer Scripting and Admin to Special Items Menu When Adding New Items
 		> There are now two XYplorer Scripting Special Items.
