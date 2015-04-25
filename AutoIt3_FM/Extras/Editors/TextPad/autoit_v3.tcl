@@ -228,7 +228,7 @@ ACos(expression)
 !TEXT=ASin
 ASin(expression)
 !
-!TEXT=ATan
+!TEXT=Atan
 ATan(expression)
 !
 !TEXT=BitAND
@@ -852,11 +852,11 @@ WinWaitNotActive(\^"title", ["text"], [timeout] )
 !TEXT=@LogonServer
 @LogonServer
 !
-!TEXT=@ComputerName
-@ComputerName
+!TEXT=@Computername
+@Computername
 !
-!TEXT=@UserName
-@UserName
+!TEXT=@Username
+@Username
 !
 !TEXT=@TempDir
 @TempDir

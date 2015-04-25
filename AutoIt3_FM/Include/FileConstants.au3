@@ -2,7 +2,7 @@
 
 ; #INDEX# =======================================================================================================================
 ; Title .........: File_Constants
-; AutoIt Version : 3.3.12.0
+; AutoIt Version : 3.3
 ; Language ......: English
 ; Description ...: Constants to be included in an AutoIt v3 script when using File functions.
 ; Author(s) .....: Valik, Gary Frost, ...
@@ -12,7 +12,6 @@
 ; Indicates file copy and install options
 Global Const $FC_NOOVERWRITE = 0 ; Do not overwrite existing files (default)
 Global Const $FC_OVERWRITE = 1 ; Overwrite existing files
-Global Const $FC_CREATEPATH = 8 ; Create destination directory structure if it doesn't exist
 
 ; Indicates file date and time options
 Global Const $FT_MODIFIED = 0 ; Date and time file was last modified (default)
@@ -23,14 +22,12 @@ Global Const $FT_ACCESSED = 2 ; Date and time file was last accessed
 Global Const $FO_READ = 0 ; Read mode
 Global Const $FO_APPEND = 1 ; Write mode (append)
 Global Const $FO_OVERWRITE = 2 ; Write mode (erase previous contents)
-Global Const $FO_CREATEPATH = 8 ; Create directory structure if it doesn't exist
 Global Const $FO_BINARY = 16 ; Read/Write mode binary
 Global Const $FO_UNICODE = 32 ; Write mode Unicode UTF16-LE
 Global Const $FO_UTF16_LE = 32 ; Write mode Unicode UTF16-LE
 Global Const $FO_UTF16_BE = 64 ; Write mode Unicode UTF16-BE
 Global Const $FO_UTF8 = 128 ; Read/Write mode UTF8 with BOM
 Global Const $FO_UTF8_NOBOM = 256 ; Read/Write mode UTF8 with no BOM
-Global Const $FO_UTF8_FULL = 16384 ; Use full file UTF8 detection if no BOM present
 
 ; Indicates file read options
 Global Const $EOF = -1 ; End-of-file reached
@@ -73,39 +70,9 @@ Global Const $FILE_ATTRIBUTE_ENCRYPTED = 0x00004000
 Global Const $FILE_SHARE_READ = 0x00000001
 Global Const $FILE_SHARE_WRITE = 0x00000002
 Global Const $FILE_SHARE_DELETE = 0x00000004
-Global Const $FILE_SHARE_READWRITE = BitOR($FILE_SHARE_READ, $FILE_SHARE_WRITE)
-Global Const $FILE_SHARE_ANY = BitOR($FILE_SHARE_READ, $FILE_SHARE_WRITE, $FILE_SHARE_DELETE)
 
 Global Const $GENERIC_ALL = 0x10000000
 Global Const $GENERIC_EXECUTE = 0x20000000
 Global Const $GENERIC_WRITE = 0x40000000
 Global Const $GENERIC_READ = 0x80000000
-Global Const $GENERIC_READWRITE = BitOR($GENERIC_READ, $GENERIC_WRITE)
-
-; Indicates _FileReadToArray modes
-Global Const $FRTA_NOCOUNT = 0
-Global Const $FRTA_COUNT = 1
-Global Const $FRTA_INTARRAYS = 2
-Global Const $FRTA_ENTIRESPLIT = 4
-
-; Indicates _FileListToArray modes
-Global Const $FLTA_FILESFOLDERS = 0
-Global Const $FLTA_FILES = 1
-Global Const $FLTA_FOLDERS = 2
-
-; Indicates _FileListToArrayRec modes
-Global Const $FLTAR_FILESFOLDERS = 0
-Global Const $FLTAR_FILES = 1
-Global Const $FLTAR_FOLDERS = 2
-Global Const $FLTAR_NOHIDDEN = 4
-Global Const $FLTAR_NOSYSTEM = 8
-Global Const $FLTAR_NOLINK = 16
-Global Const $FLTAR_NORECUR = 0
-Global Const $FLTAR_RECUR = 1
-Global Const $FLTAR_NOSORT = 0
-Global Const $FLTAR_SORT = 1
-Global Const $FLTAR_FASTSORT = 2
-Global Const $FLTAR_NOPATH = 0
-Global Const $FLTAR_RELPATH = 1
-Global Const $FLTAR_FULLPATH = 2
 ; ===============================================================================================================================

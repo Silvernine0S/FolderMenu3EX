@@ -2,7 +2,7 @@
 
 ; #INDEX# =======================================================================================================================
 ; Title .........: Border_Constants
-; AutoIt Version : 3.3.12.0
+; AutoIt Version : 3.2
 ; Language ......: English
 ; Description ...: Constants for _WinAPI_DrawEdge().
 ; Author(s) .....: Gary Frost
@@ -38,4 +38,5 @@ Global Const $BF_DIAGONAL_ENDBOTTOMLEFT = BitOR($BF_DIAGONAL, $BF_BOTTOM, $BF_LE
 Global Const $BF_DIAGONAL_ENDBOTTOMRIGHT = BitOR($BF_DIAGONAL, $BF_BOTTOM, $BF_RIGHT)
 Global Const $BF_DIAGONAL_ENDTOPLEFT = BitOR($BF_DIAGONAL, $BF_TOP, $BF_LEFT)
 Global Const $BF_DIAGONAL_ENDTOPRIGHT = BitOR($BF_DIAGONAL, $BF_TOP, $BF_RIGHT)
+
 ; ===============================================================================================================================

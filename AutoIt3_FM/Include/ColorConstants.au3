@@ -2,7 +2,7 @@
 
 ; #INDEX# =======================================================================================================================
 ; Title .........: Constants
-; AutoIt Version : 3.3.12.0
+; AutoIt Version : 3.2
 ; Language ......: English
 ; Description ...: Constants to be included in an AutoIt v3 script.
 ; Author(s) .....: JLandes, Nutster, CyberSlug, Holger, ...
@@ -63,4 +63,5 @@ Global Const $CLR_YELLOW = 0x00FFFF
 Global Const $CC_ANYCOLOR = 0x0100
 Global Const $CC_FULLOPEN = 0x0002
 Global Const $CC_RGBINIT = 0x0001
+
 ; ===============================================================================================================================

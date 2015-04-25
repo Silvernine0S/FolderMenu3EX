@@ -2,10 +2,31 @@
 
 ; #INDEX# =======================================================================================================================
 ; Title .........: Slider_Constants
-; AutoIt Version : 3.3.12.0
+; AutoIt Version : 3.2
 ; Language ......: English
 ; Description ...: <a href="../appendix/GUIStyles.htm#Slider">GUI control Slider styles</a> and much more constants.
 ; Author(s) .....: Valik, Gary Frost, ...
+; ===============================================================================================================================
+
+; #STYLES# ======================================================================================================================
+Global Const $TBS_AUTOTICKS = 0x0001
+Global Const $TBS_BOTH = 0x0008
+Global Const $TBS_BOTTOM = 0x0000
+Global Const $TBS_DOWNISLEFT = 0x0400
+Global Const $TBS_ENABLESELRANGE = 0x20
+Global Const $TBS_FIXEDLENGTH = 0x40
+Global Const $TBS_HORZ = 0x0000
+Global Const $TBS_LEFT = 0x0004
+Global Const $TBS_NOTHUMB = 0x0080
+Global Const $TBS_NOTICKS = 0x0010
+Global Const $TBS_REVERSED = 0x200
+Global Const $TBS_RIGHT = 0x0000
+Global Const $TBS_TOP = 0x0004
+Global Const $TBS_TOOLTIPS = 0x100
+Global Const $TBS_VERT = 0x0002
+
+; Control default styles
+Global Const $GUI_SS_DEFAULT_SLIDER = $TBS_AUTOTICKS
 ; ===============================================================================================================================
 
 ; #CONSTANTS# ===================================================================================================================
@@ -57,24 +78,4 @@ Global Const $TBTS_BOTTOM = 2
 Global Const $TBTS_LEFT = 1
 Global Const $TBTS_RIGHT = 3
 Global Const $TBTS_TOP = 0
-
-; Styles
-Global Const $TBS_AUTOTICKS = 0x0001
-Global Const $TBS_BOTH = 0x0008
-Global Const $TBS_BOTTOM = 0x0000
-Global Const $TBS_DOWNISLEFT = 0x0400
-Global Const $TBS_ENABLESELRANGE = 0x20
-Global Const $TBS_FIXEDLENGTH = 0x40
-Global Const $TBS_HORZ = 0x0000
-Global Const $TBS_LEFT = 0x0004
-Global Const $TBS_NOTHUMB = 0x0080
-Global Const $TBS_NOTICKS = 0x0010
-Global Const $TBS_REVERSED = 0x200
-Global Const $TBS_RIGHT = 0x0000
-Global Const $TBS_TOP = 0x0004
-Global Const $TBS_TOOLTIPS = 0x100
-Global Const $TBS_VERT = 0x0002
-
-; Control default styles
-Global Const $GUI_SS_DEFAULT_SLIDER = $TBS_AUTOTICKS
 ; ===============================================================================================================================

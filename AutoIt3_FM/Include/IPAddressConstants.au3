@@ -2,7 +2,7 @@
 
 ; #INDEX# =======================================================================================================================
 ; Title .........: IPAddress_Constants
-; AutoIt Version : 3.3.12.0
+; AutoIt Version : 3.2
 ; Language ......: English
 ; Description ...: Constants for IPAddress functions.
 ; Author(s) .....: Valik, Gary Frost, ...
@@ -16,8 +16,9 @@ Global Const $IPM_GETADDRESS = ($__IPADDRESSCONSTANT_WM_USER + 102)
 Global Const $IPM_SETRANGE = ($__IPADDRESSCONSTANT_WM_USER + 103)
 Global Const $IPM_SETFOCUS = ($__IPADDRESSCONSTANT_WM_USER + 104)
 Global Const $IPM_ISBLANK = ($__IPADDRESSCONSTANT_WM_USER + 105)
+; ===============================================================================================================================
 
-; Notifications
+; #NOTIFICATIONS# ===============================================================================================================
 Global Const $IPN_FIRST = (-860)
 Global Const $IPN_FIELDCHANGED = ($IPN_FIRST - 0) ; Sent when the user changes a field or moves from one field to another
 ; ===============================================================================================================================

@@ -8,12 +8,12 @@
 
 <h1>Using Textpad with Syntax Highlighting and Context Sensitive Help</h1>
 <p>&quot;Description from Trids&quot;</p>
-<p>Some tips for integrating TextPad and AutoIt:<br>
+<p>Some tips for integrating TextPad and Autoit:<br>
 <br>
 <b><span style="COLOR: blue">Setup an &quot;Execute&quot; tool in TextPad</span></b></p>
 <ul>
-	<li>In TP: <b>Configure \ Preferences \ Tools \ Add \ Programs \ </b>&lt;Navigate to AutoIt3.exe&gt; <b>\ Apply</b>.
-	<li>This will create a tool called &quot;AutoIt3&quot; in TP's [Tools] menu. You can rename this if you want - see TP helpfile if necessary.</li>
+	<li>In TP: <b>Configure \ Preferences \ Tools \ Add \ Programs \ </b>&lt;Navigate to Autoit3.exe&gt; <b>\ Apply</b>.
+	<li>This will create a tool called &quot;Autoit3&quot; in TP's [Tools] menu. You can rename this if you want - see TP helpfile if necessary.</li>
 </ul>
 <br>
 <b><span style="COLOR: blue">Set Hotkey for the Execute tool</span></b>
@@ -26,7 +26,7 @@
 </ul>
 
 <br>
-<b><span style="COLOR: blue">Setup Context Sensitive Help for AutoIt in TP</span></b>
+<b><span style="COLOR: blue">Setup Context Sensitive Help for Autoit in TP</span></b>
 
 <ul>
 	<li><b>METHOD-1</b><br>
@@ -44,9 +44,9 @@
 	<i>Use this method if your version of TextPad does NOT have the <b>Online Help File</b> tool type referred to in METHOD-1<BR><BR></i>
 		<ul>
 			<li>Download and install the <a href="http://www.keyworks.net/keyhh.htm" target="_blank">free KeyHH.exe</a></li>
-			<li>For the purposes of this explanation, assume you place it in <span style="COLOR: purple">C:\Program Files\AutoIt3</span>.</li>
+			<li>For the purposes of this explanation, assume you place it in <span style="COLOR: purple">C:\Program Files\Autoit3</span>.</li>
 			<li>Setup another TP tool: <b>Configure \ Preferences \ Tools \ Add \ Programs \ </b>&lt;Navigate to KeyHH.exe&gt; <b>\ Apply</b>.</li>
-			<li>Then edit this tool and replace [Parameters] with <b>-#klink $SelWord &quot;</b><span style="COLOR: purple">C:\Program Files\AutoIt3</span><b><span style="COLOR: purple">\AutoIt.chm</span>&quot;</b></li>
+			<li>Then edit this tool and replace [Parameters] with <b>-#klink $SelWord &quot;</b><span style="COLOR: purple">C:\Program Files\Autoit3</span><b><span style="COLOR: purple">\AutoIt.chm</span>&quot;</b></li>
 			<li>Setup a Hotkey for this tool: see Hotkey procedure above - I use ALT+F2.</li>
 			<li>This enables you to select an interesting function in a script that you
 			have open in TP, and press ALT+F2 to get instant gratification.</li>
