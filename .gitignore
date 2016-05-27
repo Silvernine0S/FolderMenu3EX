@@ -214,3 +214,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# FolderMenu's Personal Configuration (Used For Testing)
+FolderMenu.xml
+# Ignore AutoIt Folders
+AutoIt3_FM/
+Include_Replace/
