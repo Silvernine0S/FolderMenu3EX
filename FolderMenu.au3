@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=FolderMenu3 EX
-#AutoIt3Wrapper_Res_Fileversion=1.0.3.1
+#AutoIt3Wrapper_Res_Fileversion=1.0.3.2
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_requestedExecutionLevel=asInvoker
 #AutoIt3Wrapper_Res_Icon_Add=Res\201.ico
@@ -27,8 +27,8 @@
 
 ; Oringally Folder Menu3 EX by rexx
 ; FolderMenu3EX is Forked from v3.1.2.2
-Global Const $iCurrentVer = "1.0.3.1"
-Global Const $EXBuildDate = "November 22, 2013"
+Global Const $iCurrentVer = "1.0.3.2"
+Global Const $EXBuildDate = "May 30, 2016"
 
 ; ** CREDITS **
 ; Icons from "Silk Icons" by Mark James @ FAMFAMFAM
@@ -2603,7 +2603,8 @@ Func OpenFile($sPath)
 		$sPath = StringReplace($sPath,"ADMIN::","")
 		; $sPath = "cmd.exe /c "&$sPath
 		; Run($sPath)
-		ShellExecute($sPath) ; ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
+		ShellExecute($sPath, "", "","RunAs") ; ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
+											 ; https://www.autoitscript.com/forum/topic/174422-elevated-cmd-prompt/
 	ElseIf StringLeft($sPath, 7) = "cmd.exe" Then
 		Run($sPath)
 	ElseIf StringInStr($sPath, ".exe") Then

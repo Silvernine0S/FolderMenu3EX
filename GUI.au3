@@ -2033,7 +2033,8 @@ Func TabIconGet()
 	Next
 EndFunc
 Func ListViewIconCreate()
-	Global $hImageListIcon = _GUIImageList_Create(16, 16, 5)
+	;Global $hImageListIcon = _GUIImageList_Create(16, 16)
+	Global $hImageListIcon = _GUIImageList_Create(16, 16)
 	_GUICtrlListView_SetImageList($ListViewIcon, $hImageListIcon, 1)
 	Local $ListViewIcon_Item, $hIcon
 	If $iIconsCount > 0 Then
