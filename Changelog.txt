@@ -4,7 +4,7 @@ Program   FolderMenu3 EX
 		  command prompt...and more. You can also launch your favorite
 		  folders, files or urls." -rexx
 		  http://foldermenu.sourceforge.net/
-		  
+
 		  FolderMenuEX is a Fork of the Original Folder Menu 3 by rexx
 
 Version   3.1.2.2 EX 1.0.3.1
@@ -22,8 +22,29 @@ NOTE:     Changelog Format Thanks to Don, Developer of XYplorer.
 	% Improved Performance or Quality
 	> More Information
 	! Fixed Minor Bug
-	
+
 	FolderMenu3EX = FolderMenu3 EX = FolderMenu != Folder Menu 3
+
+~~~~~~~~~~~~~~~~~~~ May 30, 2016 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	!! Version 3.1.2.2 EX 1.0.3.2 - May 30, 2016
+	> Compiled using the latest AutoIt version 3.3.14.2
+	! Fixed minor bug. Run favorite application as Admin still wasn't fully working.
+	  Should be completely fixed now.
+	! Fixed a critical bug. Under Options > Applications, FolderMenu3 EX did not
+	  properly save the configuration keys for the toggled applications. For
+	  example, if you were to toggle Explorer so that FolderMenu3 EX would run,
+	  A key value of "-1" was saved instead of a proper "1". Which means on the
+	  next startup of FolderMenu3 EX, it would read "-1" as disabled and Explorer
+	  would then be togged off which will not allow FolderMenu3 EX to show up.
+	  The current fix is a bit "stupid" as the original author have modified
+	  AutoIt3's internal libraries so much that it would require a lot more time
+	  to find exactly what's wrong. However, the current fix does work very well.
+	> Both a "fix" and an improvement. XYplorer is written in VB6 and as a result,
+	  has a form class for its GUI named ThunderRT6FormDC. I wrote the code to find
+	  XYplorer assuming that it's the only running program written with VB6. Found out
+	  the hard way that Dexpot was also written with VB6 so when Dexpot was running,
+	  XYS scripting would be sent to it instead of XYplorer. The code is now fixed
+	  and improved so that it will find the proper XYplorer window.
 
 ~~~~~~~~~~~~~~~~~~~ November 22, 2013 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	!! Version 3.1.2.2 EX 1.0.3.1 - November 14, 2013

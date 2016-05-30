@@ -8,10 +8,32 @@ folders, files or urls." -rexx http://foldermenu.sourceforge.net/
 **DO NOT EXPECT UPDATES**. I am doing this on my spare time which I
 don't have much of. Furthermore I'm new to programming in general
 so please don't expect too much from me. I'm only doing what I
-can do and share it with everyone. Enjoy!  
+can do and share it with everyone. Enjoy!
+
+**Important News As Of May 2016**. This is probably the end of the road for this program. This last update fixes all the remaining problems that I know about. The features that I introduced should now be stable and reliable (run as admin, support for XYplorer scripting, and various other fixes and modifications from the original code by rexx). The reasons I'm going to put this off even more from now on and that is time and also the complexity of getting this program working with the standard libraries that comes with newer version of AutoIt. rexx heavily modified many of the internal libraries that came with the very old AutoIt and as a result, updating AutoIt for better performance and newer features while making sure FolderMenu3 EX continues to work is challenging because his heavily modified libraries will require significant amount of time to properly merge with the newer updated libraries and I simply cannot give this program any more time than I have now. Currently I have continued to update AutoIt but replaced many of the libraries with his heavily modified libraries so it's not a full updated AutoIt. Anyway, thank you much for all those years and if you continue to use this program, thank you. If you want to find an alternative program, I would definitely suggest to take a look at Quick Access Popup located at http://www.quickaccesspopup.com and https://github.com/JnLlnd/QuickAccessPopup. I have recently ported the feature to allow launching applications with admin privileges (he's currently in the process of merging it) and perhaps I will port the feature to allow it to send scripts to XYplorer too. The program runs great, quick, relatively modern, and is also very much alive and receiving frequent updates and new features. Once again, thank you for everything!
 
 ####Most Recent Changes. See Changelog.txt For More.
 ----------------------------------------------------
+	!! Version 3.1.2.2 EX 1.0.3.2 - May 30, 2016
+	> Compiled using the latest AutoIt version 3.3.14.2
+	! Fixed minor bug. Run favorite application as Admin still wasn't fully working.
+	  Should be completely fixed now.
+	! Fixed a critical bug. Under Options > Applications, FolderMenu3 EX did not
+	  properly save the configuration keys for the toggled applications. For
+	  example, if you were to toggle Explorer so that FolderMenu3 EX would run,
+	  A key value of "-1" was saved instead of a proper "1". Which means on the
+	  next startup of FolderMenu3 EX, it would read "-1" as disabled and Explorer
+	  would then be togged off which will not allow FolderMenu3 EX to show up.
+	  The current fix is a bit "stupid" as the original author have modified
+	  AutoIt3's internal libraries so much that it would require a lot more time
+	  to find exactly what's wrong. However, the current fix does work very well.
+	> Both a "fix" and an improvement. XYplorer is written in VB6 and as a result,
+	  has a form class for its GUI named ThunderRT6FormDC. I wrote the code to find
+	  XYplorer assuming that it's the only running program written with VB6. Found out
+	  the hard way that Dexpot was also written with VB6 so when Dexpot was running,
+	  XYS scripting would be sent to it instead of XYplorer. The code is now fixed
+	  and improved so that it will find the proper XYplorer window.
+
 	!! Version 3.1.2.2 EX 1.0.3.1 - November 14, 2013
 	! Fixed minor bug. For some systems, XYS scripts refuse to run.
 	% Slight code cleanup and change.

@@ -4,32 +4,99 @@
 		<Item Type="Item" Name="&amp;Recent" Path=":RecentMenu" Icon="" Size=""></Item>
 		<Item Type="Separator" Name="- - - - -"></Item>
 		<Item Type="Item" Name="Drive Menu" Path=":DriveMenu" Icon="" Size=""></Item>
-		<Item Type="Item" Name="&amp;C:\" Path="C:\" Icon="" Size=""></Item>
-		<Item Type="Item" Name="&amp;UserProfile" Path="%UserProfile%" Icon="" Size=""></Item>
-		<Item Type="Item" Name="&amp;Program Files" Path="%ProgramFiles%" Icon="" Size=""></Item>
-		<Item Type="Item" Name="&amp;Windows" Path="%WinDir%" Icon="" Size=""></Item>
+		<Item ID="7" Type="Menu" Name="Other" Icon="" Size="">
+			<Item Type="Item" Name="&amp;Program Files" Path="%ProgramFiles%" Icon="" Size=""></Item>
+			<Item Type="Item" Name="S&amp;ystem32" Path="%WinDir%\System32" Icon="" Size=""></Item>
+			<Item Type="Item" Name="&amp;Windows" Path="%WinDir%" Icon="" Size=""></Item>
+		</Item>
 		<Item Type="Item" Name="&amp;AppData" Path="%AppData%" Icon="" Size=""></Item>
+		<Item Type="Item" Name="&amp;UserProfile" Path="%UserProfile%" Icon="" Size=""></Item>
 		<Item Type="Separator" Name="- - - - -"></Item>
-		<Item Type="Item" Name="XYplorer Weather" Path="XYS::load &quot;&lt;xyscripts&gt;\Weather2.xys&quot;;" Icon="" Size=""></Item>
-		<Item Type="Item" Name="XYS Goto" Path="XYS_F::goto C:\" Icon="" Size=""></Item>
-		<Item Type="Item" Name="Notepad2" Path="C:\Users\User\Documents\Applications\Notepad2.exe" Icon="" Size=""></Item>
-		<Item Type="Item" Name="AkelPad" Path="C:\Users\User\Documents\Applications\AkelPad\AkelPad.exe" Icon="" Size=""></Item>
-		<Item Type="Item" Name="Everything" Path="admin::C:\Users\User\Documents\Applications\Everything-1.2.1.452a.exe" Icon="" Size=""></Item>
-		<Item Type="Item" Name="XYplorer" Path="C:\Users\User\Documents\Applications\XYPlorer\XYplorer.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="Notepad2" Path="notepad.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="Notepad++" Path="C:\Users\Owner\Programs\Other\Notepad++\Notepad++Portable.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="AkelPad" Path="C:\Users\Owner\Programs\Other\AkelPad\AkelPad.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="Audacity" Path="C:\Users\Owner\Programs\Misc\AudacityPortable\AudacityPortable.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="WinSCP" Path="C:\Users\Owner\Programs\Other\WinSCP.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="XYplorer" Path="C:\Users\Owner\Programs\XYplorer\XYplorer.exe" Icon="" Size=""></Item>
+		<Item Type="Item" Name="XYplorer Script With Focus" Path="XYS_F::Tab(&quot;new&quot;); Goto &quot;C:\Users\Owner\Desktop&quot;" Icon="" Size=""></Item>
+		<Item Type="Item" Name="XYplorer Script" Path="XYS::Tab(&quot;new&quot;); Goto &quot;C:\Users\Owner\Desktop&quot;" Icon="" Size=""></Item>
+		<Item ID="22" Type="Menu" Name="Engineer" Icon="C:\Users\Owner\Programs\Other\LunaMig_128.ico,0" Size="">
+			<Item Type="Item" Name="Excel 2010" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Microsoft Office\Office14\EXCEL.EXE&quot;" Icon="C:\Program Files (x86)\Microsoft Office\Office14\EXCEL.EXE,0" Size=""></Item>
+			<Item Type="Item" Name="PowerPoint 2010" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Microsoft Office\Office14\POWERPNT.EXE&quot;" Icon="C:\Program Files (x86)\Microsoft Office\Office14\POWERPNT.EXE,0" Size=""></Item>
+			<Item Type="Item" Name="Word 2010" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE&quot;" Icon="C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE,0" Size=""></Item>
+			<Item Type="Item" Name="Mendeley" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Mendeley Desktop\MendeleyDesktop.exe&quot;" Icon="C:\Program Files (x86)\Mendeley Desktop\MendeleyDesktop.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Autodesk AutoCAD 2014" Path="runas /user:Engineer &quot;C:\Program Files\Autodesk\AutoCAD 2014\acad.exe&quot;" Icon="C:\Program Files\Autodesk\AutoCAD 2014\acad.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Autodesk Inventor 2014" Path="runas /user:Engineer &quot;C:\Program Files\Autodesk\Inventor 2014\Bin\Inventor.exe&quot;" Icon="C:\Program Files\Autodesk\Inventor 2014\Bin\Inventor.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Anaconda" Path="runas /user:Engineer &quot;&quot;C:\Anaconda3\node-webkit\nw.exe&quot; &quot;C:\Anaconda3/node-webkit/launcher&quot;&quot;" Icon="C:\Anaconda3\node-webkit\nw.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Euler Math Toolbox" Path="runas /user:Engineer &quot;C:\Program Files\Euler x64\euler64.exe&quot;" Icon="C:\Program Files\Euler x64\euler64.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Mathematica 10" Path="runas /user:Engineer &quot;C:\Program Files\Wolfram Research\Mathematica\10.2\Mathematica.exe&quot;" Icon="C:\Program Files\Wolfram Research\Mathematica\10.2\Mathematica.exe,0" Size=""></Item>
+			<Item Type="Item" Name="ModelCenter 4" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Wolfram Research\SystemModeler 4.0.1\bin\ModelCenter.exe&quot;" Icon="C:\Program Files (x86)\Wolfram Research\SystemModeler 4.0.1\bin\ModelCenter.exe,0" Size=""></Item>
+			<Item Type="Item" Name="MATLAB 2015b" Path="runas /user:Engineer &quot;C:\Program Files\MATLAB\R2015b\bin\win64\matlab.exe&quot;" Icon="C:\Program Files\MATLAB\R2015b\bin\win64\matlab.exe,0" Size=""></Item>
+			<Item Type="Item" Name="RStudio" Path="runas /user:Engineer &quot;C:\Program Files\RStudio\bin\rstudio.exe&quot;" Icon="C:\Program Files\RStudio\bin\rstudio.exe,0" Size=""></Item>
+			<Item Type="Item" Name="SolidWorks 2012" Path="runas /user:Engineer &quot;C:\Program Files\SolidWorks Corp\SolidWorks\SLDWORKS.exe&quot;" Icon="C:\Program Files\SolidWorks Corp\SolidWorks\SLDWORKS.exe,0" Size=""></Item>
+			<Item Type="Item" Name="Texmaker" Path="runas /user:Engineer &quot;C:\Program Files (x86)\Texmaker\texmaker.exe&quot;" Icon="C:\Program Files (x86)\Texmaker\texmaker.exe,0" Size=""></Item>
+		</Item>
+		<Item ID="37" Type="Menu" Name="Image Tools" Icon="C:\Users\Owner\Programs\Other\LunaMig_128.ico,0" Size="">
+			<Item Type="Item" Name="FSCapture" Path="C:\Users\Owner\Programs\FastStone\FSCapture\FSCapture.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Greenshot" Path="C:\Users\Owner\Programs\FastStone\Greenshot\Greenshot.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Honeyview" Path="C:\Users\Owner\Programs\FastStone\HoneyView\Honeyview32.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="IrfanView" Path="C:\Users\Owner\Programs\FastStone\IrfanView\IrfanViewPortable.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="JPEGView" Path="C:\Users\Owner\Programs\FastStone\JPEGView\JPEGView.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="MaxView" Path="C:\Users\Owner\Programs\FastStone\FSMaxView\MaxView.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Pictus" Path="C:\Users\Owner\Programs\FastStone\Pictus\Pictus.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="PicPick" Path="C:\Users\Owner\Programs\FastStone\PicPick\PicPickPortable.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Viewer" Path="C:\Users\Owner\Programs\FastStone\FSViewer\FSViewer.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Xlideit" Path="C:\Users\Owner\Programs\FastStone\Xlideit\Xlideit.exe" Icon="" Size=""></Item>
+		</Item>
+		<Item ID="48" Type="Menu" Name="Maintenance" Icon="C:\Users\Owner\Programs\Other\LunaMig_128.ico,0" Size="">
+			<Item Type="Item" Name="ARenamer" Path="C:\Users\Owner\Programs\Other\ARenamer\ARen.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Batchrun" Path="admin::C:\Users\Owner\Programs\Other\Batchrun\Batchrun.exe" Icon="C:\Users\Owner\Programs\Other\Batchrun\Batchrun.exe" Size=""></Item>
+			<Item Type="Item" Name="Beyond Compare" Path="C:\Users\Owner\Programs\Other\Beyond Compare\BCompare.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="CCEnchance" Path="admin::C:\Program Files\CCleaner\CCEnhancer.exe" Icon="C:\Program Files\CCleaner\CCEnhancer.exe,0" Size=""></Item>
+			<Item Type="Item" Name="CloneSpy" Path="C:\Users\Owner\Programs\Other\CloneSpy\CloneSpy.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Dexpot" Path="C:\Users\Owner\Programs\Other\Dexpot\dexpot.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Everything" Path="C:\Users\Owner\Programs\Other\Everything\Everything.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Executor" Path="C:\Users\Owner\Programs\Other\Executor\Executor.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Executor Admin" Path="admin::C:\Users\Owner\Programs\Other\Executor\Executor.exe" Icon="C:\Users\Owner\Programs\Other\Executor\Executor.exe,0" Size=""></Item>
+			<Item Type="Item" Name="FastCopy" Path="C:\Users\Owner\Programs\Other\FastCopy\FastCopy.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="FileLocator Pro" Path="C:\Users\Owner\Programs\Other\FileLocator Pro\FileLocatorPro.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="FreeFileSync" Path="C:\Users\Owner\Programs\Other\FreeFileSync\FreeFileSync.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="GetWindowText" Path="C:\Users\Owner\Programs\Other\GetWindowText.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Md5Checker" Path="C:\Users\Owner\Programs\Other\Md5Checker.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="MultiHasher" Path="C:\Users\Owner\Programs\Other\MultiHasher\MultiHasher.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="NeatMouse" Path="C:\Users\Owner\Programs\Other\NeatMouse.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="PatchMyPC" Path="admin::C:\Users\Owner\Programs\Other\PatchMyPC.exe" Icon="C:\Users\Owner\Programs\Other\PatchMyPC.exe,0" Size=""></Item>
+			<Item Type="Item" Name="PNotes" Path="C:\Users\Owner\Programs\Other\PNotes\PNotes.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Process Hacker" Path="C:\Program Files\Process Hacker 2\ProcessHacker.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Process Explorer" Path="C:\Users\Owner\Programs\Other\Process Explorer.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="ReNamer" Path="C:\Users\Owner\Programs\Other\ReNamer\ReNamer.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="SpaceSniffer" Path="C:\Users\Owner\Programs\Other\SpaceSniffer.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="TeraCopy" Path="C:\Users\Owner\Programs\Other\TeraCopy\TeraCopy.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="UniExtract" Path="admin::C:\Users\Owner\Programs\Other\Universal Extractor\UniExtract.exe" Icon="C:\Users\Owner\Programs\Other\Universal Extractor\UniExtract.exe" Size=""></Item>
+			<Item Type="Item" Name="WindowTabs" Path="C:\Users\Owner\Programs\Other\WindowTabs.exe" Icon="" Size=""></Item>
+			<Item Type="Item" Name="WinSplit" Path="C:\Users\Owner\Programs\Other\WinSplit Revolution\WinSplit.exe" Icon="" Size=""></Item>
+		</Item>
 		<Item Type="Separator" Name="- - - - -"></Item>
-		<Item ID="20" Type="Menu" Name="Special" Icon=".\FolderMenu.exe,-207" Size="">
+		<Item ID="76" Type="Menu" Name="Special Items" Icon=".\FolderMenu.exe,-207" Size="">
+			<Item ID="77" Type="Menu" Name="Registry" Icon="regedit.exe" Size="">
+				<Item Type="Item" Name="HKCU Run" Path="http://www.autoitscript.com/autoit3/" Icon="" Size=""></Item>
+				<Item Type="Item" Name="HKLM Run" Path="http://sourceforge.net/" Icon="" Size=""></Item>
+			</Item>
 			<Item Type="Item" Name="Toggle Hidden Files" Path="_ToggleHidden" Icon="" Size=""></Item>
 			<Item Type="Item" Name="Toggle Hide File Extension" Path="_ToggleFileExt" Icon="" Size=""></Item>
 			<Item Type="Item" Name="Command Prompt" Path="cmd.exe" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Command Prompt Here" Path="cmd.exe /k cd /D &quot;%F_CurrentDir%&quot;" Icon="cmd.exe" Size=""></Item>
+			<Item Type="Item" Name="Command Prompt Here" Path="cmd.exe /k cd /D %F_CurrentDir%" Icon="cmd.exe" Size=""></Item>
+			<Item Type="Item" Name="KeePass" Path="admin::C:\Program Files (x86)\KeePass Password Safe 2\KeePass.exe" Icon="C:\Program Files (x86)\KeePass Password Safe 2\KeePass.exe,0" Size=""></Item>
 			<Item Type="Separator" Name="- - - - -"></Item>
 			<Item Type="Item" Name="All Files" Path="*.*" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Documents" Path="*.xls;*.ppt;*.pdf;*.doc" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Images" Path="*.png;*.gif;*.jpg;*.jpeg;*.ico;*.bmp" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Compressed" Path="*.rar;*.lzh;*.gz;*.cab;*.7z;*.zip" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Documents" Path="*.xlsx;*.xls;*.pptx;*.ppt;*.pdf;*.docx;*.djvu;*.doc" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Audios" Path="*.ape;*.flac;*.mpc;*.ogg;*.wma;*.mp3" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Images" Path="*.png;*.gif;*.jpeg;*.ico;*.bmp;*.jpg" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Videos" Path="*.avi;*.mkv;*.mp4;*.mpeg;*.ogm;*.wmv" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Text Files" Path="*.ini;*.inf;*.csv;*.txt" Icon="" Size=""></Item>
+			<Item Type="Item" Name="Programming" Path="*.php;*.html;*.js;*.c;*.cpp;*.java;*.python;*.rb;*.m;*.r;*.htm" Icon="" Size=""></Item>
 			<Item Type="Item" Name="Programs" Path="*.exe;*.com;*.cmd;*.bat" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Text Files" Path="*.csv;*.txt" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Compressed" Path="*.rar;*.7z;*.cab;*.gz;*.zip" Icon="" Size=""></Item>
-			<Item Type="Item" Name="Development" Path="*.php;*.htm;*.js" Icon="" Size=""></Item>
 		</Item>
 		<Item Type="Item" Name="&amp;Folder Menu" Path=":ToolMenu" Icon="" Size=""></Item>
 	</Menu>
@@ -38,17 +105,22 @@
 			<Setting Name="ApplicationList">
 				<Application Check="1" Type="M" Name="Explorer" Class="CabinetWClass,ExploreWClass" ClassNN="Edit1"></Application>
 				<Application Check="1" Type="M" Name="Open/Save Dialog" Class="#32770" ClassNN="Edit1"></Application>
-				<Application Check="1" Type="C" Name="Office Dialog" Class="bosa_sdm_" ClassNN="RichEdit20W2"></Application>
+				<Application Check="0" Type="C" Name="Office Dialog" Class="bosa_sdm_" ClassNN="RichEdit20W2"></Application>
 				<Application Check="1" Type="M" Name="Command" Class="ConsoleWindowClass" ClassNN="Edit1"></Application>
 				<Application Check="1" Type="M" Name="Desktop" Class="Progman,WorkerW" ClassNN="Edit1"></Application>
 				<Application Check="1" Type="M" Name="Taskbar" Class="Shell_TrayWnd" ClassNN="Edit1"></Application>
-				<Application Check="1" Type="C" Name="XYplorer" Class="ThunderRT6FormDC" ClassNN="Edit1"></Application>
+				<Application Check="0" Type="M" Name="TotalCommander" Class="TTOTAL_CMD" ClassNN="Edit1"></Application>
+				<Application Check="0" Type="M" Name="UnrealCommander" Class="TxUNCOM" ClassNN="Edit1"></Application>
+				<Application Check="0" Type="M" Name="FreeCommander" Class="TfcForm" ClassNN="Edit1"></Application>
+				<Application Check="0" Type="M" Name="Emacs" Class="Emacs" ClassNN="Edit1"></Application>
+				<Application Check="0" Type="C" Name="rxvt" Class="rxvt" ClassNN="Edit1"></Application>
+				<Application Check="1" Type="M" Name="XYplorer" Class="ThunderRT6FormDC" ClassNN="Edit1"></Application>
 			</Setting>
 		</Applications>
 		<Hotkeys>
 			<Setting Name="HotkeyList">
 				<Hotkey Key="4" Func="_ShowMainMenu1"></Hotkey>
-				<Hotkey Key="2129" Func="_ShowMainMenu2"></Hotkey>
+				<Hotkey Key="3162" Func="_ShowMainMenu2"></Hotkey>
 			</Setting>
 		</Hotkeys>
 		<Icons>
@@ -96,8 +168,8 @@
 			<Setting Name="RecentFolder" Value="0"></Setting>
 			<Setting Name="RecentFull" Value="1"></Setting>
 			<Setting Name="RecentList">
-				<Recent Date="2013/11/22 14:50:48" Path="XYS_F::goto C:\"></Recent>
-				<Recent Date="2013/11/22 14:50:46" Path="XYS::load &quot;&lt;xyscripts&gt;\Weather2.xys&quot;;"></Recent>
+				<Recent Date="" Path=""></Recent>
+				<Recent Date="" Path=""></Recent>
 				<Recent Date="" Path=""></Recent>
 				<Recent Date="" Path=""></Recent>
 				<Recent Date="" Path=""></Recent>
@@ -116,10 +188,10 @@
 		</Menus>
 		<Others>
 			<Setting Name="Language" Value=""></Setting>
-			<Setting Name="StartWithWin" Value="1"></Setting>
+			<Setting Name="StartWithWin" Value="0"></Setting>
 			<Setting Name="NoTray" Value="0"></Setting>
 			<Setting Name="AddFavAtTop" Value="0"></Setting>
-			<Setting Name="AddFavCheck" Value="0"></Setting>
+			<Setting Name="AddFavCheck" Value="1"></Setting>
 			<Setting Name="AddFavSkipGui" Value="0"></Setting>
 			<Setting Name="AddFavApp" Value="1"></Setting>
 			<Setting Name="AddFavAppCmd" Value="0"></Setting>
@@ -128,14 +200,14 @@
 			<Setting Name="Browser" Value=""></Setting>
 			<Setting Name="SearchSel" Value="0"></Setting>
 			<Setting Name="SearchSelUrl" Value="http://www.google.com/search?q=%s"></Setting>
-			<Setting Name="LoadingTip" Value="1"></Setting>
+			<Setting Name="LoadingTip" Value="0"></Setting>
 			<Setting Name="LoadingTipFor" Value="0"></Setting>
-			<Setting Name="CheckVersion" Value="0"></Setting>
-			<Setting Name="CurrentVer" Value="1.0.3"></Setting>
+			<Setting Name="CheckVersion" Value="1"></Setting>
+			<Setting Name="CurrentVer" Value="1.0.3.2"></Setting>
 		</Others>
 		<GUI>
-			<Setting Name="OptionsPosX" Value="430"></Setting>
-			<Setting Name="OptionsPosY" Value="166"></Setting>
+			<Setting Name="OptionsPosX" Value="670"></Setting>
+			<Setting Name="OptionsPosY" Value="251"></Setting>
 			<Setting Name="OptionsPosW" Value="580"></Setting>
 			<Setting Name="OptionsPosH" Value="538"></Setting>
 			<Setting Name="OptionsPosM" Value="0"></Setting>

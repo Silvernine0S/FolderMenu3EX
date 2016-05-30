@@ -70,6 +70,7 @@ Global Const $EXBuildDate = "May 30, 2016"
 #include "Include\_Zip.au3"
 #include "GUI.au3"
 #include "Language.au3"
+#Include <Array.au3>;
 
 ; FolderMenu3 EX
 ; http://www.autoitscript.com/forum/topic/122212-running-a-command-prompt-command-as-administrator/
@@ -2572,12 +2573,14 @@ Func OpenFilter($sPath)
 	Return 0
 EndFunc
 
-Func XYSScript($sPathXY)
-	; XYplorer Command Support - FolderMenu3 EX
+Func XYSScript($sPathXY, $hWnd)
+	; XYplorer Command Support - FolderMenu3 EX,  Updated FolderMenu3 EX 2016
 	; Original Source By Marco (XYPlorer Messenger): http://www.xyplorer.com/xyfc/viewtopic.php?f=7&t=9216
+	; Example - XYS_F::Tab("new"); Goto "C:\Users\Owner\Desktop" - Restore XYplorer, Focus On It, Open New Tab, And Go To Desktop
 	Local $WM_COPYDATAXY, $hWndXY, $dwDataXY, $iSizeXY, $pMemXY, $pCdsXY
 	$WM_COPYDATAXY = 0x004A
-	$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
+	;$hWndXY = WinGetHandle("[CLASS:ThunderRT6FormDC]")
+	$hWndXY = $hWnd
 	$dwDataXY = 0x00400001
 	$iSizeXY = StringLen($sPathXY)
 	$pMemXY = DllStructCreate("wchar[" & $iSizeXY & "]")
@@ -2590,19 +2593,29 @@ Func XYSScript($sPathXY)
 EndFunc
 
 Func OpenFile($sPath)
-	; XYplorer Command Support Implemented - FolderMenu3 EX
+	; XYplorer Command Support Implemented - FolderMenu3 EX, Updated FolderMenu3 EX 2016
 	Local $sPathXY
 	If StringLeft($sPath, 5) = "XYS::" Then
 		$sPathXY = StringTrimLeft($sPath, 3)
-		XYSScript($sPathXY)
+		; https://www.autoitscript.com/forum/topic/124053-is-there-a-bug-with-winactivate/
+		Global $XYWin = WinList("[CLASS:ThunderRT6FormDC]", "")
+		;_ArrayDisplay($var, "Have " & $var[0][0] & " Windows That Exist")
+		For $i = 1 To $XYWin[0][0]
+			If StringInStr($XYWin[$i][0], "XYplorer") = 0 Then ContinueLoop
+			Global $hWnd = $XYWin[$i][1]
+			XYSScript($sPathXY, $hWnd)
+		Next
 	ElseIf StringLeft($sPath, 7) = "XYS_F::" Then
 		$sPathXY = StringTrimLeft($sPath, 5)
-		XYSScript($sPathXY)
-		WinActivate("[CLASS:ThunderRT6FormDC]", "")
+		Global $XYWin = WinList("[CLASS:ThunderRT6FormDC]", "")
+		For $i = 1 To $XYWin[0][0]
+			If StringInStr($XYWin[$i][0], "XYplorer") = 0 Then ContinueLoop
+			Global $hWnd = $XYWin[$i][1]
+			WinSetState($hWnd, "", @SW_RESTORE)
+			XYSScript($sPathXY, $hWnd)
+		Next
 	ElseIf StringLeft($sPath, 7) = "ADMIN::" Then ; Run as Admin - FolderMenu3 EX
 		$sPath = StringReplace($sPath,"ADMIN::","")
-		; $sPath = "cmd.exe /c "&$sPath
-		; Run($sPath)
 		ShellExecute($sPath, "", "","RunAs") ; ShellExecute Can Elevate Admin If Required Unlike Run() Which Are Used Almost Everywhere Else
 											 ; https://www.autoitscript.com/forum/topic/174422-elevated-cmd-prompt/
 	ElseIf StringLeft($sPath, 7) = "cmd.exe" Then

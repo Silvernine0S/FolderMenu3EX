@@ -3031,7 +3031,14 @@ Func WriteConfigApp()
 			$asAtt[2] = "Name"
 			$asAtt[3] = "Class"
 			$asAtt[4] = "ClassNN"
-			$asVal[0] = $afAppCheck[$i]
+			;$asVal[0] = $afAppCheck[$i]
+			; ???? Temporary "Fix". Primary Issue Is _XMLCreateChildWAttr Gives "-1" For "True". Hackey Workaround For Now... Or Forever...
+			;MsgBox($MB_YESNO, "Title", "'" & $afAppCheck[$i] & "'")
+			If $afAppCheck[$i] = "True" Then
+				$asVal[0] = "1"
+			Else
+				$asVal[0] = "0"
+			EndIf
 			$asVal[1] = $asAppType[$i]
 			$asVal[2] = $asAppName[$i]
 			$asVal[3] = $asAppClass[$i]
